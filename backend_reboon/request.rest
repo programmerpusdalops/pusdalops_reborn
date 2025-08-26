@@ -1,0 +1,61 @@
+###
+GET http://localhost:5001/asessment/lokasi/57e9a5a6-1ed6-4b1c-908d-b03d45fd21c6
+
+###
+POST http://localhost:5001/user
+Content-Type: application/json
+
+{
+    "username": "Pusdalops",
+    "password": "123",
+    "telepon": "0827263736353",
+    "kab": 1,
+    "role_id": 2,
+    "is_active": true
+}
+
+
+###
+POST http://localhost:5001/auth/login
+Content-Type: application/json
+
+{
+    "username": "admin",
+    "password": "123"
+}
+
+###
+GET http://localhost:5001/user/29
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IlZhbGtyaSIsInVzZXJJZCI6MjksImlhdCI6MTY5MDQzNDYzMCwiZXhwIjoxNjkwNTIxMDMwfQ.IXSU1aMZe6peSxjbnRagCWZtM7Fe-vj5PIWV5VM8vY4
+
+###
+GET http://localhost:5001/asessment/lokasi/a09c2322-c893-47da-be86-4e1462c494c2
+
+###
+GET http://localhost:5001/api/kejadian
+
+###
+GET http://localhost:5001/berita/latest
+
+###
+http://localhost:5001/public/images/1715418744687-1649138531.jpeg
+
+###
+GET http://localhost:5001/kejadian/count/tahun
+
+###
+GET http://localhost:5001/kejadian/count/jenis?search_query=06da5942-14cb-4874-80cb-bfe1b5af4bf7&search_tahun=2024
+
+###
+GET http://localhost:5001/kejadian/count/wilayah?search_tahun=2023
+
+###
+GET http://localhost:5001/kejadian/f4d3c9aa-7503-4f11-9f84-fc7267523ede
+
+###
+GET http://localhost:5001/kejadian/persentase
+
+###
+GET http://localhost:5001/kejadian/deleteKejadian/ac17fb0f-5830-43a1-8bbb-9c131955cb1e
+###
+GET http://localhost:5001/kejadian/jenis

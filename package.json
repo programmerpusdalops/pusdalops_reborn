@@ -1,0 +1,19 @@
+{
+  "name": "pusdalops",
+  "version": "1.0.0",
+  "description": "* Cara Connect Ke database 1. Buat folder dengan nama \"config\" 2. Buat File \"Database.js\" di dalam folder config tersebut",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dalopsit/pusdalops.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dalopsit/pusdalops/issues"
+  },
+  "homepage": "https://github.com/dalopsit/pusdalops#readme"
+}
