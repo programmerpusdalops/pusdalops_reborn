@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { useEffect, useState } from 'react';
 import { FaAngleRight } from 'react-icons/fa6';
 import * as api from '../../../utils/Api';

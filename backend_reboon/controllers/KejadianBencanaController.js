@@ -598,6 +598,102 @@ const deleteKejadian = async (req, res) => {
 
 
 
+// const getKejadianPerTahun = async (req, res) => {
+//   try {
+//     // const tahun = req.query.tahun || "2025";
+//     const tahun = req.query.tahun || new Date().getFullYear().toString();
+
+//     const kejadianList = await Kejadian.findAll({
+//       where: { tanggal: { [Op.like]: `%${tahun}%` } },
+//       include: [
+//         { model: JenisKejadian },
+//         { 
+//           model: LokasiKejadian,
+//           include: ["Kabupaten", "Kecamatan", "Desa"] // pastikan alias sesuai model Anda
+//         }
+//       ]
+//     });
+
+//     const geojson = {
+//       type: "FeatureCollection",
+//       features: kejadianList.flatMap(kejadian =>
+//         kejadian.LokasiKejadians.map(lokasi => ({
+//           type: "Feature",
+//           geometry: {
+//             type: "Point",
+//             coordinates: [
+//               parseFloat(lokasi.long),
+//               parseFloat(lokasi.lat)
+//             ]
+//           },
+//           properties: {
+//             kejadian: kejadian.JenisKejadian?.nama || "",
+//             tgl: kejadian.tanggal,
+//             lokasi: lokasi.Desa?.nama || lokasi.desa,   // nama desa
+//             kec: lokasi.Kecamatan?.nama || lokasi.kec,  // nama kecamatan
+//             kab: lokasi.Kabupaten?.nama || lokasi.kab,  // nama kabupaten
+//             kronologis: kejadian.kronologis
+//           }
+//         }))
+//       )
+//     };
+
+//     res.json(geojson);
+//   } catch (error) {
+//     res.status(500).json({ message: error.message });
+//   }
+// };
+
+//versi aman
+
+const getKejadianPerTahun = async (req, res) => {
+  try {
+    const tahun = req.query.tahun || new Date().getFullYear().toString();
+
+    const kejadianList = await Kejadian.findAll({
+      where: { tanggal: { [Op.like]: `%${tahun}%` } },
+      include: [
+        { model: JenisKejadian },
+        { 
+          model: LokasiKejadian,
+          include: ["Kabupaten", "Kecamatan", "Desa"] 
+        }
+      ]
+    });
+
+    const geojson = {
+      type: "FeatureCollection",
+      features: kejadianList.flatMap(kejadian =>
+        (kejadian.LokasiKejadians ?? []).map(lokasi => ({
+          type: "Feature",
+          geometry: {
+            type: "Point",
+            coordinates: lokasi?.lat && lokasi?.long 
+              ? [parseFloat(lokasi.long), parseFloat(lokasi.lat)]
+              : null
+          },
+          properties: {
+            kejadian: kejadian?.JenisKejadian?.nama ?? "",
+            tgl: kejadian?.tanggal ?? "",
+            lokasi: lokasi?.Desa?.nama ?? lokasi?.desa ?? "",
+            kec: lokasi?.Kecamatan?.nama ?? lokasi?.kec ?? "",
+            kab: lokasi?.Kabupaten?.nama ?? lokasi?.kab ?? "",
+            kronologis: kejadian?.kronologis ?? ""
+          }
+        }))
+      )
+    };
+
+    res.json(geojson);
+  } catch (error) {
+    res.status(500).json({ message: error.message });
+  }
+};
+
+
+
+
+
 module.exports = {
   getCountKejadian,
   getCountKorbanTerdampak,
@@ -613,5 +709,6 @@ module.exports = {
   postKejadian, 
   updateKejadian, 
   deleteKejadian, 
-  getKejadianForUpdate
+  getKejadianForUpdate,
+  getKejadianPerTahun
 };

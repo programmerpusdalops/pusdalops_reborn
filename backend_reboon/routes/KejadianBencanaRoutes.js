@@ -1,6 +1,6 @@
 const express = require('express');
 const auth = require("../middleware/auth.js");
-const { getCountKejadian, getCountKorbanTerdampak, getCountKejadianPerTahun, getCountKejadianPerJenisKejadian, getCountKejadianPerWilayah, getKejadianPerJenisKejadian, getPersentaseKejadian, getKejadianSearch, getKejadian, getKejadianById, getKejadianByIdUser, postKejadian, updateKejadian, deleteKejadian, getKejadianForUpdate } = require( "../controllers/KejadianBencanaController.js");
+const { getCountKejadian, getCountKorbanTerdampak, getCountKejadianPerTahun, getCountKejadianPerJenisKejadian, getCountKejadianPerWilayah, getKejadianPerJenisKejadian, getPersentaseKejadian, getKejadianSearch, getKejadian, getKejadianById, getKejadianByIdUser, postKejadian, updateKejadian, deleteKejadian, getKejadianForUpdate, getKejadianPerTahun } = require( "../controllers/KejadianBencanaController.js");
 
 const router = express.Router();
 // Kejadian
@@ -21,4 +21,5 @@ router.post('/', postKejadian);
 router.patch('/:id', updateKejadian);
 router.delete('/:id', deleteKejadian);
 
+router.get('/kejadian-per-tahun', getKejadianPerTahun);
 module.exports = router;

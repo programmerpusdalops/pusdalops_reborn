@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { useEffect, useRef, useState } from 'react';
 import { LayersControl, MapContainer, TileLayer, GeoJSON } from 'react-leaflet';
 import CardTotalKejadianMobile from '../../components/Module/CardTotalKejadianMobile';
