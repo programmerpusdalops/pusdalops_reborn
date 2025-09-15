@@ -7,6 +7,9 @@ const Dokumentasi = require("../models/DokumentasiModel.js");
 const JenisKejadian = require("../models/JenisKejadianModel.js");
 const {Op} = require("sequelize");
 const fs = require("fs");
+const Kabupaten = require("../models/KabupatenModel.js");
+const Kecamatan = require("../models/KecamatanModel.js");
+const Kelurahan = require("../models/KelurahanModel.js");
 
 const getCountKejadian = async (req, res) => {
   try {
@@ -343,6 +346,10 @@ const getKejadian = async (req, res) => {
   }
 };
 
+// const getKejadian = async (req, res) => {
+
+// };
+
 const getKejadianById = async (req, res) => {
   try {
     const kejadian = await Kejadian.findAll({
@@ -650,37 +657,40 @@ const getKejadianPerTahun = async (req, res) => {
   try {
     const tahun = req.query.tahun || new Date().getFullYear().toString();
 
+    const { Kejadian, LokasiKejadian, Kabupaten, Kecamatan, Kelurahan } = require("../models/Connector.js");
     const kejadianList = await Kejadian.findAll({
       where: { tanggal: { [Op.like]: `%${tahun}%` } },
       include: [
-        { model: JenisKejadian },
+        { model: JenisKejadian, as: "JenisKejadian" },
         { 
-          model: LokasiKejadian,
-          include: ["Kabupaten", "Kecamatan", "Desa"] 
+          model: LokasiKejadian, as: "LokasiKejadians",
+          include: [
+            { model: Kabupaten, as: "Kabupaten" },
+            { model: Kecamatan, as: "Kecamatan" },
+            { model: Kelurahan, as: "Kelurahan" }
+          ]
         }
       ]
     });
-
     const geojson = {
       type: "FeatureCollection",
       features: kejadianList.flatMap(kejadian =>
-        (kejadian.LokasiKejadians ?? []).map(lokasi => ({
-          type: "Feature",
-          geometry: {
-            type: "Point",
-            coordinates: lokasi?.lat && lokasi?.long 
-              ? [parseFloat(lokasi.long), parseFloat(lokasi.lat)]
-              : null
-          },
-          properties: {
-            kejadian: kejadian?.JenisKejadian?.nama ?? "",
-            tgl: kejadian?.tanggal ?? "",
-            lokasi: lokasi?.Desa?.nama ?? lokasi?.desa ?? "",
-            kec: lokasi?.Kecamatan?.nama ?? lokasi?.kec ?? "",
-            kab: lokasi?.Kabupaten?.nama ?? lokasi?.kab ?? "",
-            kronologis: kejadian?.kronologis ?? ""
-          }
-        }))
+        (kejadian.LokasiKejadians ?? [])
+          .filter(lokasi => lokasi?.lat && lokasi?.long) // hanya ambil lokasi yg ada koordinat
+          .map(lokasi => ({
+            type: "Feature",
+            geometry: {
+              type: "Point",
+              coordinates: [parseFloat(lokasi.long), parseFloat(lokasi.lat)]
+            },
+            properties: {
+              kejadian: kejadian?.JenisKejadian?.nama ?? "",
+              tgl: kejadian?.tanggal ?? "",
+              lokasi: lokasi?.Kelurahan?.name ?? lokasi?.desa ?? "",
+              kab: lokasi?.Kabupaten?.name ?? lokasi?.kab ?? "",
+              kronologis: kejadian?.kronologis ?? ""
+            }
+          }))
       )
     };
 
@@ -688,6 +698,60 @@ const getKejadianPerTahun = async (req, res) => {
   } catch (error) {
     res.status(500).json({ message: error.message });
   }
+    // try {
+    //   const tahun = req.query.tahun || new Date().getFullYear().toString();
+
+    //   const { Kejadian, LokasiKejadian, Kabupaten, Kecamatan, Kelurahan } = require("../models/Connector.js");
+
+    //   const kejadianList = await Kejadian.findAll({
+    //     where: { tanggal: { [Op.like]: `%${tahun}%` } },
+    //     include: [
+    //       { model: JenisKejadian, as: "JenisKejadian" },
+    //       { 
+    //         model: LokasiKejadian, 
+    //         as: "LokasiKejadians",
+    //         where: {
+    //           lat: { [Op.ne]: null },
+    //           long: { [Op.ne]: null }
+    //         },
+    //         required: false, // supaya kejadian tanpa lokasi tetap bisa muncul kalau dibutuhkan
+    //         include: [
+    //           { model: Kabupaten, as: "Kabupaten" },
+    //           { model: Kecamatan, as: "Kecamatan" },
+    //           { model: Kelurahan, as: "Kelurahan" }
+    //         ]
+    //       }
+    //     ]
+    //   });
+
+    //   const geojson = {
+    //     type: "FeatureCollection",
+    //     features: kejadianList.flatMap(kejadian =>
+    //       (kejadian.LokasiKejadians ?? [])
+    //         .filter(lokasi => lokasi?.lat && lokasi?.long && !isNaN(lokasi.lat) && !isNaN(lokasi.long))
+    //         .map(lokasi => ({
+    //           type: "Feature",
+    //           geometry: {
+    //             type: "Point",
+    //             coordinates: [parseFloat(lokasi.long), parseFloat(lokasi.lat)]
+    //           },
+    //           properties: {
+    //             kejadian: kejadian?.JenisKejadian?.nama ?? "",
+    //             tgl: kejadian?.tanggal ?? "",
+    //             lokasi: lokasi?.Kelurahan?.name ?? lokasi?.desa ?? "",
+    //             kec: lokasi?.Kecamatan?.name ?? lokasi?.kec ?? "",
+    //             kab: lokasi?.Kabupaten?.name ?? lokasi?.kab ?? "",
+    //             kronologis: kejadian?.kronologis ?? ""
+    //           }
+    //         }))
+    //     )
+    //   };
+
+    //   res.json(geojson);
+    // } catch (error) {
+    //   res.status(500).json({ message: error.message });
+    // }
+
 };
 
 

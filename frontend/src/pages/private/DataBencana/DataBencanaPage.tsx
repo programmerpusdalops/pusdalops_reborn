@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { SetStateAction, useEffect, useState } from 'react';
 import Breadcrumb from '../../../components/Breadcrumb';
 import { NavLink } from 'react-router-dom';

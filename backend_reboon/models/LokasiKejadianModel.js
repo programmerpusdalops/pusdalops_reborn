@@ -1,6 +1,5 @@
 const { Sequelize } = require("sequelize");
 const db = require("../config/Database.js");
-
 const Kabupaten = require("./KabupatenModel.js");
 const Kecamatan = require("./KecamatanModel.js");
 const Kelurahan = require("./KelurahanModel.js");

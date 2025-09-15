@@ -5,6 +5,7 @@ const { getCountKejadian, getCountKorbanTerdampak, getCountKejadianPerTahun, get
 const router = express.Router();
 // Kejadian
 
+router.get('/pertahun', getKejadianPerTahun);
 router.get('/count/kejadian', getCountKejadian);
 router.get('/count/terdampak', getCountKorbanTerdampak);
 router.get('/persentase', getPersentaseKejadian);
@@ -21,5 +22,5 @@ router.post('/', postKejadian);
 router.patch('/:id', updateKejadian);
 router.delete('/:id', deleteKejadian);
 
-router.get('/kejadian-per-tahun', getKejadianPerTahun);
+
 module.exports = router;
