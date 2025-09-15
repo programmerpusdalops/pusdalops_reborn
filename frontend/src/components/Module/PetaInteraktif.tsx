@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { useEffect, useRef, useState } from 'react';
 import { LayersControl, MapContainer, TileLayer, GeoJSON } from 'react-leaflet';
 import CardTotalKejadianMobile from '../../components/Module/CardTotalKejadianMobile';
@@ -6,17 +7,37 @@ import * as api from '../../utils/Api';
 import { Icon } from 'leaflet';
 import L from 'leaflet';
 
-import testing from '../../utils/js/testing.json';
+// import testing from '../../utils/js/testing1.json';
 import batas_kab from '../../utils/js/BATAS_KAB_BIG_2021.json';
 
 import CardTotalKejadian from './CardTotalKejadian';
 
 export default function PetaInteraktif() {
   const [totalKejadian, setTotalKejadian] = useState();
-  const[bencana] = useState<any>(testing)
+  const [bencana, setBencana] = useState<any>([]);
+  // const[bencana] = useState<any>(testing);
+  console.log(bencana);
   const[batasKab] = useState<any>(batas_kab)
 
   const geo = useRef(null);
+
+  //Jelaskan fungsi perbaris
+  // fetch data kejadian
+  useEffect(() => {
+    // Untuk mengambil data kejadian dari API
+    const fetchKejadian = async () => {
+      // Memanggil fungsi fetchKejadianPerTahun dari modul api untuk mendapatkan data kejadian per tahun
+      const response = await api.fetchKejadianPerTahun(); 
+      // Menyimpan data yang diterima dari response ke dalam state bencana
+      setBencana(response?.data);
+      // ⚠️ ini mungkin belum langsung update karena state asynchronous
+      console.log("Response API:", response?.data);
+    };
+    // Memanggil fungsi fetchKejadian untuk mengeksekusi pengambilan data
+    // console.log(bencana);
+    fetchKejadian();
+    // Menambahkan array kosong sebagai dependensi agar efek ini hanya berjalan sekali saat komponen dipasang
+  }, []);
 
   useEffect(() => {
     const JenisKejadian = async () => {
@@ -87,7 +108,8 @@ export default function PetaInteraktif() {
           <LayersControl position="bottomleft">
             <LayersControl.Overlay name="Titik Lokasi Bencana Tahun 2025">
               <GeoJSON
-                data={bencana}
+                key={JSON.stringify(bencana)} // untuk merender ulang ketika data berubah
+                data={bencana} // data dari state bencana
                 ref={geo}
                 pointToLayer={function (_geoJsonPoint, latlng) {
                   return L.marker(latlng, {
@@ -105,12 +127,16 @@ export default function PetaInteraktif() {
                       <li>
                         Lokasi : Desa ${feature?.properties?.lokasi}
                       </li>
+                      <li>
+                        Tanggal : ${feature?.properties?.tgl}
+                      </li>
                     </ul>
                   </div>
                   `);
                 }}
               />
             </LayersControl.Overlay>
+
             <LayersControl.Overlay name="Batas Kabupaten">
               <GeoJSON
                 data={batasKab}

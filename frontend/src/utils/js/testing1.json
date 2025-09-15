@@ -1,0 +1,3915 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.33853,
+          -1.35967
+        ]
+      },
+      "properties": {
+        "kejadian": "Tanah Longsor",
+        "tgl": "2025-04-22",
+        "lokasi": "Sedoa",
+        "kab": "KAB. POSO",
+        "kronologis": "Terjadinya intensitas curah hujan yang tinggi menyebabkan terjadinya tanah longsor yang menyebabkan tertutupnya akses jalan di Desa Sedoa."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.80146,
+          1.11164
+        ]
+      },
+      "properties": {
+        "kejadian": "Puting Beliung",
+        "tgl": "2025-07-07",
+        "lokasi": "Ginunggung",
+        "kab": "KAB. TOLI TOLI",
+        "kronologis": "Cuaca buruk sekitar Pukul 14.00 WITA menyebabkan terjadinya hujan disertai angin puting beliung di Desa Ginunggung, Desa Bajugan Kecamatan Galang Kabupaten Toli-Toli"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.82828,
+          1.20199
+        ]
+      },
+      "properties": {
+        "kejadian": "Puting Beliung",
+        "tgl": "2025-07-07",
+        "lokasi": "Ginunggung",
+        "kab": "KAB. TOLI TOLI",
+        "kronologis": "Cuaca buruk sekitar Pukul 14.00 WITA menyebabkan terjadinya hujan disertai angin puting beliung di Desa Ginunggung, Desa Bajugan Kecamatan Galang Kabupaten Toli-Toli"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.66882,
+          -1.41609
+        ]
+      },
+      "properties": {
+        "kejadian": "Gempa Bumi",
+        "tgl": "2025-08-17",
+        "lokasi": "Bega",
+        "kab": "KAB. POSO",
+        "kronologis": "Pada hari Minggu, 17 Agustus 2025 Pukul 06.38 WITA wilayah Poso Sulawesi Tengah diguncang gempa tektonik. Hasil analisis BMKG menunjukkan gempa bumi ini memiliki parameter update dengan magnitudo M 6,0. episenter gempa bumi terletak pada koordinat 1,30ᴼ LS ; 120,62ᴼ BT atau tepatnya berlokasi didarat wilayah Poso Sulawesi Tengah pada kedalaman 10 Km."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.64415,
+          -1.35415
+        ]
+      },
+      "properties": {
+        "kejadian": "Gempa Bumi",
+        "tgl": "2025-08-17",
+        "lokasi": "Tokorondo",
+        "kab": "KAB. POSO",
+        "kronologis": "Pada hari Minggu, 17 Agustus 2025 Pukul 06.38 WITA wilayah Poso Sulawesi Tengah diguncang gempa tektonik. Hasil analisis BMKG menunjukkan gempa bumi ini memiliki parameter update dengan magnitudo M 6,0. episenter gempa bumi terletak pada koordinat 1,30ᴼ LS ; 120,62ᴼ BT atau tepatnya berlokasi didarat wilayah Poso Sulawesi Tengah pada kedalaman 10 Km."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.64735,
+          -1.43588
+        ]
+      },
+      "properties": {
+        "kejadian": "Gempa Bumi",
+        "tgl": "2025-08-17",
+        "lokasi": "Tabalu",
+        "kab": "KAB. POSO",
+        "kronologis": "Pada hari Minggu, 17 Agustus 2025 Pukul 06.38 WITA wilayah Poso Sulawesi Tengah diguncang gempa tektonik. Hasil analisis BMKG menunjukkan gempa bumi ini memiliki parameter update dengan magnitudo M 6,0. episenter gempa bumi terletak pada koordinat 1,30ᴼ LS ; 120,62ᴼ BT atau tepatnya berlokasi didarat wilayah Poso Sulawesi Tengah pada kedalaman 10 Km."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.6229,
+          -1.30317
+        ]
+      },
+      "properties": {
+        "kejadian": "Gempa Bumi",
+        "tgl": "2025-08-17",
+        "lokasi": "Tiwaa",
+        "kab": "KAB. POSO",
+        "kronologis": "Pada hari Minggu, 17 Agustus 2025 Pukul 06.38 WITA wilayah Poso Sulawesi Tengah diguncang gempa tektonik. Hasil analisis BMKG menunjukkan gempa bumi ini memiliki parameter update dengan magnitudo M 6,0. episenter gempa bumi terletak pada koordinat 1,30ᴼ LS ; 120,62ᴼ BT atau tepatnya berlokasi didarat wilayah Poso Sulawesi Tengah pada kedalaman 10 Km."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.63615,
+          -1.4022
+        ]
+      },
+      "properties": {
+        "kejadian": "Gempa Bumi",
+        "tgl": "2025-08-17",
+        "lokasi": "Masamba",
+        "kab": "KAB. POSO",
+        "kronologis": "Pada hari Minggu, 17 Agustus 2025 Pukul 06.38 WITA wilayah Poso Sulawesi Tengah diguncang gempa tektonik. Hasil analisis BMKG menunjukkan gempa bumi ini memiliki parameter update dengan magnitudo M 6,0. episenter gempa bumi terletak pada koordinat 1,30ᴼ LS ; 120,62ᴼ BT atau tepatnya berlokasi didarat wilayah Poso Sulawesi Tengah pada kedalaman 10 Km."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.61363,
+          -1.29485
+        ]
+      },
+      "properties": {
+        "kejadian": "Gempa Bumi",
+        "tgl": "2025-08-17",
+        "lokasi": "Towu",
+        "kab": "KAB. POSO",
+        "kronologis": "Pada hari Minggu, 17 Agustus 2025 Pukul 06.38 WITA wilayah Poso Sulawesi Tengah diguncang gempa tektonik. Hasil analisis BMKG menunjukkan gempa bumi ini memiliki parameter update dengan magnitudo M 6,0. episenter gempa bumi terletak pada koordinat 1,30ᴼ LS ; 120,62ᴼ BT atau tepatnya berlokasi didarat wilayah Poso Sulawesi Tengah pada kedalaman 10 Km."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.63532,
+          -1.47505
+        ]
+      },
+      "properties": {
+        "kejadian": "Gempa Bumi",
+        "tgl": "2025-08-17",
+        "lokasi": "Patiwunga",
+        "kab": "KAB. POSO",
+        "kronologis": "Pada hari Minggu, 17 Agustus 2025 Pukul 06.38 WITA wilayah Poso Sulawesi Tengah diguncang gempa tektonik. Hasil analisis BMKG menunjukkan gempa bumi ini memiliki parameter update dengan magnitudo M 6,0. episenter gempa bumi terletak pada koordinat 1,30ᴼ LS ; 120,62ᴼ BT atau tepatnya berlokasi didarat wilayah Poso Sulawesi Tengah pada kedalaman 10 Km."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.63528,
+          -1.48418
+        ]
+      },
+      "properties": {
+        "kejadian": "Gempa Bumi",
+        "tgl": "2025-08-17",
+        "lokasi": "Tangkura",
+        "kab": "KAB. POSO",
+        "kronologis": "Pada hari Minggu, 17 Agustus 2025 Pukul 06.38 WITA wilayah Poso Sulawesi Tengah diguncang gempa tektonik. Hasil analisis BMKG menunjukkan gempa bumi ini memiliki parameter update dengan magnitudo M 6,0. episenter gempa bumi terletak pada koordinat 1,30ᴼ LS ; 120,62ᴼ BT atau tepatnya berlokasi didarat wilayah Poso Sulawesi Tengah pada kedalaman 10 Km."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.63987,
+          -1.36156
+        ]
+      },
+      "properties": {
+        "kejadian": "Gempa Bumi",
+        "tgl": "2025-08-17",
+        "lokasi": "Lape",
+        "kab": "KAB. POSO",
+        "kronologis": "Pada hari Minggu, 17 Agustus 2025 Pukul 06.38 WITA wilayah Poso Sulawesi Tengah diguncang gempa tektonik. Hasil analisis BMKG menunjukkan gempa bumi ini memiliki parameter update dengan magnitudo M 6,0. episenter gempa bumi terletak pada koordinat 1,30ᴼ LS ; 120,62ᴼ BT atau tepatnya berlokasi didarat wilayah Poso Sulawesi Tengah pada kedalaman 10 Km."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.56902,
+          -1.26543
+        ]
+      },
+      "properties": {
+        "kejadian": "Gempa Bumi",
+        "tgl": "2025-08-17",
+        "lokasi": "Maranda",
+        "kab": "KAB. POSO",
+        "kronologis": "Pada hari Minggu, 17 Agustus 2025 Pukul 06.38 WITA wilayah Poso Sulawesi Tengah diguncang gempa tektonik. Hasil analisis BMKG menunjukkan gempa bumi ini memiliki parameter update dengan magnitudo M 6,0. episenter gempa bumi terletak pada koordinat 1,30ᴼ LS ; 120,62ᴼ BT atau tepatnya berlokasi didarat wilayah Poso Sulawesi Tengah pada kedalaman 10 Km."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.59083,
+          -1.27527
+        ]
+      },
+      "properties": {
+        "kejadian": "Gempa Bumi",
+        "tgl": "2025-08-17",
+        "lokasi": "Kilo",
+        "kab": "KAB. POSO",
+        "kronologis": "Pada hari Minggu, 17 Agustus 2025 Pukul 06.38 WITA wilayah Poso Sulawesi Tengah diguncang gempa tektonik. Hasil analisis BMKG menunjukkan gempa bumi ini memiliki parameter update dengan magnitudo M 6,0. episenter gempa bumi terletak pada koordinat 1,30ᴼ LS ; 120,62ᴼ BT atau tepatnya berlokasi didarat wilayah Poso Sulawesi Tengah pada kedalaman 10 Km."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.68186,
+          -2.07475
+        ]
+      },
+      "properties": {
+        "kejadian": "Banjir",
+        "tgl": "2025-03-16",
+        "lokasi": "Pasir Putih",
+        "kab": "KAB. POSO",
+        "kronologis": "Curah hujan tinggi yang terjadi di daerah aliran sungai Kodina, sejak beberapa hari terakhir menyebabkan sungai meluap dan merendam pemukiman warga sebanyak 10 unit rumah setinggi 1,5 meter"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          22.08235,
+          -2.78653
+        ]
+      },
+      "properties": {
+        "kejadian": "Banjir",
+        "tgl": "2025-03-16",
+        "lokasi": "Lalampu",
+        "kab": "KAB. MOROWALI",
+        "kronologis": "Hujan Lebat yang mengguyur wilayah kecamatan Bahodopi khususnya Desa Labota dan Desa Lalampu, mengakibatkan debit air meningkat sekitar 50-60 cm. Banjir menggenangi ruas jalan mulai dari PT. Ampang sampai SDN Lalampu, dan merendam pemukiman warga."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          122.18229,
+          -2.86986
+        ]
+      },
+      "properties": {
+        "kejadian": "Banjir",
+        "tgl": "2025-03-16",
+        "lokasi": "Labota",
+        "kab": "KAB. MOROWALI",
+        "kronologis": "Hujan Lebat yang mengguyur wilayah kecamatan Bahodopi khususnya Desa Labota dan Desa Lalampu, mengakibatkan debit air meningkat sekitar 50-60 cm. Banjir menggenangi ruas jalan mulai dari PT. Ampang sampai SDN Lalampu, dan merendam pemukiman warga."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          119.85083,
+          -0.90337
+        ]
+      },
+      "properties": {
+        "kejadian": "Banjir",
+        "tgl": "2025-04-25",
+        "lokasi": "Balaroa",
+        "kab": "KOTA PALU",
+        "kronologis": "Intensitas curah hujan yang tinggi mengakibatkan terjadinnya banjir di wilayah Kec. Palu Barat Kota Palu"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          123.482438,
+          -1.637963
+        ]
+      },
+      "properties": {
+        "kejadian": "Puting Beliung",
+        "tgl": "2025-02-09",
+        "lokasi": "Monsongan",
+        "kab": "KAB. BANGGAI LAUT",
+        "kronologis": "Terjadi hujan deras disertai angin kencang pada pukul 23.45 WITA di 2 desa di Kec. Banggai Tengah dan 2 Desa/Kel di Kec. Banggai yang berdampak rusak berat pada satu unit rumah warga."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          123.485463,
+          -1.63023
+        ]
+      },
+      "properties": {
+        "kejadian": "Puting Beliung",
+        "tgl": "2025-02-09",
+        "lokasi": "Gonggong",
+        "kab": "KAB. BANGGAI LAUT",
+        "kronologis": "Terjadi hujan deras disertai angin kencang pada pukul 23.45 WITA di 2 desa di Kec. Banggai Tengah dan 2 Desa/Kel di Kec. Banggai yang berdampak rusak berat pada satu unit rumah warga."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          123.496885,
+          -1.603698
+        ]
+      },
+      "properties": {
+        "kejadian": "Puting Beliung",
+        "tgl": "2025-02-09",
+        "lokasi": "Lampa",
+        "kab": "KAB. BANGGAI LAUT",
+        "kronologis": "Terjadi hujan deras disertai angin kencang pada pukul 23.45 WITA di 2 desa di Kec. Banggai Tengah dan 2 Desa/Kel di Kec. Banggai yang berdampak rusak berat pada satu unit rumah warga."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          123.498172,
+          -1.594347
+        ]
+      },
+      "properties": {
+        "kejadian": "Puting Beliung",
+        "tgl": "2025-02-09",
+        "lokasi": "Lompio",
+        "kab": "KAB. BANGGAI LAUT",
+        "kronologis": "Terjadi hujan deras disertai angin kencang pada pukul 23.45 WITA di 2 desa di Kec. Banggai Tengah dan 2 Desa/Kel di Kec. Banggai yang berdampak rusak berat pada satu unit rumah warga."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.85737,
+          -0.97814
+        ]
+      },
+      "properties": {
+        "kejadian": "Banjir dan Tanah Longsor",
+        "tgl": "2025-01-22",
+        "lokasi": "Obo Balingara",
+        "kab": "KAB. BANGGAI",
+        "kronologis": "Sesuai rilis dari BMKG potensi intensitas curah hujan yang tinggi di wilayah Kabupaten Banggai, sehingga mengakibatkan Banjir Bandang yang merembes ke ruas jalan trans sulawesi dan menghalangi jalan yang menghubungkan Desa Batu Hitam dan Desa Obo Balingara."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          123.5364,
+          -1.71661
+        ]
+      },
+      "properties": {
+        "kejadian": "Banjir",
+        "tgl": "2025-07-11",
+        "lokasi": "Tolokibit",
+        "kab": "KAB. BANGGAI LAUT",
+        "kronologis": "Bahwa pada hari Jumat Tanggal 11 Juli 2025 Pukul o7.45 WITA telah terjadi banjir di Desa Tolokibit antara Dusun 1 dan Dusun 3 penyebabnya dikarekan oleh hujan yang cukup lama sehingga 2 rumah warga yang berada di pinggir sungai terancam karena tanah di tepi sungai mulai tergerus dan menyebabkan longsor."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.18108,
+          0.24947
+        ]
+      },
+      "properties": {
+        "kejadian": "Banjir",
+        "tgl": "2025-08-20",
+        "lokasi": "Sidoan Selatan",
+        "kab": "KAB. PARIGI MOUTONG",
+        "kronologis": "Rabu 20 Agustus 2025 Pukul 00.10 WITA telah terjadi Banjir di Desa Sidoan Selatan Kecamatan Sidoan. Akibat hujan dengan curah hujan yang deras menyebabkan banjir meluap hingga ke pemukiman."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.52642,
+          1.08023
+        ]
+      },
+      "properties": {
+        "kejadian": "Banjir",
+        "tgl": "2025-01-02",
+        "lokasi": "Doulan",
+        "kab": "KAB. BUOL",
+        "kronologis": "Intensitas curah hujan tinggi\r\n\r\nIntensitas curah hujan tinggi\r\n\r\n\r\n\r\n\r\n\r\n"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          119.67163,
+          -0.82612
+        ]
+      },
+      "properties": {
+        "kejadian": "Banjir",
+        "tgl": "2025-04-15",
+        "lokasi": "Salungkaenu",
+        "kab": "KAB. DONGGALA",
+        "kronologis": "Pada hari Selasa tanggal 15 April 2025 pukul 13.00 WITA wilayah Kec. Banawa Selatan di guyur hujan dengan intensitas tinggi yang mengakibatkan meluapnya air sungai ke pemukiman warga."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          119.67834,
+          -0.84369
+        ]
+      },
+      "properties": {
+        "kejadian": "Banjir",
+        "tgl": "2025-04-15",
+        "lokasi": "Sarombaya",
+        "kab": "KAB. DONGGALA",
+        "kronologis": "Pada hari Selasa tanggal 15 April 2025 pukul 13.00 WITA wilayah Kec. Banawa Selatan di guyur hujan dengan intensitas tinggi yang mengakibatkan meluapnya air sungai ke pemukiman warga."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          119.60639,
+          -0.94494
+        ]
+      },
+      "properties": {
+        "kejadian": "Banjir",
+        "tgl": "2025-04-15",
+        "lokasi": "Ongulara",
+        "kab": "KAB. DONGGALA",
+        "kronologis": "Pada hari Selasa tanggal 15 April 2025 pukul 13.00 WITA wilayah Kec. Banawa Selatan di guyur hujan dengan intensitas tinggi yang mengakibatkan meluapnya air sungai ke pemukiman warga."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          119.63403,
+          -0.80483
+        ]
+      },
+      "properties": {
+        "kejadian": "Banjir",
+        "tgl": "2025-04-15",
+        "lokasi": "Lembasada",
+        "kab": "KAB. DONGGALA",
+        "kronologis": "Pada hari Selasa tanggal 15 April 2025 pukul 13.00 WITA wilayah Kec. Banawa Selatan di guyur hujan dengan intensitas tinggi yang mengakibatkan meluapnya air sungai ke pemukiman warga."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          119.65832,
+          -0.85379
+        ]
+      },
+      "properties": {
+        "kejadian": "Banjir",
+        "tgl": "2025-04-15",
+        "lokasi": "Salumpaku",
+        "kab": "KAB. DONGGALA",
+        "kronologis": "Pada hari Selasa tanggal 15 April 2025 pukul 13.00 WITA wilayah Kec. Banawa Selatan di guyur hujan dengan intensitas tinggi yang mengakibatkan meluapnya air sungai ke pemukiman warga."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          119.63513,
+          -0.80849
+        ]
+      },
+      "properties": {
+        "kejadian": "Banjir",
+        "tgl": "2025-04-15",
+        "lokasi": "Tanamea",
+        "kab": "KAB. DONGGALA",
+        "kronologis": "Pada hari Selasa tanggal 15 April 2025 pukul 13.00 WITA wilayah Kec. Banawa Selatan di guyur hujan dengan intensitas tinggi yang mengakibatkan meluapnya air sungai ke pemukiman warga."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          119.66919,
+          -0.83661
+        ]
+      },
+      "properties": {
+        "kejadian": "Banjir",
+        "tgl": "2025-04-15",
+        "lokasi": "Bambarimi",
+        "kab": "KAB. DONGGALA",
+        "kronologis": "Pada hari Selasa tanggal 15 April 2025 pukul 13.00 WITA wilayah Kec. Banawa Selatan di guyur hujan dengan intensitas tinggi yang mengakibatkan meluapnya air sungai ke pemukiman warga."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          119.64796,
+          -0.81811
+        ]
+      },
+      "properties": {
+        "kejadian": "Banjir",
+        "tgl": "2025-04-15",
+        "lokasi": "Lumbu Tarombo",
+        "kab": "KAB. DONGGALA",
+        "kronologis": "Pada hari Selasa tanggal 15 April 2025 pukul 13.00 WITA wilayah Kec. Banawa Selatan di guyur hujan dengan intensitas tinggi yang mengakibatkan meluapnya air sungai ke pemukiman warga."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          119.67815,
+          -0.81901
+        ]
+      },
+      "properties": {
+        "kejadian": "Banjir",
+        "tgl": "2025-04-15",
+        "lokasi": "Lumbumamara",
+        "kab": "KAB. DONGGALA",
+        "kronologis": "Pada hari Selasa tanggal 15 April 2025 pukul 13.00 WITA wilayah Kec. Banawa Selatan di guyur hujan dengan intensitas tinggi yang mengakibatkan meluapnya air sungai ke pemukiman warga."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          119.75491,
+          -0.70139
+        ]
+      },
+      "properties": {
+        "kejadian": "Banjir",
+        "tgl": "2025-04-01",
+        "lokasi": "Maleni",
+        "kab": "KAB. DONGGALA",
+        "kronologis": "Intensitas hujan yang tinggi terjadi di Kec. Banawa, Kab. Donggala sehingga menyebabkan sungai yang berada di Kelurahan Kabonga Besar, Kabonga Kecil dan Maleni meluap dan mengakibatkan banjir disertai material lumpur\r\n"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          119.75494,
+          -0.70133
+        ]
+      },
+      "properties": {
+        "kejadian": "Banjir",
+        "tgl": "2025-04-01",
+        "lokasi": "Kabonga Kecil",
+        "kab": "KAB. DONGGALA",
+        "kronologis": "Intensitas hujan yang tinggi terjadi di Kec. Banawa, Kab. Donggala sehingga menyebabkan sungai yang berada di Kelurahan Kabonga Besar, Kabonga Kecil dan Maleni meluap dan mengakibatkan banjir disertai material lumpur\r\n"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          119.74454,
+          -0.66982
+        ]
+      },
+      "properties": {
+        "kejadian": "Banjir",
+        "tgl": "2025-04-01",
+        "lokasi": "Tanjung Batu",
+        "kab": "KAB. DONGGALA",
+        "kronologis": "Intensitas hujan yang tinggi terjadi di Kec. Banawa, Kab. Donggala sehingga menyebabkan sungai yang berada di Kelurahan Kabonga Besar, Kabonga Kecil dan Maleni meluap dan mengakibatkan banjir disertai material lumpur\r\n"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          119.76129,
+          -0.71003
+        ]
+      },
+      "properties": {
+        "kejadian": "Banjir",
+        "tgl": "2025-04-01",
+        "lokasi": "Kabonga Besar",
+        "kab": "KAB. DONGGALA",
+        "kronologis": "Intensitas hujan yang tinggi terjadi di Kec. Banawa, Kab. Donggala sehingga menyebabkan sungai yang berada di Kelurahan Kabonga Besar, Kabonga Kecil dan Maleni meluap dan mengakibatkan banjir disertai material lumpur\r\n"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          119.97515,
+          -1.39928
+        ]
+      },
+      "properties": {
+        "kejadian": "Banjir Bandang",
+        "tgl": "2025-08-14",
+        "lokasi": "Namo",
+        "kab": "KAB. SIGI",
+        "kronologis": "Akibat curah hujan yang cukup deras sehingga mengakibatkan terjadinya banjir bandang hingga meluap ke pemukiman warga dan jalan Palu - Kulawi"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          119.68987,
+          -0.7259
+        ]
+      },
+      "properties": {
+        "kejadian": "Banjir",
+        "tgl": "2025-07-07",
+        "lokasi": "Mekar Baru",
+        "kab": "KAB. DONGGALA",
+        "kronologis": "Banjir di beberapa wilayah Kecamatan Banawa Tengah yang disebabkan hujan dengan intensitas lebat memicu meluapnya air sungai dan mengalirnya air di Sungai Mati"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          119.71908,
+          -0.79391
+        ]
+      },
+      "properties": {
+        "kejadian": "Banjir",
+        "tgl": "2025-07-07",
+        "lokasi": "Powelua",
+        "kab": "KAB. DONGGALA",
+        "kronologis": "Banjir di beberapa wilayah Kecamatan Banawa Tengah yang disebabkan hujan dengan intensitas lebat memicu meluapnya air sungai dan mengalirnya air di Sungai Mati"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          119.69855,
+          -0.72354
+        ]
+      },
+      "properties": {
+        "kejadian": "Banjir",
+        "tgl": "2025-07-07",
+        "lokasi": "Limboro",
+        "kab": "KAB. DONGGALA",
+        "kronologis": "Banjir di beberapa wilayah Kecamatan Banawa Tengah yang disebabkan hujan dengan intensitas lebat memicu meluapnya air sungai dan mengalirnya air di Sungai Mati"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          119.70963,
+          -0.73317
+        ]
+      },
+      "properties": {
+        "kejadian": "Banjir",
+        "tgl": "2025-07-07",
+        "lokasi": "Kola-Kola",
+        "kab": "KAB. DONGGALA",
+        "kronologis": "Banjir di beberapa wilayah Kecamatan Banawa Tengah yang disebabkan hujan dengan intensitas lebat memicu meluapnya air sungai dan mengalirnya air di Sungai Mati"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          119.71423,
+          -0.73945
+        ]
+      },
+      "properties": {
+        "kejadian": "Banjir",
+        "tgl": "2025-07-07",
+        "lokasi": "Lumbudolo",
+        "kab": "KAB. DONGGALA",
+        "kronologis": "Banjir di beberapa wilayah Kecamatan Banawa Tengah yang disebabkan hujan dengan intensitas lebat memicu meluapnya air sungai dan mengalirnya air di Sungai Mati"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          119.71776,
+          -0.75911
+        ]
+      },
+      "properties": {
+        "kejadian": "Banjir",
+        "tgl": "2025-07-07",
+        "lokasi": "Lampo",
+        "kab": "KAB. DONGGALA",
+        "kronologis": "Banjir di beberapa wilayah Kecamatan Banawa Tengah yang disebabkan hujan dengan intensitas lebat memicu meluapnya air sungai dan mengalirnya air di Sungai Mati"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.22773,
+          -1.95509
+        ]
+      },
+      "properties": {
+        "kejadian": "Banjir",
+        "tgl": "2025-03-24",
+        "lokasi": "Ulu Laa",
+        "kab": "KAB. MOROWALI UTARA",
+        "kronologis": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.22773,
+          -1.95509
+        ]
+      },
+      "properties": {
+        "kejadian": "Banjir",
+        "tgl": "2025-03-24",
+        "lokasi": "Togo Mulyo",
+        "kab": "KAB. MOROWALI UTARA",
+        "kronologis": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.37608,
+          -2.0641
+        ]
+      },
+      "properties": {
+        "kejadian": "Banjir",
+        "tgl": "2025-03-24",
+        "lokasi": "Tompira",
+        "kab": "KAB. MOROWALI UTARA",
+        "kronologis": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.29534,
+          -2.06044
+        ]
+      },
+      "properties": {
+        "kejadian": "Banjir",
+        "tgl": "2025-03-24",
+        "lokasi": "Onepute",
+        "kab": "KAB. MOROWALI UTARA",
+        "kronologis": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.37608,
+          -2.0641
+        ]
+      },
+      "properties": {
+        "kejadian": "Banjir",
+        "tgl": "2025-03-24",
+        "lokasi": "Bunta",
+        "kab": "KAB. MOROWALI UTARA",
+        "kronologis": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.29534,
+          -2.06044
+        ]
+      },
+      "properties": {
+        "kejadian": "Banjir",
+        "tgl": "2025-03-24",
+        "lokasi": "Moleono",
+        "kab": "KAB. MOROWALI UTARA",
+        "kronologis": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          119.92409,
+          -1.02582
+        ]
+      },
+      "properties": {
+        "kejadian": "Puting Beliung",
+        "tgl": "2025-07-26",
+        "lokasi": "Soulowe",
+        "kab": "KAB. SIGI",
+        "kronologis": "Hujan lebat, angin kencang yang disertai petir yang melanda Kab. Sigi dan sekitarnya hingga malam ini mengakibatkan sejumlah pohon tumbang sepanjang jalan poros Palu - Palolo. Selain itu, hujan juga mengakibatkan padamnya listrik pada beberapa wilayah Kota Palu dan sekitarnya. "
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          119.91031,
+          -1.02001
+        ]
+      },
+      "properties": {
+        "kejadian": "Puting Beliung",
+        "tgl": "2025-07-26",
+        "lokasi": "Soulowe",
+        "kab": "KAB. SIGI",
+        "kronologis": "Hujan lebat, angin kencang yang disertai petir yang melanda Kab. Sigi dan sekitarnya hingga malam ini mengakibatkan sejumlah pohon tumbang sepanjang jalan poros Palu - Palolo. Selain itu, hujan juga mengakibatkan padamnya listrik pada beberapa wilayah Kota Palu dan sekitarnya. "
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          119.95008,
+          -1.02366
+        ]
+      },
+      "properties": {
+        "kejadian": "Puting Beliung",
+        "tgl": "2025-07-26",
+        "lokasi": "Olobuju",
+        "kab": "KAB. SIGI",
+        "kronologis": "Hujan lebat, angin kencang yang disertai petir yang melanda Kab. Sigi dan sekitarnya hingga malam ini mengakibatkan sejumlah pohon tumbang sepanjang jalan poros Palu - Palolo. Selain itu, hujan juga mengakibatkan padamnya listrik pada beberapa wilayah Kota Palu dan sekitarnya. "
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.01639,
+          -1.12132
+        ]
+      },
+      "properties": {
+        "kejadian": "Puting Beliung",
+        "tgl": "2025-07-26",
+        "lokasi": "Bunga",
+        "kab": "KAB. SIGI",
+        "kronologis": "Hujan lebat, angin kencang yang disertai petir yang melanda Kab. Sigi dan sekitarnya hingga malam ini mengakibatkan sejumlah pohon tumbang sepanjang jalan poros Palu - Palolo. Selain itu, hujan juga mengakibatkan padamnya listrik pada beberapa wilayah Kota Palu dan sekitarnya. "
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          119.93173,
+          -1.01149
+        ]
+      },
+      "properties": {
+        "kejadian": "Puting Beliung",
+        "tgl": "2025-07-26",
+        "lokasi": "Sidera",
+        "kab": "KAB. SIGI",
+        "kronologis": "Hujan lebat, angin kencang yang disertai petir yang melanda Kab. Sigi dan sekitarnya hingga malam ini mengakibatkan sejumlah pohon tumbang sepanjang jalan poros Palu - Palolo. Selain itu, hujan juga mengakibatkan padamnya listrik pada beberapa wilayah Kota Palu dan sekitarnya. "
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.49177,
+          -2.14669
+        ]
+      },
+      "properties": {
+        "kejadian": "Banjir",
+        "tgl": "2025-04-02",
+        "lokasi": "Peboa",
+        "kab": "KAB. MOROWALI UTARA",
+        "kronologis": "Hujan dengan intensitas yang tinggi mengakibatkan meluapnya Sungai Tambalako hingga menggenangi pemukiman warga."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.80374,
+          1.08547
+        ]
+      },
+      "properties": {
+        "kejadian": "Banjir",
+        "tgl": "2025-01-26",
+        "lokasi": "Kalangkangan",
+        "kab": "KAB. TOLI TOLI",
+        "kronologis": "Terjadi hujan sekitar pukul 16.30 hingga saat ini mengakibatkan banjir dibeberapa titik di Desa Ginunggung, Desa Kalangkangan dan Desa Lalos Kec. Galang Kab. Toli-Toli\r\n"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.4575,
+          0.77518
+        ]
+      },
+      "properties": {
+        "kejadian": "Banjir",
+        "tgl": "2025-03-28",
+        "lokasi": "Tinabogan",
+        "kab": "KAB. TOLI TOLI",
+        "kronologis": "Pada hari jumat tanggal 28 Maret 2025 pukul 19.20 WITA,  Desa tinabogan dan malomba di guyur hujan dengan intensitas tinggi yang mengakibatkan air sungai meluap dan menggenangi sebagian wilayah pemukiman masyarakat.\r\n\r\n\r\n"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.33735,
+          -1.98029
+        ]
+      },
+      "properties": {
+        "kejadian": "Banjir dan Tanah Longsor",
+        "tgl": "2025-06-14",
+        "lokasi": "Ganda-Ganda",
+        "kab": "KAB. MOROWALI UTARA",
+        "kronologis": "Kejadian banjir tanggal 14 Juni 2025 pukul 22.00 WITA di Kecamatan Petasia Kab. Morowali Utara"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.81474,
+          1.03576
+        ]
+      },
+      "properties": {
+        "kejadian": "Banjir",
+        "tgl": "2025-05-21",
+        "lokasi": "Baru",
+        "kab": "KAB. TOLI TOLI",
+        "kronologis": "Pada hari rabu tanggal 21 mei 2025 pukul 13:50 wilayah kec. Baolan di guyur hujan dengan intensitas tinggi mulai pukul 12:30 Wita sd pukul 14:00 Wita, yang mengakibatkan meluapnya air sungai desa Pangi akibat tidak bisa menampung debit air sehingga air sungai meluap ke jalan raya dan menggenangi sebagian besar wilayah pemukiman masyarakat."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.81753,
+          0.97772
+        ]
+      },
+      "properties": {
+        "kejadian": "Banjir",
+        "tgl": "2025-05-21",
+        "lokasi": "Pangi",
+        "kab": "KAB. TOLI TOLI",
+        "kronologis": "Pada hari rabu tanggal 21 mei 2025 pukul 13:50 wilayah kec. Baolan di guyur hujan dengan intensitas tinggi mulai pukul 12:30 Wita sd pukul 14:00 Wita, yang mengakibatkan meluapnya air sungai desa Pangi akibat tidak bisa menampung debit air sehingga air sungai meluap ke jalan raya dan menggenangi sebagian besar wilayah pemukiman masyarakat."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.55215,
+          1.06379
+        ]
+      },
+      "properties": {
+        "kejadian": "Abrasi Pantai",
+        "tgl": "2025-01-20",
+        "lokasi": "Bukamog",
+        "kab": "KAB. BUOL",
+        "kronologis": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.44203,
+          1.15533
+        ]
+      },
+      "properties": {
+        "kejadian": "Banjir",
+        "tgl": "2025-01-17",
+        "lokasi": "Buol",
+        "kab": "KAB. BUOL",
+        "kronologis": "Intensitas curah hujan Ringan hingga sedang, terjadi pada hari Kamis (16/01/25) pada pukul 03.00 Wita mengakibatkan banjir dan naiknya air laut ±setinggi lutut orang dewasa."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          119.94995,
+          -1.30284
+        ]
+      },
+      "properties": {
+        "kejadian": "Banjir",
+        "tgl": "2025-07-14",
+        "lokasi": "Tuwa",
+        "kab": "KAB. SIGI",
+        "kronologis": "Curah hujan derras yang mengguyur wilayah Gumbasa mengakibatkan meningkatnya volume air sungai Mafane hingga menyebabkan jebolnya Tanggul yang menggenangi rumah penduduk dengan ketinggian sekitar 30 - 50 Cm."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          122.86767,
+          -1.29987
+        ]
+      },
+      "properties": {
+        "kejadian": "Banjir",
+        "tgl": "2025-07-15",
+        "lokasi": "Labasiano",
+        "kab": "KAB. BANGGAI KEPULAUAN",
+        "kronologis": "Curah Hujan  yang cukup tinggi"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          122.85921,
+          -1.28169
+        ]
+      },
+      "properties": {
+        "kejadian": "Banjir",
+        "tgl": "2025-07-15",
+        "lokasi": "Malanggong",
+        "kab": "KAB. BANGGAI KEPULAUAN",
+        "kronologis": "Curah Hujan  yang cukup tinggi"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          122.83129,
+          -1.29677
+        ]
+      },
+      "properties": {
+        "kejadian": "Banjir",
+        "tgl": "2025-07-15",
+        "lokasi": "Tataba",
+        "kab": "KAB. BANGGAI KEPULAUAN",
+        "kronologis": "Curah Hujan  yang cukup tinggi"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.819991,
+          1.081253
+        ]
+      },
+      "properties": {
+        "kejadian": "Tanah Longsor",
+        "tgl": "2025-02-01",
+        "lokasi": "Lunguto",
+        "kab": "KAB. BUOL",
+        "kronologis": "Intensitas hujan yang sedang - tinggi terjadi sekitar Pukul 13:35  WITA mengakibatkan Tanah Longsor yang menimbun jalan Trans dan beberapa rumah warga sehingga akses jalan belum dapat dilalui"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          119.86949,
+          -0.89845
+        ]
+      },
+      "properties": {
+        "kejadian": "Banjir",
+        "tgl": "2025-07-12",
+        "lokasi": "Birobuli Selatan ",
+        "kab": "KOTA PALU",
+        "kronologis": "Pada hari Sabtu 12 Juli 2025 hujan deras melai mengguyur wilayah Kota Palu sejak Pukul 17.35 WITA. Hujan berlangsung cukup lama dan menyebabkan debit air meingkat disejumlah wilayah Kota Palu. Memasuki Pukul 17.53 Wita banjir terjadi dibeberapa wilayah yaitu Kelurahan Baru, Kelurahan Ujuna, Kelurahan Besusu Barat, Kelurahan Lolu Utara, Kelurahan Kamonji, Kelurahan Nunu, Kelurahan Birobuli Selatan, Kelurahan Tanamodindi, Kelurahan Lolu Selatan, Kelurahan Lere. Banjir tersebut disebabkan oleh derasnya hujan serta kondisi drainase yang menyebabkan saluran air meluap dan genangan terjadi di permukiman warga dengan ketinggian air mencapai lutut orang dewasa. Air mulai surut pada Pukul. 23.43 WITA di hari yang sama."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          119.86643,
+          -0.89346
+        ]
+      },
+      "properties": {
+        "kejadian": "Banjir",
+        "tgl": "2025-07-12",
+        "lokasi": "Baru",
+        "kab": "KOTA PALU",
+        "kronologis": "Pada hari Sabtu 12 Juli 2025 hujan deras melai mengguyur wilayah Kota Palu sejak Pukul 17.35 WITA. Hujan berlangsung cukup lama dan menyebabkan debit air meingkat disejumlah wilayah Kota Palu. Memasuki Pukul 17.53 Wita banjir terjadi dibeberapa wilayah yaitu Kelurahan Baru, Kelurahan Ujuna, Kelurahan Besusu Barat, Kelurahan Lolu Utara, Kelurahan Kamonji, Kelurahan Nunu, Kelurahan Birobuli Selatan, Kelurahan Tanamodindi, Kelurahan Lolu Selatan, Kelurahan Lere. Banjir tersebut disebabkan oleh derasnya hujan serta kondisi drainase yang menyebabkan saluran air meluap dan genangan terjadi di permukiman warga dengan ketinggian air mencapai lutut orang dewasa. Air mulai surut pada Pukul. 23.43 WITA di hari yang sama."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          119.8696,
+          -0.90227
+        ]
+      },
+      "properties": {
+        "kejadian": "Banjir",
+        "tgl": "2025-07-12",
+        "lokasi": "Ujuna",
+        "kab": "KOTA PALU",
+        "kronologis": "Pada hari Sabtu 12 Juli 2025 hujan deras melai mengguyur wilayah Kota Palu sejak Pukul 17.35 WITA. Hujan berlangsung cukup lama dan menyebabkan debit air meingkat disejumlah wilayah Kota Palu. Memasuki Pukul 17.53 Wita banjir terjadi dibeberapa wilayah yaitu Kelurahan Baru, Kelurahan Ujuna, Kelurahan Besusu Barat, Kelurahan Lolu Utara, Kelurahan Kamonji, Kelurahan Nunu, Kelurahan Birobuli Selatan, Kelurahan Tanamodindi, Kelurahan Lolu Selatan, Kelurahan Lere. Banjir tersebut disebabkan oleh derasnya hujan serta kondisi drainase yang menyebabkan saluran air meluap dan genangan terjadi di permukiman warga dengan ketinggian air mencapai lutut orang dewasa. Air mulai surut pada Pukul. 23.43 WITA di hari yang sama."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.702614,
+          1.012484
+        ]
+      },
+      "properties": {
+        "kejadian": "Abrasi Pantai",
+        "tgl": "2025-03-19",
+        "lokasi": "Taat",
+        "kab": "KAB. BUOL",
+        "kronologis": "Akibat Curah hujan terlalu tinggi dan Luapan air laut yang terjadi mengakibatkan rumah masyarakat  di wilayah pantai Desa Taat terancam.\r\n"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          122.19021,
+          -0.26046
+        ]
+      },
+      "properties": {
+        "kejadian": "Puting Beliung",
+        "tgl": "2025-01-08",
+        "lokasi": "Olilan",
+        "kab": "KAB. TOJO UNA UNA",
+        "kronologis": "Terjadinya Angin Kencang Disertai Curah Hujan yang tinggi melanda Wilayah Kec. Walea Kepulauan"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.36457,
+          -1.00217
+        ]
+      },
+      "properties": {
+        "kejadian": "Banjir",
+        "tgl": "2025-06-26",
+        "lokasi": "Balinggi",
+        "kab": "KAB. PARIGI MOUTONG",
+        "kronologis": "Intensitas curah hujan yang deras menyebabkan banjir dan sungai yang berada di Desa Balinggi meluap hingga merendam pemukiman warga dan jalan trans."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.80203,
+          1.09572
+        ]
+      },
+      "properties": {
+        "kejadian": "Puting Beliung",
+        "tgl": "2025-02-11",
+        "lokasi": "Kalangkangan",
+        "kab": "KAB. TOLI TOLI",
+        "kronologis": "Hujan dengan intensitas tinggi dan Angin Kencang yang terjadi di Kecamatan Baolan, Kecamatan Dakopamean, dan Kecamatan Galang sejak pukul 11.00 -  11.30 mengakibatkan kerusakan di pemukiman warga dan fasilitas umum"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.76218,
+          -1.48522
+        ]
+      },
+      "properties": {
+        "kejadian": "Banjir",
+        "tgl": "2025-04-11",
+        "lokasi": "Watuawu",
+        "kab": "KAB. POSO",
+        "kronologis": "Intensitas curah hujan yang tinggi di hulu sungai menyebabkan peningkatan debit air di Sungai Poso hingga meluap ke pemukiman warga."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          122.24648,
+          -3.01112
+        ]
+      },
+      "properties": {
+        "kejadian": "Banjir",
+        "tgl": "2025-03-31",
+        "lokasi": "Torete",
+        "kab": "KAB. MOROWALI",
+        "kronologis": "Air mengalir dari area jalan houling PT.TAS dan area penambangan galian CPT. GRAHA BATU PERDANA.sehingga air meluap ke pemungkiman warga dan jalan Trans Sulawesi Desa Torete dan drainase yang sempit dan penuh dengan material yang di bawa air.\r\n"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          119.74925,
+          -0.67546
+        ]
+      },
+      "properties": {
+        "kejadian": "Banjir",
+        "tgl": "2025-04-02",
+        "lokasi": "Korompeeli",
+        "kab": "KAB. MOROWALI UTARA",
+        "kronologis": "Intensitas hujan yang tinggi sejak Selasa (01/04/25) menyebabkan meluapnya Sungai Tambalako pada Rabu (02/04/25) pukul 05.30 WITA. Luapan air sungai merendam, Jalan Trans serta pemukiman warga. Dengan ketinggian air sekitar sepinggang orang dewasa di Desa Beteleme dan Kumpi serta sekitar 1,5 Meter di Desa Korompeli.\r\n\r\n"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.85917,
+          0.90702
+        ]
+      },
+      "properties": {
+        "kejadian": "Banjir",
+        "tgl": "2025-03-17",
+        "lokasi": "Sibea",
+        "kab": "KAB. TOLI TOLI",
+        "kronologis": "Hujan dengan intensitas tinggi yang terjadi di Daerah Kab. Toli-Toli sejak Minggu 16 Maret 2025 menyebabkan terjadinya luapan air sungai yang mengakibatkan banjir pada pemukiman, persawahan dan perkebunan warga\r\n"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.87595,
+          0.86961
+        ]
+      },
+      "properties": {
+        "kejadian": "Banjir",
+        "tgl": "2025-03-17",
+        "lokasi": "Lampasio",
+        "kab": "KAB. TOLI TOLI",
+        "kronologis": "Hujan dengan intensitas tinggi yang terjadi di Daerah Kab. Toli-Toli sejak Minggu 16 Maret 2025 menyebabkan terjadinya luapan air sungai yang mengakibatkan banjir pada pemukiman, persawahan dan perkebunan warga\r\n"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.87595,
+          0.86961
+        ]
+      },
+      "properties": {
+        "kejadian": "Banjir",
+        "tgl": "2025-03-17",
+        "lokasi": "Janja",
+        "kab": "KAB. TOLI TOLI",
+        "kronologis": "Hujan dengan intensitas tinggi yang terjadi di Daerah Kab. Toli-Toli sejak Minggu 16 Maret 2025 menyebabkan terjadinya luapan air sungai yang mengakibatkan banjir pada pemukiman, persawahan dan perkebunan warga\r\n"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.84554,
+          0.91416
+        ]
+      },
+      "properties": {
+        "kejadian": "Banjir",
+        "tgl": "2025-03-17",
+        "lokasi": "Salugan",
+        "kab": "KAB. TOLI TOLI",
+        "kronologis": "Hujan dengan intensitas tinggi yang terjadi di Daerah Kab. Toli-Toli sejak Minggu 16 Maret 2025 menyebabkan terjadinya luapan air sungai yang mengakibatkan banjir pada pemukiman, persawahan dan perkebunan warga\r\n"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.37025,
+          -2.0407
+        ]
+      },
+      "properties": {
+        "kejadian": "Banjir",
+        "tgl": "2025-05-02",
+        "lokasi": "Bunta",
+        "kab": "KAB. MOROWALI UTARA",
+        "kronologis": "Akibat curah hujan dengan intensitas tinggi di kabupaten morowali Utara khususnya\r\nkecamatan kec. Petasia timur dan kec. Petasia barat. Mengakibatkan terjadinya\r\nluapan sungai La'a sehingga air menggenangi beberapa dusun"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.85247,
+          -2.3564
+        ]
+      },
+      "properties": {
+        "kejadian": "Banjir",
+        "tgl": "2025-02-28",
+        "lokasi": "Wosu",
+        "kab": "KAB. MOROWALI",
+        "kronologis": "Intensitas curah hujan tinggi"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          119.96771,
+          -1.34795
+        ]
+      },
+      "properties": {
+        "kejadian": "Banjir",
+        "tgl": "2025-03-05",
+        "lokasi": "Salua",
+        "kab": "KAB. SIGI",
+        "kronologis": "Mengakibatkan meningkatnya debit air sungai desa salua yang di sertai material dan material tertahan dibendungan sabodam"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.63665,
+          0.91267
+        ]
+      },
+      "properties": {
+        "kejadian": "Banjir",
+        "tgl": "2025-03-11",
+        "lokasi": "Bambalaga",
+        "kab": "KAB. TOLI TOLI",
+        "kronologis": "Hujan dengan intensitas tinggi yg menyebabkan terjadi di beberapa wilayah di kecamatan basidondo dan lampasio membawah dampak banjir di Desa Bambalaga karena luapan aliran sungai maharaja"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.85238,
+          -2.3563
+        ]
+      },
+      "properties": {
+        "kejadian": "Banjir",
+        "tgl": "2025-01-27",
+        "lokasi": "Wosu",
+        "kab": "KAB. MOROWALI",
+        "kronologis": "Intensitas hujan yang tinggi mengakibatkan banjir"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.85142,
+          -2.35778
+        ]
+      },
+      "properties": {
+        "kejadian": "Banjir",
+        "tgl": "2025-01-21",
+        "lokasi": "Wosu",
+        "kab": "KAB. MOROWALI",
+        "kronologis": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          122.76431,
+          -0.79392
+        ]
+      },
+      "properties": {
+        "kejadian": "Banjir",
+        "tgl": "2025-05-16",
+        "lokasi": "Bondat",
+        "kab": "KAB. BANGGAI",
+        "kronologis": "Intensitas curah hujan yang tinggi pada pagi Hari mengakibatkan meningkatnya debit air pada drainase sehingga meluap kepemukiman masyarakat dengan ketinggian air mencapai betis orang dewasa."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.69562,
+          1.05573
+        ]
+      },
+      "properties": {
+        "kejadian": "Banjir ROB",
+        "tgl": "2025-01-31",
+        "lokasi": "Taat",
+        "kab": "KAB. BUOL",
+        "kronologis": "Akibat Luapan air laut dan tinggi gelombang pasang yang terjadi mengakibatkan rumah warga yang berada di bibir pantai Desa Taat terancam."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          119.83493,
+          -0.88836
+        ]
+      },
+      "properties": {
+        "kejadian": "Banjir",
+        "tgl": "2025-04-25",
+        "lokasi": "Kabonena",
+        "kab": "KOTA PALU",
+        "kronologis": "Intensitas curah hujan yang tinggi mengakibatkan terjadinnya banjir di wilayah  Kec. Ulujadi Kota Palu"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          119.83141,
+          -0.88062
+        ]
+      },
+      "properties": {
+        "kejadian": "Banjir",
+        "tgl": "2025-04-25",
+        "lokasi": "Silae",
+        "kab": "KOTA PALU",
+        "kronologis": "Intensitas curah hujan yang tinggi mengakibatkan terjadinnya banjir di wilayah  Kec. Ulujadi Kota Palu"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.37519,
+          0.46161
+        ]
+      },
+      "properties": {
+        "kejadian": "Banjir",
+        "tgl": "2025-07-16",
+        "lokasi": "Ulatan",
+        "kab": "KAB. PARIGI MOUTONG",
+        "kronologis": "Rabu 16 Juli 2025 telah terjadi banjir di Desa Ulatan Kecamatan Palasa. Akibat hujan yang cukup deras mengguyur daerah tersebut, sehingga menyebabkan banjir yang menghambat akses Jalan Trans."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.68925,
+          -1.98812
+        ]
+      },
+      "properties": {
+        "kejadian": "Gempa Bumi",
+        "tgl": "2025-07-24",
+        "lokasi": "Tindoli",
+        "kab": "KAB. POSO",
+        "kronologis": "Pada hari Kamis Tanggal 24 Juli 2025 Pukul 20.06.59 WIB Wilayah Poso Sulawesi Tengah diguncang Gempa Tektonik. Hasil analisis BMKG menunjukkan gempa bumi ini memiliki parameter update dengan magnitudo M 5,7. Episenter gempa bumi terletak pada Koordinat 2,01 LS; 120,38 BT atau tepatnya berlokasi didarat wilayah Poso Sulawesi Tengah pada kedalaman 10 Km."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.68828,
+          -2.07023
+        ]
+      },
+      "properties": {
+        "kejadian": "Gempa Bumi",
+        "tgl": "2025-07-24",
+        "lokasi": "Pasir Putih",
+        "kab": "KAB. POSO",
+        "kronologis": "Pada hari Kamis Tanggal 24 Juli 2025 Pukul 20.06.59 WIB Wilayah Poso Sulawesi Tengah diguncang Gempa Tektonik. Hasil analisis BMKG menunjukkan gempa bumi ini memiliki parameter update dengan magnitudo M 5,7. Episenter gempa bumi terletak pada Koordinat 2,01 LS; 120,38 BT atau tepatnya berlokasi didarat wilayah Poso Sulawesi Tengah pada kedalaman 10 Km."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.74074,
+          -2.0513
+        ]
+      },
+      "properties": {
+        "kejadian": "Gempa Bumi",
+        "tgl": "2025-07-24",
+        "lokasi": "Korobono",
+        "kab": "KAB. POSO",
+        "kronologis": "Pada hari Kamis Tanggal 24 Juli 2025 Pukul 20.06.59 WIB Wilayah Poso Sulawesi Tengah diguncang Gempa Tektonik. Hasil analisis BMKG menunjukkan gempa bumi ini memiliki parameter update dengan magnitudo M 5,7. Episenter gempa bumi terletak pada Koordinat 2,01 LS; 120,38 BT atau tepatnya berlokasi didarat wilayah Poso Sulawesi Tengah pada kedalaman 10 Km."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.68027,
+          -1.96191
+        ]
+      },
+      "properties": {
+        "kejadian": "Gempa Bumi",
+        "tgl": "2025-07-24",
+        "lokasi": "Tolambo",
+        "kab": "KAB. POSO",
+        "kronologis": "Pada hari Kamis Tanggal 24 Juli 2025 Pukul 20.06.59 WIB Wilayah Poso Sulawesi Tengah diguncang Gempa Tektonik. Hasil analisis BMKG menunjukkan gempa bumi ini memiliki parameter update dengan magnitudo M 5,7. Episenter gempa bumi terletak pada Koordinat 2,01 LS; 120,38 BT atau tepatnya berlokasi didarat wilayah Poso Sulawesi Tengah pada kedalaman 10 Km."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.68325,
+          -2.08652
+        ]
+      },
+      "properties": {
+        "kejadian": "Gempa Bumi",
+        "tgl": "2025-07-24",
+        "lokasi": "Pendolo",
+        "kab": "KAB. POSO",
+        "kronologis": "Pada hari Kamis Tanggal 24 Juli 2025 Pukul 20.06.59 WIB Wilayah Poso Sulawesi Tengah diguncang Gempa Tektonik. Hasil analisis BMKG menunjukkan gempa bumi ini memiliki parameter update dengan magnitudo M 5,7. Episenter gempa bumi terletak pada Koordinat 2,01 LS; 120,38 BT atau tepatnya berlokasi didarat wilayah Poso Sulawesi Tengah pada kedalaman 10 Km."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.72924,
+          -2.07703
+        ]
+      },
+      "properties": {
+        "kejadian": "Gempa Bumi",
+        "tgl": "2025-07-24",
+        "lokasi": "Bangunjaya",
+        "kab": "KAB. POSO",
+        "kronologis": "Pada hari Kamis Tanggal 24 Juli 2025 Pukul 20.06.59 WIB Wilayah Poso Sulawesi Tengah diguncang Gempa Tektonik. Hasil analisis BMKG menunjukkan gempa bumi ini memiliki parameter update dengan magnitudo M 5,7. Episenter gempa bumi terletak pada Koordinat 2,01 LS; 120,38 BT atau tepatnya berlokasi didarat wilayah Poso Sulawesi Tengah pada kedalaman 10 Km."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.64705,
+          -2.07095
+        ]
+      },
+      "properties": {
+        "kejadian": "Gempa Bumi",
+        "tgl": "2025-07-24",
+        "lokasi": "Boe",
+        "kab": "KAB. POSO",
+        "kronologis": "Pada hari Kamis Tanggal 24 Juli 2025 Pukul 20.06.59 WIB Wilayah Poso Sulawesi Tengah diguncang Gempa Tektonik. Hasil analisis BMKG menunjukkan gempa bumi ini memiliki parameter update dengan magnitudo M 5,7. Episenter gempa bumi terletak pada Koordinat 2,01 LS; 120,38 BT atau tepatnya berlokasi didarat wilayah Poso Sulawesi Tengah pada kedalaman 10 Km."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.56244,
+          -2.02533
+        ]
+      },
+      "properties": {
+        "kejadian": "Gempa Bumi",
+        "tgl": "2025-07-24",
+        "lokasi": "Bancea",
+        "kab": "KAB. POSO",
+        "kronologis": "Pada hari Kamis Tanggal 24 Juli 2025 Pukul 20.06.59 WIB Wilayah Poso Sulawesi Tengah diguncang Gempa Tektonik. Hasil analisis BMKG menunjukkan gempa bumi ini memiliki parameter update dengan magnitudo M 5,7. Episenter gempa bumi terletak pada Koordinat 2,01 LS; 120,38 BT atau tepatnya berlokasi didarat wilayah Poso Sulawesi Tengah pada kedalaman 10 Km."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.71077,
+          -2.02542
+        ]
+      },
+      "properties": {
+        "kejadian": "Gempa Bumi",
+        "tgl": "2025-07-24",
+        "lokasi": "Tokilo",
+        "kab": "KAB. POSO",
+        "kronologis": "Pada hari Kamis Tanggal 24 Juli 2025 Pukul 20.06.59 WIB Wilayah Poso Sulawesi Tengah diguncang Gempa Tektonik. Hasil analisis BMKG menunjukkan gempa bumi ini memiliki parameter update dengan magnitudo M 5,7. Episenter gempa bumi terletak pada Koordinat 2,01 LS; 120,38 BT atau tepatnya berlokasi didarat wilayah Poso Sulawesi Tengah pada kedalaman 10 Km."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.16315,
+          -1.18359
+        ]
+      },
+      "properties": {
+        "kejadian": "Banjir",
+        "tgl": "2025-04-09",
+        "lokasi": "Tongoa",
+        "kab": "KAB. SIGI",
+        "kronologis": "Akibat hujan dengan intensitas tinggi hingga sedang menyebabkan air dari pegunungan mengalir ke jalan penghubung antar Palu-Napu sehingga mengakibatkan rusaknya gorong-gorong aliran air."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.30134,
+          -2.05851
+        ]
+      },
+      "properties": {
+        "kejadian": "Banjir",
+        "tgl": "2025-03-07",
+        "lokasi": "Onepute",
+        "kab": "KAB. MOROWALI UTARA",
+        "kronologis": "Akibat intensitas curah hujan yang tinggi mengakibatkan meluapnya aliran sungai la'a ke pemukiman warga di desa onepute dan hingga saat ini air masih menggenangi pemukiman warga"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.51736,
+          1.08386
+        ]
+      },
+      "properties": {
+        "kejadian": "Banjir",
+        "tgl": "2025-05-09",
+        "lokasi": "Tang",
+        "kab": "KAB. BUOL",
+        "kronologis": "Terjadinya intensitas curah hujan yang tinggi menyebabkan terjadinya banjir di desa Tang Kec. Bokat Kab. Buol. Terdapat satu korban jiwa An. ASMIA MAJID, umur 69 tahun. Korban pulang dari lahan pegunungan pukul 3 sore dan tiba-tiba hujan deras turun hingga mengakibatkan banjir . Setelah itu korban menyeberang sungai lalu terseret dengan banjir yang sangat deras. Jarak dari tempat kejadian dengan perkampungan sekitar 1 kilometer dan korban ditemukan pada pukul 15.30 sore sudah dalam keadaan meninggal dunia."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.57969,
+          -1.26918
+        ]
+      },
+      "properties": {
+        "kejadian": "Banjir",
+        "tgl": "2025-03-16",
+        "lokasi": "Maranda",
+        "kab": "KAB. POSO",
+        "kronologis": "Intensitas curah hujan yang tinggi mengakibatkan tingginya debit air di sungai samalera Desa Maranda sehingga meluap ke area pemukiman Warga Desa Maranda"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.4224,
+          1.17789
+        ]
+      },
+      "properties": {
+        "kejadian": "Banjir",
+        "tgl": "2025-03-16",
+        "lokasi": "Leok II",
+        "kab": "KAB. BUOL",
+        "kronologis": "Sekitar pukul 22:34 WITA air mulai naik secara tiba-tiba masyarakat mengungsi ke rumah warga yang Tidak terdampak banjir . Tidak terdapat korban jiwa. Sampai dengan pukul 08:18 pagi air belum surut . Debit air semakin tinggi ."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.78419,
+          0.82324
+        ]
+      },
+      "properties": {
+        "kejadian": "Banjir",
+        "tgl": "2025-02-01",
+        "lokasi": "Ogomatanang",
+        "kab": "KAB. TOLI TOLI",
+        "kronologis": "Terjadi hujan sekitar pukul 14.00 wita hingga pukul 17.00 wita mengakibatkan banjir di Desa Ogomatanang yang di sebabkan oleh saluran drainase yang sudah dangkal."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.47216,
+          -2.15933
+        ]
+      },
+      "properties": {
+        "kejadian": "Tanah Longsor",
+        "tgl": "2025-07-12",
+        "lokasi": "Mohoni",
+        "kab": "KAB. MOROWALI UTARA",
+        "kronologis": "Akibat hujan deras yang terjadi sejak pukul 00.00 WITA sampai dengan pukul 08.00 WITA mengakibatkan terjadinya longsor di Jalan Trans Penghubung antara Desa Bimor Jaya dan Desa Mohoni"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.37685,
+          -0.97858
+        ]
+      },
+      "properties": {
+        "kejadian": "Banjir",
+        "tgl": "2025-08-19",
+        "lokasi": "Balinggi",
+        "kab": "KAB. PARIGI MOUTONG",
+        "kronologis": "Selasa 19 Agustus 2025 Pukul 20.15 WITA telah terjadi banjir di Desa Balinggi Kecamatan Balinggi, akibat curah hujan yang deras menyebabkan tanggul sungai jebol."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          119.762,
+          -0.41368
+        ]
+      },
+      "properties": {
+        "kejadian": "Banjir",
+        "tgl": "2025-04-01",
+        "lokasi": "Batusuya",
+        "kab": "KAB. DONGGALA",
+        "kronologis": "akibat intensitas curah hujan yang tinggi menyebabkan jalan trans sulawesi terendam air dan halam rumah warga terendam "
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.81753,
+          0.97772
+        ]
+      },
+      "properties": {
+        "kejadian": "Banjir",
+        "tgl": "2025-04-15",
+        "lokasi": "Pangi",
+        "kab": "KAB. TOLI TOLI",
+        "kronologis": "Pada hari Selasa tanggal 15 April 2025 pukul 14.00 wilayah kec. Baolan di guyur hujan dengan intensitas tinggi mulai pukul 14.00 Wita sd pukul 15.00 Wita, yang mengakibatkan meluapya air sungai desa Pangi akibat tidak bisa menampung debit air sehingga air sungai meluap ke jalan raya dan menggenaki sebagian besar wilayah pemukiman masyarakat."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.816194,
+          1.03853
+        ]
+      },
+      "properties": {
+        "kejadian": "Banjir",
+        "tgl": "2025-01-26",
+        "lokasi": "Baru",
+        "kab": "KAB. TOLI TOLI",
+        "kronologis": "Terjadi hujan sekitar pukul 16.30 hingga saat ini mengakibatkan banjir dibeberapa titik di Kel. Baru & Kel. Panasakan Kec. Baolan Kab. Toli-Toli"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.6834,
+          -2.07213
+        ]
+      },
+      "properties": {
+        "kejadian": "Banjir",
+        "tgl": "2025-03-18",
+        "lokasi": "Pendolo",
+        "kab": "KAB. POSO",
+        "kronologis": "Akibat curah hujan  yang sangat tinggi mengakibatkan terjadinya pengikisan di sepanjang sungai  Desa Pendolo sehingga air sungai meluap hingga ke perkebunan milik warga."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          123.5112,
+          -1.69463
+        ]
+      },
+      "properties": {
+        "kejadian": "Banjir",
+        "tgl": "2025-05-16",
+        "lokasi": "Bentean",
+        "kab": "KAB. BANGGAI LAUT",
+        "kronologis": "Intensitas curah hujan yang tinggi sejak pukul 05.30 (Jumat, 16/05/25) mengakibatkan ruas jalan utama dan 10 unit rumah warga tergenang. Mengakibatkan aktivitas warga terganggu."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.12116,
+          0.44953
+        ]
+      },
+      "properties": {
+        "kejadian": "Banjir",
+        "tgl": "2025-03-16",
+        "lokasi": "Pendelalap",
+        "kab": "KAB. PARIGI MOUTONG",
+        "kronologis": "Intensitas curah hujan yang tinggi di Pegunungan menyebabkan Sungai Meluap hingga ke Pemukiman dan Merendam rumah warga"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.22917,
+          0.46602
+        ]
+      },
+      "properties": {
+        "kejadian": "Banjir",
+        "tgl": "2025-03-16",
+        "lokasi": "Moutong Utara",
+        "kab": "KAB. PARIGI MOUTONG",
+        "kronologis": "Intensitas curah hujan yang tinggi di Pegunungan menyebabkan Sungai Meluap hingga ke Pemukiman dan Merendam rumah warga"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.01544,
+          -0.31847
+        ]
+      },
+      "properties": {
+        "kejadian": "Banjir",
+        "tgl": "2025-05-25",
+        "lokasi": "Toribulu",
+        "kab": "KAB. PARIGI MOUTONG",
+        "kronologis": "Minggu, 25 Mei 2025. Pukul 20:37 WITA, telah terjadi banjir di Desa. Toribulu, Dusun Padang. Kec. Toribulu. Akibat hujan dengan intensitas sedang hingga lebat menyebabkan sungai meluap hingga ke pemukiman warga."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.021,
+          -0.33327
+        ]
+      },
+      "properties": {
+        "kejadian": "Banjir",
+        "tgl": "2025-05-25",
+        "lokasi": "Toribulu Selatan",
+        "kab": "KAB. PARIGI MOUTONG",
+        "kronologis": "Minggu, 25 Mei 2025. Pukul 20:37 WITA, telah terjadi banjir di Desa. Toribulu, Dusun Padang. Kec. Toribulu. Akibat hujan dengan intensitas sedang hingga lebat menyebabkan sungai meluap hingga ke pemukiman warga."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.56428,
+          -1.17766
+        ]
+      },
+      "properties": {
+        "kejadian": "Banjir",
+        "tgl": "2025-06-07",
+        "lokasi": "Tambarana",
+        "kab": "KAB. POSO",
+        "kronologis": "Akibat curah hujan dengan intensitas tinggi mengakibatkan meluapnya aliran Sungai Matawo di Desa Tambarana sehingga menggenangi pemukiman warga."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.12122,
+          0.44919
+        ]
+      },
+      "properties": {
+        "kejadian": "Banjir",
+        "tgl": "2025-04-14",
+        "lokasi": "Pande",
+        "kab": "KAB. PARIGI MOUTONG",
+        "kronologis": "Senin (14/04/25) pukul 22.57 terjadi banjir di Desa Pande Kec. Moutong akibat hujan dengan intensitas tinggi menyebabkan meluapnya Sungai Taopa.    "
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.79443,
+          -1.91939
+        ]
+      },
+      "properties": {
+        "kejadian": "Banjir",
+        "tgl": "2025-05-14",
+        "lokasi": "Kancuu",
+        "kab": "KAB. POSO",
+        "kronologis": "Kembali terjadi kejadian banjir susulan di Desa kancuu pada tanggal 14 mei 2025 pukul 23.00 WITA, hujan dengan intensitas tinggi yang mengakibatkan air sungai meluap dan menggenangi sebagian wilayah pemukiman masyarakat."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.92621,
+          1.0681
+        ]
+      },
+      "properties": {
+        "kejadian": "Banjir",
+        "tgl": "2025-03-24",
+        "lokasi": "Lintidu",
+        "kab": "KAB. BUOL",
+        "kronologis": "Senin 24 Maret 2025 Sekitar Pukul 14.45 Wita, di wilayah kecamatan paleleh telah terjadi hujan dengan intensitas tinggi menyebabkan puluhan rumah di desa lintidu terendam banjir dengan ketinggian kurang lebih ± 50 CM. Adapun banjir yang terjadi di wilayah desa lintidu di akibatkan luapan air sungai tidak dapat lagi menampung debit air sehingga merendam pemukiman warga.\r\n"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.19356,
+          -1.82876
+        ]
+      },
+      "properties": {
+        "kejadian": "Banjir dan Tanah Longsor",
+        "tgl": "2025-03-03",
+        "lokasi": "Lengkeka",
+        "kab": "KAB. POSO",
+        "kronologis": "Hujan yang terjadi sejak sore hingga malam hari di wilayah lore barat mengakibatkan terjadinya banjir dan tanah longsor di beberapa titik di Desa Kageroa dan Desa Lengkeka\r\n\r\n"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.73142,
+          1.07201
+        ]
+      },
+      "properties": {
+        "kejadian": "Abrasi Pantai",
+        "tgl": "2025-01-20",
+        "lokasi": "Diapati",
+        "kab": "KAB. BUOL",
+        "kronologis": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          119.88286,
+          -1.14963
+        ]
+      },
+      "properties": {
+        "kejadian": "Banjir",
+        "tgl": "2025-05-16",
+        "lokasi": "Poi",
+        "kab": "KAB. SIGI",
+        "kronologis": "Intensitas curah hujan yang tinggi mengakibatkan Sungai Desa Poi Meluap hingga menutupi jembatan sampai saat ini belum bisa di lewati roda 2 dan roda 4. Dan jembatan alternatif Desa ikut terputus atas kejadian tersebut."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          119.90087,
+          0.26054
+        ]
+      },
+      "properties": {
+        "kejadian": "Banjir",
+        "tgl": "2025-03-21",
+        "lokasi": "Talaga",
+        "kab": "KAB. DONGGALA",
+        "kronologis": "Akibat intensitas curah hujan yang tinggi mengakibatkan terjadinya banjir hingga meluap ke pemukiman warga.\r\n"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.57706,
+          -1.26788
+        ]
+      },
+      "properties": {
+        "kejadian": "Banjir",
+        "tgl": "2025-08-19",
+        "lokasi": "Maranda",
+        "kab": "KAB. POSO",
+        "kronologis": "Akibat curah hujan yang cukup deras sejak Pukul 19.00 WITA dan kondisi gorong-gorong yang kecil sehingga menyebabkan saluran air meluap dan menggenangi pemukiman warga."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.78435,
+          1.00863
+        ]
+      },
+      "properties": {
+        "kejadian": "Banjir",
+        "tgl": "2025-03-16",
+        "lokasi": "Tambun",
+        "kab": "KAB. TOLI TOLI",
+        "kronologis": "Hujan yang mengguyur Kab. Toli-Toli sejak sore dengan intensitas tinggi mengakibatkan meluapnya air ke beberapa wilayah pemukiman warga, salah satunya di Kel. Tambun Kec. Baolan Kab. Toli-Toli"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          119.88274,
+          -0.8818
+        ]
+      },
+      "properties": {
+        "kejadian": "Banjir",
+        "tgl": "2025-04-25",
+        "lokasi": "Talise",
+        "kab": "KOTA PALU",
+        "kronologis": "Terjadinya intensitas curah hujan yang tinggi selama beberapa jam menyebabkan volume air meningkat dan meluapnya drainase sehingga mengakibatkan banjir"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          119.83141,
+          -0.88062
+        ]
+      },
+      "properties": {
+        "kejadian": "Banjir",
+        "tgl": "2025-04-25",
+        "lokasi": "Tondo",
+        "kab": "KOTA PALU",
+        "kronologis": "Terjadinya intensitas curah hujan yang tinggi selama beberapa jam menyebabkan volume air meningkat dan meluapnya drainase sehingga mengakibatkan banjir"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.49336,
+          -1.03623
+        ]
+      },
+      "properties": {
+        "kejadian": "Banjir",
+        "tgl": "2025-04-14",
+        "lokasi": "Sausu Peore",
+        "kab": "KAB. PARIGI MOUTONG",
+        "kronologis": "Intensitas hujan yang tinggi mengakibatkan meluapnya sungai yang berada di Desa Sausu Peore hingga merendam pemukiman warga"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.79443,
+          -1.91939
+        ]
+      },
+      "properties": {
+        "kejadian": "Banjir",
+        "tgl": "2025-04-25",
+        "lokasi": "Kancuu",
+        "kab": "KAB. POSO",
+        "kronologis": "Pada hari Jumat tanggal 25 Maret 2025 pukul 15.00 WITA,  Desa Kancuu di guyur hujan dengan intensitas tinggi yang mengakibatkan air sungai meluap dan menggenangi sebagian wilayah pemukiman masyarakat."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.54489,
+          0.51249
+        ]
+      },
+      "properties": {
+        "kejadian": "Banjir Bandang",
+        "tgl": "2025-03-13",
+        "lokasi": "Tomini Barat",
+        "kab": "KAB. PARIGI MOUTONG",
+        "kronologis": "Kamis, 13 Maret 2025, hujan dengan intensitas sedang hingga lebat menyebabkan banjir di sungai Popa dan meluap kepemukiman warga hingga merendam rumah warga Desa Tomini Barat."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.54604,
+          0.5283
+        ]
+      },
+      "properties": {
+        "kejadian": "Banjir Bandang",
+        "tgl": "2025-03-13",
+        "lokasi": "Tomini Utara",
+        "kab": "KAB. PARIGI MOUTONG",
+        "kronologis": "Kamis, 13 Maret 2025, hujan dengan intensitas sedang hingga lebat menyebabkan banjir di sungai Popa dan meluap kepemukiman warga hingga merendam rumah warga Desa Tomini Barat."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.5539,
+          0.51721
+        ]
+      },
+      "properties": {
+        "kejadian": "Banjir Bandang",
+        "tgl": "2025-03-13",
+        "lokasi": "Tomini",
+        "kab": "KAB. PARIGI MOUTONG",
+        "kronologis": "Kamis, 13 Maret 2025, hujan dengan intensitas sedang hingga lebat menyebabkan banjir di sungai Popa dan meluap kepemukiman warga hingga merendam rumah warga Desa Tomini Barat."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.23772,
+          1.23003
+        ]
+      },
+      "properties": {
+        "kejadian": "Abrasi Pantai",
+        "tgl": "2025-01-16",
+        "lokasi": "Ngune",
+        "kab": "KAB. BUOL",
+        "kronologis": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.37521,
+          0.4616
+        ]
+      },
+      "properties": {
+        "kejadian": "Banjir",
+        "tgl": "2025-03-08",
+        "lokasi": "Ulatan",
+        "kab": "KAB. PARIGI MOUTONG",
+        "kronologis": "Akibat hujan dengan intensitas sedang hingga lebat dari pagi hingga siang hari, menyebabkan banjir di desa ulatan"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          122.24837,
+          -1.54528
+        ]
+      },
+      "properties": {
+        "kejadian": "Banjir",
+        "tgl": "2025-08-03",
+        "lokasi": "Kami Wangi",
+        "kab": "KAB. BANGGAI",
+        "kronologis": "Hujan deras yang terjadi sejak tanggal 1 hingga 3 Agustus 2025 menyebabkan terjadinya banjir akibat meluapnya sungai sehingga merendam pemukiman dan persawahan warga di Desa Kami Wangi\r\n"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.33501,
+          1.0713
+        ]
+      },
+      "properties": {
+        "kejadian": "Banjir",
+        "tgl": "2025-02-01",
+        "lokasi": "Soraya",
+        "kab": "KAB. BUOL",
+        "kronologis": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.25718,
+          0.98139
+        ]
+      },
+      "properties": {
+        "kejadian": "Banjir",
+        "tgl": "2025-03-08",
+        "lokasi": "Kokobuka",
+        "kab": "KAB. BUOL",
+        "kronologis": "Pada hari sabtu 8 Februari 2025 sekitar Pkl. 12.45 WITA, di wilayah kecamatan Tiloan Kabupaten Buol, telah terjadi Hujan dengan intensitas sedang hingga intensitas Tinggi di sertai angin kencang, yang mengakibatkan banjir di desa kokobuka Dusun IV, RT 1 dan RT 2, Kecamatan tiloan yang di akibatkan meeluapnya air sungai Buol dan sungai tiloan dengan ketinggian air berkisar 70-Cm - 1 M"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.302,
+          0.45796
+        ]
+      },
+      "properties": {
+        "kejadian": "Banjir",
+        "tgl": "2025-04-14",
+        "lokasi": "Pebounang",
+        "kab": "KAB. PARIGI MOUTONG",
+        "kronologis": "Senin, 14 April 2025. Pukul 17:09 WITA telah terjadi banjir di Desa Pebuonang Kec. Palasa. Hujan dengan intensitas sedang hingga lebat di hulu menyebabkan banjir di Desa Pebuonang Akibatnya 2 jembatan akses jalan desa putus dan 7 unit rumah hanyut."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.699,
+          0.83512
+        ]
+      },
+      "properties": {
+        "kejadian": "Banjir",
+        "tgl": "2025-02-02",
+        "lokasi": "Bambalaga",
+        "kab": "KAB. TOLI TOLI",
+        "kronologis": "Hujan dengan intensitas tinggi yang terjadi di Desa Bambalaga mengakibatkan meluapnya sungai Maharaja karena rusaknya pintu klep air. Sehingga terjadinya Banjir di pemukiman warga"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.6834,
+          -2.07213
+        ]
+      },
+      "properties": {
+        "kejadian": "Banjir",
+        "tgl": "2025-06-12",
+        "lokasi": "Pendolo",
+        "kab": "KAB. POSO",
+        "kronologis": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          122.32199,
+          -0.2611
+        ]
+      },
+      "properties": {
+        "kejadian": "Puting Beliung",
+        "tgl": "2025-01-01",
+        "lokasi": "Tongidon",
+        "kab": "KAB. TOJO UNA UNA",
+        "kronologis": "Terjadinya Angin Kencang Disertai Curah Hujan yang tinggi melanda Wilayah Kec. Walea Besar"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.426687,
+          0.788455
+        ]
+      },
+      "properties": {
+        "kejadian": "Banjir",
+        "tgl": "2025-01-19",
+        "lokasi": "Lais",
+        "kab": "KAB. TOLI TOLI",
+        "kronologis": "Intensitas curah hujan yang tinggi dan kondisi sungai yang mengalami pendangkalan mengakibatkan meluapnya air Sungai Lais sehingga meluap ke pemukiman warga\r\n"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          119.9455,
+          1.27575
+        ]
+      },
+      "properties": {
+        "kejadian": "Banjir",
+        "tgl": "2025-03-08",
+        "lokasi": "Omu",
+        "kab": "KAB. SIGI",
+        "kronologis": "Akibat intensitas curah hujan yang tinggi pada sabtu 08 maret 2025 mengakibatkan meluapnya aliran sungai di desa omu yang mengakibatkan terendamnya perkebunan warga serta mengancam putusnya jalan raya yang menghubungkan desa omu dan desa bangga"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.71994,
+          -2.059513
+        ]
+      },
+      "properties": {
+        "kejadian": "Banjir",
+        "tgl": "2025-01-28",
+        "lokasi": "Pasir Putih",
+        "kab": "KAB. POSO",
+        "kronologis": "Curah hujan yang tinggi mengakibatkan luapan sungai Kordina, luapan air memasuki pemukiman pada pukul 02.00 WITA.\r\n\r\n"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.519,
+          1.08361
+        ]
+      },
+      "properties": {
+        "kejadian": "Banjir",
+        "tgl": "2025-01-30",
+        "lokasi": "Tang",
+        "kab": "KAB. BUOL",
+        "kronologis": "Intensitas Curah Hujan Tinggi\r\n\r\n"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.32941,
+          -1.91158
+        ]
+      },
+      "properties": {
+        "kejadian": "Banjir Bandang",
+        "tgl": "2025-01-03",
+        "lokasi": "Tamainusi",
+        "kab": "KAB. MOROWALI UTARA",
+        "kronologis": "Pada 3 Januari 2025, Pukul 17.45 WITA, Terjadi Banjir disertai material batang pohon yang kemudian menghanyutkan bangunan/basecamp milik perusahaan Surya Amino Perkasa yang lokasinya terletak di pinggir Sungai. Kejadian ini mengakibatkan 1 orang korban jiwa dan 2 lainnya terluka."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.64939,
+          -1.43444
+        ]
+      },
+      "properties": {
+        "kejadian": "Puting Beliung",
+        "tgl": "2025-04-06",
+        "lokasi": "Tabalu",
+        "kab": "KAB. POSO",
+        "kronologis": "Terjadinya hujan dengan intensitas tinggi disertai angin kencang di Kecamatan Poso Pesisir Selatan menyebabkan terjadinya banjir yang meluap ke pemukiman warga di Desa Betalemba dan Desa Tabalu serta terjadinya beberapa kerusakan pada bangunan akibat angin kencang yang terjadi."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          119.78033,
+          -0.54182
+        ]
+      },
+      "properties": {
+        "kejadian": "Tanah Longsor",
+        "tgl": "2025-04-06",
+        "lokasi": "Enu",
+        "kab": "KAB. DONGGALA",
+        "kronologis": "Akibat hujan dengan intensitas sedang dan angin kencang yang mengakibatkan tanah longsor di sertai pohon tumbang di jalan Toli-toli - Palu Desa Enu "
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.53818,
+          -0.87914
+        ]
+      },
+      "properties": {
+        "kejadian": "Puting Beliung",
+        "tgl": "2025-02-27",
+        "lokasi": "Bone Rato",
+        "kab": "KAB. TOJO UNA UNA",
+        "kronologis": "Terjadinya angin kencang melanda 1 rumah di wilayah kel. Bonerato dusun podimase, yang mengakibatkan atap rumah bagian dapur terbawa oleh angin putting beliung"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.51907,
+          -1.10176
+        ]
+      },
+      "properties": {
+        "kejadian": "Banjir",
+        "tgl": "2025-06-07",
+        "lokasi": "Sausu Pakareme",
+        "kab": "KAB. PARIGI MOUTONG",
+        "kronologis": "Sabtu, 7 Juni 2025. Pukul 21.15 WITA, telah terjadi banjir di Desa. Maleali, Kec. Sausu. Akibat dari hujan dengan intensitas yang tinggi."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.56347,
+          -1.10035
+        ]
+      },
+      "properties": {
+        "kejadian": "Banjir",
+        "tgl": "2025-06-07",
+        "lokasi": "Maleali",
+        "kab": "KAB. PARIGI MOUTONG",
+        "kronologis": "Sabtu, 7 Juni 2025. Pukul 21.15 WITA, telah terjadi banjir di Desa. Maleali, Kec. Sausu. Akibat dari hujan dengan intensitas yang tinggi."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          119.95721,
+          -1.327691
+        ]
+      },
+      "properties": {
+        "kejadian": "Banjir",
+        "tgl": "2025-01-20",
+        "lokasi": "Tuwa",
+        "kab": "KAB. SIGI",
+        "kronologis": "Intensitas curah hujan yang tinggi mengakibatkan meluapnya air sungai ke pemukiman warga Desa Tuva Kec. Gumbasa Kab. Sigi\r\n"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.3116,
+          -1.61557
+        ]
+      },
+      "properties": {
+        "kejadian": "Banjir",
+        "tgl": "2025-05-12",
+        "lokasi": "Talabosa",
+        "kab": "KAB. POSO",
+        "kronologis": "Akibat hujan dengan intensitas sedang hingga tinggi mengakibatkan kenaikan debit air di sungai Salorampo yang berdampak terhadap pemukiman warga di Desa Talabosa, Kec. Lore Peore, Kab. Poso."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.41126,
+          1.26597
+        ]
+      },
+      "properties": {
+        "kejadian": "Banjir",
+        "tgl": "2025-03-16",
+        "lokasi": "Mendaan",
+        "kab": "KAB. BUOL",
+        "kronologis": "Curah hujan tinggi yang terjadi di daerah Pegunungan, sejak beberapa hari terakhir menyebabkan debit air meningkat sehingga  merendam pemukiman warga.\r\n"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.57665,
+          1.05987
+        ]
+      },
+      "properties": {
+        "kejadian": "Banjir",
+        "tgl": "2025-02-01",
+        "lokasi": "Tamit",
+        "kab": "KAB. BUOL",
+        "kronologis": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.75493,
+          0.97476
+        ]
+      },
+      "properties": {
+        "kejadian": "Banjir",
+        "tgl": "2025-03-16",
+        "lokasi": "Lelean Nono",
+        "kab": "KAB. TOLI TOLI",
+        "kronologis": "Hujan dengan intensitas tinggi yang terjadi di Desa Lelean Nono  Kec. Baolan Kab. Toli-Toli sejak pukul 14.00 WITA menyebabkan terjadinya luapan air sungai pada pukul 17.30 WITA yang mengakibatkan banjir pada pemukiman warga"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.96842,
+          0.51795
+        ]
+      },
+      "properties": {
+        "kejadian": "Tanah Longsor",
+        "tgl": "2025-06-21",
+        "lokasi": "Lambunu",
+        "kab": "KAB. PARIGI MOUTONG",
+        "kronologis": "Sabtu, 21 Juni 2025 pukul 17.06 WITA. Telah terjadi tanah longsor di Desa Tirtanagaya, Kec. Bolano Lambunu.  Akibat hujan deras yang cukup lama diwilayah Kec. Bolano Lambunu, sehingga menyebabkan longsor dan menimbun 7 orang warga yang sedang mencari kayu. "
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.3366,
+          -2.0147
+        ]
+      },
+      "properties": {
+        "kejadian": "Banjir",
+        "tgl": "2025-08-09",
+        "lokasi": "Korololama",
+        "kab": "KAB. MOROWALI UTARA",
+        "kronologis": "Akibat Curah hujan yang cukup deras terjadi sejak Pukul 21.00 WITA s/d Pukul 02.00 WITA. Mengakibatkan debit air yang turun ke pemukiman warga sangat tinggi hingga menyebabkan terjadinya banjir dengan ketinggian 30 -50 Cm."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.24145,
+          0.46751
+        ]
+      },
+      "properties": {
+        "kejadian": "Tanah Longsor",
+        "tgl": "2025-03-14",
+        "lokasi": "Taipaobal",
+        "kab": "KAB. PARIGI MOUTONG",
+        "kronologis": "Intensitas curah hujan yang tinggi terjadi sejak sore hari menyebabkan terjadinya tanah longsor pada akses jalan utama menuju Desa Taipa Obal sepanjang 150 meter serta tidak dapat dilalui oleh kendaraan."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          119.76932,
+          -0.10312
+        ]
+      },
+      "properties": {
+        "kejadian": "Banjir",
+        "tgl": "2025-03-13",
+        "lokasi": "Palau",
+        "kab": "KAB. DONGGALA",
+        "kronologis": "Akibat curah hujan yang tinggi sehingga menyebabkan air sungai meluap hingga ke pemukiman warga \r\n"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.66126,
+          -1.65186
+        ]
+      },
+      "properties": {
+        "kejadian": "Puting Beliung",
+        "tgl": "2025-06-29",
+        "lokasi": "Sulewana",
+        "kab": "KAB. POSO",
+        "kronologis": "Telah terjadi angin kencang akibat cuaca yang ekstrem pada pukul 17:00 WITA menyebabkan padamnya listrik serta beberapa unit rumah warga rusak di Desa Sulewana"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.80686,
+          0.53488
+        ]
+      },
+      "properties": {
+        "kejadian": "Banjir",
+        "tgl": "2025-06-19",
+        "lokasi": "Persatuan Utara",
+        "kab": "KAB. PARIGI MOUTONG",
+        "kronologis": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.12122,
+          0.44919
+        ]
+      },
+      "properties": {
+        "kejadian": "Banjir",
+        "tgl": "2025-04-08",
+        "lokasi": "Pendelalap",
+        "kab": "KAB. PARIGI MOUTONG",
+        "kronologis": "Rabu, 8 April 2025, telah terjadi banjir di Desa Pandelalap, Kec. Moutong akibat hujan dengan intensitas sedang hingga lebat menyebabkan banjir di sungai Taopa dan meluap kepemukiman warga."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.65049,
+          -1.84723
+        ]
+      },
+      "properties": {
+        "kejadian": "Banjir",
+        "tgl": "2025-03-17",
+        "lokasi": "Peura",
+        "kab": "KAB. POSO",
+        "kronologis": "Terjadinya hujan dengan intensitas tinggi pada hari Senin tanggal 17 Maret 2025, jam 21.00 Wita, mengakibatkan meluapnya air sungai dan merendam pemukiman warga Desa Peura Kec. Pamona Puselemba, Kab. Poso"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.24068,
+          1.2339
+        ]
+      },
+      "properties": {
+        "kejadian": "Abrasi Pantai",
+        "tgl": "2025-03-13",
+        "lokasi": "Ngune",
+        "kab": "KAB. BUOL",
+        "kronologis": "Sekitar pkl.15.40 Wita - 19.30 Wita,  Air laut Di sertai ombak dan anging kencang merusak sekitar 50 Unit Rumah warga, yang merupakan rumah Nelayan bantuan dari pemerintah kabupaten buol"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.36595,
+          1.11213
+        ]
+      },
+      "properties": {
+        "kejadian": "Banjir",
+        "tgl": "2025-01-15",
+        "lokasi": "Pinamula",
+        "kab": "KAB. BUOL",
+        "kronologis": "Intensitas curah hujan yang sedang – tinggi terjadi pada hari Rabu tanggal 15-01-2025 pada pukul 15.00 Wita mengakibatkan meluapnya Sungai pinamula di Kecamatan Momunu, Ketinggian air ± lutut orang dewasa, dan luapan air/banjir makin bertambah"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.29914,
+          -1.75733
+        ]
+      },
+      "properties": {
+        "kejadian": "Banjir",
+        "tgl": "2025-01-24",
+        "lokasi": "Tandoyondo",
+        "kab": "KAB. MOROWALI UTARA",
+        "kronologis": "Telah terjadi hujan dengan intensitas tinggi sejak pukul 15.00 WITA sampai dengan Pukul 23.00 WITA tanggal 23 Januari 2025, sehingga mengakibatkan sungai sumara meluap menggenangi pemukiman warga."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.72505,
+          1.06813
+        ]
+      },
+      "properties": {
+        "kejadian": "Banjir",
+        "tgl": "2025-01-02",
+        "lokasi": "Bulagidun",
+        "kab": "KAB. BUOL",
+        "kronologis": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.491159,
+          -0.995916
+        ]
+      },
+      "properties": {
+        "kejadian": "Banjir ROB",
+        "tgl": "2025-02-01",
+        "lokasi": "Sausu Peore",
+        "kab": "KAB. PARIGI MOUTONG",
+        "kronologis": "Air Laut Pasang mengakibatkan jebolnya tanggul hingga meluapnya air ke pemukiman warga."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          119.93175,
+          -1.01133
+        ]
+      },
+      "properties": {
+        "kejadian": "Banjir",
+        "tgl": "2025-01-19",
+        "lokasi": "Sidera",
+        "kab": "KAB. SIGI",
+        "kronologis": "Intensitas curah hujan sedang hingga tinggi mengakibatkan meluapnya air melalui drainase yang ada di Desa Sidera dan Jono Oge ke pemukiman warga. Sehingga berdampak ke lingkungan masyarakat."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.99746,
+          1.02127
+        ]
+      },
+      "properties": {
+        "kejadian": "Puting Beliung",
+        "tgl": "2025-02-11",
+        "lokasi": "Talaki",
+        "kab": "KAB. BUOL",
+        "kronologis": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.16094,
+          -0.85523
+        ]
+      },
+      "properties": {
+        "kejadian": "Banjir",
+        "tgl": "2025-07-07",
+        "lokasi": "Air Panas",
+        "kab": "KAB. PARIGI MOUTONG",
+        "kronologis": "Senin, 07 Juli 2025 Pukul 15.20 WITA telah terjadi banjir di Desa Air Panas, Kecamatan Parigi Barat akibat dari intensitas curah hujan yang deras"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.22543,
+          0.47185
+        ]
+      },
+      "properties": {
+        "kejadian": "Banjir",
+        "tgl": "2025-06-01",
+        "lokasi": "Moutong Tengah",
+        "kab": "KAB. PARIGI MOUTONG",
+        "kronologis": "Minggu, 01 Juni 2025. Pukul 06.00 WITA, telah terjadi banjir di Desa Moutong Tengah, Desa Moutong Utara, Desa Moutong Timur, Desa Moutong Barat, dan Desa Lobu Kec. Moutong Kab. Parigi moutong. Akibat hujan dengan intensitas yang tinggi menyebabkan sungai moutong meluap hingga ke pemukiman warga."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.24546,
+          0.54258
+        ]
+      },
+      "properties": {
+        "kejadian": "Banjir",
+        "tgl": "2025-06-01",
+        "lokasi": "Moutong Timur",
+        "kab": "KAB. PARIGI MOUTONG",
+        "kronologis": "Minggu, 01 Juni 2025. Pukul 06.00 WITA, telah terjadi banjir di Desa Moutong Tengah, Desa Moutong Utara, Desa Moutong Timur, Desa Moutong Barat, dan Desa Lobu Kec. Moutong Kab. Parigi moutong. Akibat hujan dengan intensitas yang tinggi menyebabkan sungai moutong meluap hingga ke pemukiman warga."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.97649,
+          -1.99617
+        ]
+      },
+      "properties": {
+        "kejadian": "Banjir",
+        "tgl": "2025-03-01",
+        "lokasi": "Pambarea",
+        "kab": "KAB. MOROWALI UTARA",
+        "kronologis": "Telah terjadi banjir d desa pambarea mengakibatkan terendamnya 5 unit rumah warga, yang disebabkan oleh curah hujan yang tinggi sejak sore hari pukul 18.00 WITA\r\n"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.285164,
+          0.388673
+        ]
+      },
+      "properties": {
+        "kejadian": "Gempa Bumi",
+        "tgl": "2025-01-28",
+        "lokasi": "Siavu",
+        "kab": "KAB. PARIGI MOUTONG",
+        "kronologis": "Hari Selasa,  28 Januari 2025 pukul 21.53 WITA, wilayah Desa Salampangut (Kab. Parimo), Propinsi Sulawesi Tengah diguncang gempabumi tektonik. Hasil analisis BMKG menunjukkan informasi awal gempabumi ini berkekuatan M = 6.1. Episenter gempabumi terletak pada koordinat Lokasi 0.53 LU 121.18 BT atau tepatnya berlokasi di darat, 45 km arah Tenggara Parigi Moutong,  Propinsi Sulawesi Tengah pada kedalaman 76 km. \r\n"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.64014,
+          -1.4586
+        ]
+      },
+      "properties": {
+        "kejadian": "Banjir",
+        "tgl": "2025-04-06",
+        "lokasi": "Betalemba",
+        "kab": "KAB. POSO",
+        "kronologis": "Terjadinya hujan dengan intensitas tinggi disertai angin kencang di Kecamatan Poso Pesisir Selatan menyebabkan terjadinya banjir yang meluap ke pemukiman warga di Desa Betalemba dan Desa Tabalu serta terjadinya beberapa kerusakan pada bangunan akibat angin kencang yang terjadi."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          119.76587,
+          -0.41544
+        ]
+      },
+      "properties": {
+        "kejadian": "Banjir",
+        "tgl": "2025-01-15",
+        "lokasi": "Batusuya",
+        "kab": "KAB. DONGGALA",
+        "kronologis": "Intensitas curah hujan yang sedang hingga tinggi mengakibatkan meluapnya air sungai yang ada di Desa Batusuya ke pemukiman warga. Sehingga berdampak ke lingkungan masyarakat dan merusak fasilitas desa."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          119.8938,
+          -0.68942
+        ]
+      },
+      "properties": {
+        "kejadian": "Banjir Bandang",
+        "tgl": "2025-05-27",
+        "lokasi": "Wombo",
+        "kab": "KAB. DONGGALA",
+        "kronologis": "Pada hari Selasa tanggal 27 Mei 2025 pukul 15.00 desa Wombo di guyur hujan dengan intensitas tinggi yang mengakibatkan meluapnya air sungai dan menyebabkan banjir bandang. Hingga saat ini warga masih mengharapkan pertolongan dari tim Rescue."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          119.89766,
+          -0.68852
+        ]
+      },
+      "properties": {
+        "kejadian": "Banjir Bandang",
+        "tgl": "2025-05-27",
+        "lokasi": "Wombo Kalonggo",
+        "kab": "KAB. DONGGALA",
+        "kronologis": "Pada hari Selasa tanggal 27 Mei 2025 pukul 15.00 desa Wombo di guyur hujan dengan intensitas tinggi yang mengakibatkan meluapnya air sungai dan menyebabkan banjir bandang. Hingga saat ini warga masih mengharapkan pertolongan dari tim Rescue."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.89148,
+          -1.69202
+        ]
+      },
+      "properties": {
+        "kejadian": "Puting Beliung",
+        "tgl": "2025-02-08",
+        "lokasi": "Kolo Bawah",
+        "kab": "KAB. MOROWALI UTARA",
+        "kronologis": "Telah Terjadi Angin Putting Beliung yang mengakibatkan 20 rumah warga rusak dan fasilitas umum 1 masjid"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          123.28269,
+          -1.32347
+        ]
+      },
+      "properties": {
+        "kejadian": "Puting Beliung",
+        "tgl": "2025-01-21",
+        "lokasi": "Tompudau",
+        "kab": "KAB. BANGGAI KEPULAUAN",
+        "kronologis": "Pada pukul. 13.30 wita Cuaca buruk dengan awan gelap dan angin kencang mulai terbentuk di sekitar wilayah kota salakan. Dalam hitungan menit, sebuah rumah panggung milik Tn. Irwan roboh akibat terjangan angin yang sangat kuat. Bagian dinding rumah patah, sementara struktur rumah yang terbuat dari kayu dan tiang panggung tumbang."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          123.50308,
+          -1.58916
+        ]
+      },
+      "properties": {
+        "kejadian": "Tanah Longsor",
+        "tgl": "2025-05-24",
+        "lokasi": "Tano Bununungan",
+        "kab": "KAB. BANGGAI LAUT",
+        "kronologis": "Akibat intensitas hujan yang cukup lebat dari pukul 21.00 WITA hingga 04.30 WITA, yang menyebabkan sebuah rumah milik warga di Kelurahan Tanobonunungan tertimbun tanah longsor."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          122.71849,
+          -1.10416
+        ]
+      },
+      "properties": {
+        "kejadian": "Banjir",
+        "tgl": "2025-03-27",
+        "lokasi": "Padungnyo",
+        "kab": "KAB. BANGGAI",
+        "kronologis": "intensitas hujan yang tinggi di Desa Lumbe Kec. Nambo Kab. Banggai mengakibatkan debit air meningkat sehingga Desa Padungyo Kec. Nambo Kab. Banggai terkena imbas dari luapan air tersebut dan menggenangi pemukiman warga.\r\n"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.21665,
+          0.44617
+        ]
+      },
+      "properties": {
+        "kejadian": "Tanah Longsor",
+        "tgl": "2025-03-14",
+        "lokasi": "Ogoalas",
+        "kab": "KAB. PARIGI MOUTONG",
+        "kronologis": "Intensitas curah hujan yang tinggi menyebabkan terjadinya tanah longsor pada akses jalan utama menuju Desa Ogoalas sepanjang ± 30 meter dan Desa Patingke ± 30 meter serta tidak dapat dilalui oleh kendaraan."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          119.98672,
+          -1.43905
+        ]
+      },
+      "properties": {
+        "kejadian": "Tanah Longsor",
+        "tgl": "2025-04-13",
+        "lokasi": "Bolapapu",
+        "kab": "KAB. SIGI",
+        "kronologis": "Intensitas curah hujan yang tinggi menyebabkan terjadinya tanah longsor sehingga menutupi sebagian badan jalan pada akses jalan trans Palu - Kulawi."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          122.23627,
+          -0.8679
+        ]
+      },
+      "properties": {
+        "kejadian": "Banjir",
+        "tgl": "2025-03-18",
+        "lokasi": "Koninis",
+        "kab": "KAB. BANGGAI",
+        "kronologis": "Akibat intensitas curah hujan yang tinggi mengakibatkan terjadinya banjir hingga meluap ke pemukiman warga dan terjadi pengikisan tebing sungai di area Pemakaman Umum."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.71075,
+          -2.12621
+        ]
+      },
+      "properties": {
+        "kejadian": "Banjir",
+        "tgl": "2025-05-12",
+        "lokasi": "Pandajaya",
+        "kab": "KAB. POSO",
+        "kronologis": "Hujan dengan intensitas tinggi mulai pukul 14.00 WITA menyebabkan volume air meningkat dan meluapnya drainase hingga mengakibatkan banjir di area pemukiman warga Desa Panda Jaya "
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.0267,
+          -1.58352
+        ]
+      },
+      "properties": {
+        "kejadian": "Banjir",
+        "tgl": "2025-03-07",
+        "lokasi": "OParese",
+        "kab": "KAB. SIGI",
+        "kronologis": "Intensitas curah hujan yang tinggi mengakibatkan meluapnya air sungai ke pemukiman warga dan merusak lahan persawahan dan perkebunan"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.278949,
+          1.068204
+        ]
+      },
+      "properties": {
+        "kejadian": "Banjir",
+        "tgl": "2025-01-30",
+        "lokasi": "Balau",
+        "kab": "KAB. BUOL",
+        "kronologis": "Intensitas hujan ringan hingga sedang terjadi pada hari kamis 30 januari 2025 mengakibatkan banir hingga meluap ke pemukiman warga dengan ketinggian kurang lebih 1 meter"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.57706,
+          -1.26788
+        ]
+      },
+      "properties": {
+        "kejadian": "Banjir",
+        "tgl": "2025-03-21",
+        "lokasi": "Maranda",
+        "kab": "KAB. POSO",
+        "kronologis": "Akibat terjadinya hujan lebat yang berlangsung selama ± 2 jam mengakibatkan debit air meluap hingga ke pemukiman masyrakat. \r\n"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72386,
+          -0.66286
+        ]
+      },
+      "properties": {
+        "kejadian": "Banjir",
+        "tgl": "2025-05-03",
+        "lokasi": "Boneoge",
+        "kab": "KAB. DONGGALA",
+        "kronologis": "Terjadinya intensitas curah hujan yang tinggi selama beberapa jam menyebabkan volume air meningkat dan meluapnya drainase sehingga mengakibatkan banjir.\r\n"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72386,
+          -0.66286
+        ]
+      },
+      "properties": {
+        "kejadian": "Banjir",
+        "tgl": "2025-05-03",
+        "lokasi": "Ganti",
+        "kab": "KAB. DONGGALA",
+        "kronologis": "Terjadinya intensitas curah hujan yang tinggi selama beberapa jam menyebabkan volume air meningkat dan meluapnya drainase sehingga mengakibatkan banjir.\r\n"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.55019,
+          -2.2096
+        ]
+      },
+      "properties": {
+        "kejadian": "Banjir",
+        "tgl": "2025-07-07",
+        "lokasi": "Solonsa",
+        "kab": "KAB. MOROWALI",
+        "kronologis": "Hujan berintensitas sedang hingga lebat menyebabkan air dan lumpu yang berasal dari lokasi Pertambangan PT. Alaska melewati galian parit meluap sampai ke jalan Trans Sulawesi dan rumah warga"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.30134,
+          -2.05851
+        ]
+      },
+      "properties": {
+        "kejadian": "Banjir",
+        "tgl": "2025-03-20",
+        "lokasi": "Onepute",
+        "kab": "KAB. MOROWALI UTARA",
+        "kronologis": "Telah terjadi hujan dengan Intensitas tinggi sejak tanggal 19 Maret 2025. Sehingga menyebabkan aliran sungai La'a meluap dan menggenangi sebagian besar pemukiman warga dengan ketinggian air mencapai ± 40 cm dan merendam 8 rumah warga."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.99646,
+          0.87043
+        ]
+      },
+      "properties": {
+        "kejadian": "Tanah Longsor",
+        "tgl": "2025-03-16",
+        "lokasi": "Mulya Sari",
+        "kab": "KAB. TOLI TOLI",
+        "kronologis": "Intensitas curah hujan yang tinggi menyebabkan terjadinya tanah longsor pada akses jalan antara desa Maibua dan Muliasari serta tidak dapat dilalui oleh kendaraan roda 4.\r\n"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.759092,
+          -1.489394
+        ]
+      },
+      "properties": {
+        "kejadian": "Tanah Longsor",
+        "tgl": "2025-01-23",
+        "lokasi": "Watuawu",
+        "kab": "KAB. POSO",
+        "kronologis": "Hujan yang terjadi pada rabu sore hingga malam hari mengakibatkan terjadinya longsor pada jalan poros  penghubung Poso - Tentena dan juga berdampak pada beberapa unit rumah warga\r\n"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.765957,
+          0.815455
+        ]
+      },
+      "properties": {
+        "kejadian": "Banjir",
+        "tgl": "2025-02-01",
+        "lokasi": "Silondou",
+        "kab": "KAB. TOLI TOLI",
+        "kronologis": "Akibat intensitas hujan tinggi mengakibatkan air sungai meluap ke rumah penduduk, usaha pertanian, sekolah SMP, SD, Paud, Kantor Desa, Rumah Ibadah dan lain - lain."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.75027,
+          -1.39004
+        ]
+      },
+      "properties": {
+        "kejadian": "Banjir",
+        "tgl": "2025-03-05",
+        "lokasi": "Kayamanya",
+        "kab": "KAB. POSO",
+        "kronologis": "Intensitas curah hujan yang tinggi sejak siang hari mengakibatkan banjir meluap dipemukiman warga yang berada dibantaran sungai di kelurahan kayamanya\r\n"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          123.283141,
+          -1.316081
+        ]
+      },
+      "properties": {
+        "kejadian": "Puting Beliung",
+        "tgl": "2025-02-06",
+        "lokasi": "Bongganan",
+        "kab": "KAB. BANGGAI KEPULAUAN",
+        "kronologis": "Terjadinya cuaca buruk disertai angin kencang pada pukul 01.20 WITA di Desa Bongganan yang berdampak ke rumah warga. pada kejadian tersebut mengakibatkan robohnya salah satu rumah warga dengan kondisi rusak berat."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.68925,
+          -1.98812
+        ]
+      },
+      "properties": {
+        "kejadian": "Gempa Bumi",
+        "tgl": "2025-07-14",
+        "lokasi": "Tindoli",
+        "kab": "KAB. POSO",
+        "kronologis": "Hari Senin Tanggal 14 Juli 2025 Pukul 19.52 WITA Wilayah Pamona Tenggara Kab. Poso Sulawesi Tengah diguncang Gempa Tektonik. Hasil Analisis BMKG menunjukan gempa bumi ini memiliki parameter update dengan Magnetudo M 5,0. Episenter gempa bumi terletak pada koordinat 2,01 LS; 120.68 BT atau tepatnya berlokasi di darat wilayah Pamona Tenggara Kab. Poso Sulawesi Tengah pada kedalaman 14 Km."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.17353,
+          -1.60402
+        ]
+      },
+      "properties": {
+        "kejadian": "Banjir Bandang",
+        "tgl": "2025-08-20",
+        "lokasi": "Molino",
+        "kab": "KAB. MOROWALI UTARA",
+        "kronologis": "Akibat hujan deras mengguyur Desa Malino menyebabkan debit air begitu besar dan mengakibatkan banjir bandang."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.39418,
+          1.20335
+        ]
+      },
+      "properties": {
+        "kejadian": "Tanah Longsor",
+        "tgl": "2025-02-01",
+        "lokasi": "Leok I",
+        "kab": "KAB. BUOL",
+        "kronologis": "Akibat curah hujan yang sedang - tinggi terjadi sekira Pukul 12:35 - 18:30 WITA, menyebabkan tanah longsor, material yang menimbun badan jalan ± 50 m. Sehingga akses jalan masuk sementara belum bisa dilalui"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.66125,
+          -1.65186
+        ]
+      },
+      "properties": {
+        "kejadian": "Banjir",
+        "tgl": "2025-05-03",
+        "lokasi": "Sulewana",
+        "kab": "KAB. POSO",
+        "kronologis": "Intensitas curah hujan yang tinggi mengakibatkan meningkatnya debit air di Sungai Desa Sulewana dan Membawa material yang menyebabkan rusaknya Jembatan Kantong Produksi di Desa Sulewana"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          119.93173,
+          -1.01149
+        ]
+      },
+      "properties": {
+        "kejadian": "Banjir",
+        "tgl": "2025-08-19",
+        "lokasi": "Sidera",
+        "kab": "KAB. SIGI",
+        "kronologis": "Selasa 19 Agustus 2025 hujan deras mengguyur dari jam 15.00 sampai 17.00 WITA, menyebabkan debit air begitu besar sehingga saluran drainase tidak mampu menampung dan mengakibatkan luapan air kerumah warga. "
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          122.08235,
+          -2.78653
+        ]
+      },
+      "properties": {
+        "kejadian": "Puting Beliung",
+        "tgl": "2025-04-29",
+        "lokasi": "Lalampu",
+        "kab": "KAB. MOROWALI",
+        "kronologis": "Cuaca Buruk sekitar pukul 08.00 WITA menyebabkan terjadinya Angin Puting Beliung dari arah pantai sampai ke pemukiman warga pada pukul 08.18 WITA."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.07807,
+          -1.5094
+        ]
+      },
+      "properties": {
+        "kejadian": "Banjir",
+        "tgl": "2025-03-14",
+        "lokasi": "Toro",
+        "kab": "KAB. SIGI",
+        "kronologis": "Intensitas curah hujan yang tinggi menyebabkan meluapnya sungai Meweh hingga merendam pemukiman warga di Dusun 6 Desa Toro\r\n"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          123.49019,
+          -1.608446
+        ]
+      },
+      "properties": {
+        "kejadian": "Puting Beliung",
+        "tgl": "2025-02-08",
+        "lokasi": "Tinakin Laut",
+        "kab": "KAB. BANGGAI LAUT",
+        "kronologis": "Terjadi hujan deras disertai angin kencang pada pukul 23.45 WITA di Desa Tinaki yang berdampak rusak berat pada satu unit rumah warga."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.38154,
+          -1.92724
+        ]
+      },
+      "properties": {
+        "kejadian": "Puting Beliung",
+        "tgl": "2025-02-13",
+        "lokasi": "Gililana",
+        "kab": "KAB. MOROWALI UTARA",
+        "kronologis": "Angin Kencang\r\n"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.08534,
+          121.4618
+        ]
+      },
+      "properties": {
+        "kejadian": "Banjir",
+        "tgl": "2025-04-03",
+        "lokasi": "Towara Pantai",
+        "kab": "KAB. MOROWALI UTARA",
+        "kronologis": "Intensitas hujan yang tinggi terjadi di Kec. Petasia Timur Kab. Morowali Utara menyebabkan sungai yang berada di Desa Towara Pantai meluap sehingga Menggenangi pemukiman warga."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.80148,
+          1.1121
+        ]
+      },
+      "properties": {
+        "kejadian": "Banjir",
+        "tgl": "2025-01-17",
+        "lokasi": "Ginunggung",
+        "kab": "KAB. TOLI TOLI",
+        "kronologis": "Hujan dengan intensitas tinggi yang terjadi sejak pukul 07.30 wita sampe 10:30 wita mengakibatkan meluapnya air drainase di desa Ginunggung dan mengakibatkan banjir menggenangi badan jalan, sekolah dan rumah warga."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          123.38117,
+          -0.91925
+        ]
+      },
+      "properties": {
+        "kejadian": "Banjir",
+        "tgl": "2025-03-08",
+        "lokasi": "Resarna",
+        "kab": "KAB. BANGGAI",
+        "kronologis": "Akibat hujan dengan intensitas sedang hingga lebat dari pagi hingga siang hari, menyebabkan banjir di desa resarna, Kec. Balantak Selatan, Kab. Banggai"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.36623,
+          -2.04576
+        ]
+      },
+      "properties": {
+        "kejadian": "Banjir",
+        "tgl": "2025-02-17",
+        "lokasi": "Bunta",
+        "kab": "KAB. MOROWALI UTARA",
+        "kronologis": "Terjadi Hujan deras pada pukul 19.00 wita sampai dengan 09.30 wita sehingga mengakibatkan 2 fasum serta 1 rumah warga terendam"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.10802,
+          0.42186
+        ]
+      },
+      "properties": {
+        "kejadian": "Banjir",
+        "tgl": "2025-03-16",
+        "lokasi": "Tuladenggi Sibatang",
+        "kab": "KAB. PARIGI MOUTONG",
+        "kronologis": "Minggu, 16 Maret 2025. Pukul 19:05 WITA, Akibat hujan dengan intensitas sedang hingga lebat di pegunungan menyebabkan banjir disungai meluap kepemukiman warga dan merendam rumah warga."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.11306,
+          0.44603
+        ]
+      },
+      "properties": {
+        "kejadian": "Banjir",
+        "tgl": "2025-04-14",
+        "lokasi": "Tompo",
+        "kab": "KAB. PARIGI MOUTONG",
+        "kronologis": "Senin, 14 April 2025. Pukul 22:38 WITA telah terjadi banjir di Desa.Tompo, Kec. Taopa. Kab. Parigi Moutong Hujan dengan intensitas sedang hingga lebat menyebabkan banjir. Akibat tanggul sungai tidak mampu menahan debit air, sehingga banjir meluap sampai kepemukiman warga."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          119.73132,
+          -0.79418
+        ]
+      },
+      "properties": {
+        "kejadian": "Tanah Longsor",
+        "tgl": "2025-04-15",
+        "lokasi": "Powelua",
+        "kab": "KAB. DONGGALA",
+        "kronologis": "Telah terjadinya pengikisan pada tebing sungai yang disebabkan oleh meningkatnya debit air yang berada di Desa Powelua menyebabkan terjadinya Longsor sehingga jalan Akses menuju Desa Powelua terputus."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.69235,
+          -2.07175
+        ]
+      },
+      "properties": {
+        "kejadian": "Banjir",
+        "tgl": "2025-04-17",
+        "lokasi": "Pasir Putih",
+        "kab": "KAB. POSO",
+        "kronologis": "karena debit air yang meningkat, jembatan Tinelala yang merupakan akses penghubung Desa Pasir Putih - Desa Pendolo mengalami pengikisan akibat debit air yang meningkat."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.96842,
+          0.51795
+        ]
+      },
+      "properties": {
+        "kejadian": "Banjir",
+        "tgl": "2025-06-21",
+        "lokasi": "Lambunu",
+        "kab": "KAB. PARIGI MOUTONG",
+        "kronologis": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.29776,
+          -1.75614
+        ]
+      },
+      "properties": {
+        "kejadian": "Banjir",
+        "tgl": "2025-05-02",
+        "lokasi": "Tandoyondo",
+        "kab": "KAB. MOROWALI UTARA",
+        "kronologis": "Banjir yang terjadi pada desa Tandayondo Kec. Soyojaya disebabkan adanya Hujan selama 3 hari berturut-turut, sehingga sungai Sumara meluap ke pemukiman warga dengan ketinggian ± 35-70 cm. Dapat pula kami sampaikan bahwa pintu masuk aliran air terdapat 2(dua) buah saluran, yang perlu segera di lakukan penanganan lebih lanjut."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.95677,
+          1.03062
+        ]
+      },
+      "properties": {
+        "kejadian": "Banjir",
+        "tgl": "2025-07-04",
+        "lokasi": "Kwalabesar",
+        "kab": "KAB. BUOL",
+        "kronologis": "Akibat intensitas curah hujan yang deras menyebabkan banjir di Desa Kwala Besar hingga merendam pemukiman dan perkebunan warga"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.42353,
+          0.49684
+        ]
+      },
+      "properties": {
+        "kejadian": "Banjir Bandang",
+        "tgl": "2025-03-13",
+        "lokasi": "Ogoansam",
+        "kab": "KAB. PARIGI MOUTONG",
+        "kronologis": "Akibat Hujan dengan intensitas sedang hingga lebat menyebabkan sungai Palasa meluap kepemukiman warga hingga merendam rumah warga Desa Ogoansam dan Desa Bambasiang.\r\n\r\n"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.41845,
+          0.52149
+        ]
+      },
+      "properties": {
+        "kejadian": "Banjir Bandang",
+        "tgl": "2025-03-13",
+        "lokasi": "Bambasiang",
+        "kab": "KAB. PARIGI MOUTONG",
+        "kronologis": "Akibat Hujan dengan intensitas sedang hingga lebat menyebabkan sungai Palasa meluap kepemukiman warga hingga merendam rumah warga Desa Ogoansam dan Desa Bambasiang.\r\n\r\n"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.45401,
+          1.03946
+        ]
+      },
+      "properties": {
+        "kejadian": "Banjir",
+        "tgl": "2025-04-04",
+        "lokasi": "Mopu",
+        "kab": "KAB. BUOL",
+        "kronologis": "Pada hari Jum'at 4 April 2025 Sekitar Pkl.15.30.Wita, di wilayah kecamatan Bukal, telah terjadi hujan dengan intensitas tinggi, yang menyebabkan puluhan rumah di desa Mopu terendam banjir dengan ketinggian kurang lebih ± 40- 60 cm. banjir yang terjadi di wilayah Desa Mopu diakibatkan luapan air Sungai Bukal, yang tidak dapat lagi menampung lagi debit air sehingga merendam pemukiman warga."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.65324,
+          0.76604
+        ]
+      },
+      "properties": {
+        "kejadian": "Banjir dan Tanah Longsor",
+        "tgl": "2025-02-01",
+        "lokasi": "Kongkomos",
+        "kab": "KAB. TOLI TOLI",
+        "kronologis": "Hujan dengan intensitas tinggi Sejak pukul 15.30 - 17:30 mengakibatkan terjadinya banjir dan Tanah longsor di beberapa titik wilayah Kec. Basidondo"
+      }
+    }
+  ]
+}

@@ -1,7 +1,9 @@
+/* eslint-disable @typescript-eslint/ban-types */
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import axios from 'axios';
 
-// const API = axios.create({baseURL: 'http://localhost:5001'});
-const API = axios.create({baseURL: 'https://backendreboon.api.pusdalops-bpbdsulteng.com'});
+const API = axios.create({baseURL: 'http://localhost:5001'});
+// const API = axios.create({baseURL: 'https://backendreboon.api.pusdalops-bpbdsulteng.com'});
 
 API.interceptors.request.use((req) => {
   if (localStorage.getItem('profile')) {
@@ -53,6 +55,7 @@ export const fetchCountKejadianPerTahun = () => API.get('/kejadian/count/tahun')
 export const fetchCountKejadianPerWilayah = (tahun: string) => API.get(`/kejadian/count/wilayah?search_tahun=${tahun}`);
 export const fetchCountKejadianPerJenisKejadian = (keyword: string, tahun: string) => API.get(`/kejadian/count/jenis?search_query=${keyword}&search_tahun=${tahun}`);
 export const fetchKejadianSearch = (kab: any, jenis: any, tahun: any, bulan: any, status: any, page: any, limit: any) =>API.get(`/kejadian/search?kab=${kab}&jenis=${jenis}&tahun=${tahun}&bulan=${bulan}&status${status}&page=${page}&limit=${limit}`);
+export const fetchKejadianPerTahun = () => API.get('/kejadian/pertahun');
 
 export const fetchKejadianTerdampak = (id: string | any) =>
   API.get(`/kejadian/update/${id}`);

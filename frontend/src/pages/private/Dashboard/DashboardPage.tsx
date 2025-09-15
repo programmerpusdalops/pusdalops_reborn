@@ -1,18 +1,36 @@
-import { useRef, useState } from 'react';
+/* eslint-disable @typescript-eslint/no-explicit-any */
+import { useEffect, useRef, useState } from 'react';
 import { LayersControl, MapContainer, TileLayer, GeoJSON } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
 import { Icon } from 'leaflet';
 import L from 'leaflet';
+import * as api from '../../../utils/Api';
 
-import testing from '../../../utils/js/testing.json';
+// import testing from '../../../utils/js/testing1.json';
 import batas_kab from '../../../utils/js/BATAS_KAB_BIG_2021.json';
 
 
 const DashboardPage = () => {
-  const[bencana] = useState<any>(testing)
+  // const[bencana] = useState<any>(testing)
+  const [bencana, setBencana] = useState<any>([]);
   const[batasKab] = useState<any>(batas_kab)
 
   const geo = useRef(null);
+
+    useEffect(() => {
+      // Untuk mengambil data kejadian dari API
+      const fetchKejadian = async () => {
+        // Memanggil fungsi fetchKejadianPerTahun dari modul api untuk mendapatkan data kejadian per tahun
+        const response = await api.fetchKejadianPerTahun(); 
+        // Menyimpan data yang diterima dari response ke dalam state bencana
+        setBencana(response?.data);
+        // ⚠️ ini mungkin belum langsung update karena state asynchronous
+      };
+      // Memanggil fungsi fetchKejadian untuk mengeksekusi pengambilan data
+      // console.log(bencana);
+      fetchKejadian();
+      // Menambahkan array kosong sebagai dependensi agar efek ini hanya berjalan sekali saat komponen dipasang
+    }, []);
 
   const MarkerPetaCore = new Icon({
     iconUrl: 'https://backendreboon.api.pusdalops-bpbdsulteng.com/images/location1.png',
@@ -43,6 +61,7 @@ const DashboardPage = () => {
               <LayersControl position="bottomleft">
                 <LayersControl.Overlay name="Titik Lokasi Bencana Tahun 2025">
                   <GeoJSON
+                  key={JSON.stringify(bencana)}
                     data={bencana}
                     ref={geo}
                     pointToLayer={function (_geoJsonPoint, latlng) {
