@@ -41,7 +41,7 @@ const VideoAssetPage = () => {
 
   return (
     <>
-      <Breadcrumb pageName="Jenis Bencana" />
+      <Breadcrumb pageName="Video Youtube" />
       <div className="flex flex-col gap-9 mb-5">
         {/* <!-- Tambah Data --> */}
         <div className="rounded-sm border border-stroke bg-white shadow-default dark:border-strokedark dark:bg-boxdark">
@@ -54,7 +54,7 @@ const VideoAssetPage = () => {
             <form onSubmit={OnSubmit}>
               <div>
                 <label className="mb-3 block text-black dark:text-white lg:inline lg:mr-10">
-                  Jenis Bencana
+                  Jenis Vidio
                 </label>
                 <input
                   type="text"

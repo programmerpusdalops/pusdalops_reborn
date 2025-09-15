@@ -110,12 +110,62 @@ export default function HeaderPublic() {
               </Popover>
             </Popover.Group>
 
-            <NavLink
+            {/* <NavLink
               to="/dokumen-publik"
               className="text-sm font-semibold leading-6 text-gray-900"
             >
               Dokumen
-            </NavLink>
+            </NavLink> */}
+
+            <Popover.Group className="hidden lg:flex lg:gap-x-12">
+              <Popover className="relative">
+                <Popover.Button className="flex items-center gap-x-1 text-sm font-semibold leading-6 text-gray-900">
+                  Informasi
+                  {/* <ChevronDownIcon
+                    className="h-4 w-4 flex-none text-gray-400"
+                    aria-hidden="true"
+                  /> */}
+                </Popover.Button>
+                <Transition
+                  as={Fragment}
+                  enter="transition ease-out duration-200"
+                  enterFrom="opacity-0 translate-y-1"
+                  enterTo="opacity-100 translate-y-0"
+                  leave="transition ease-in duration-150"
+                  leaveFrom="opacity-100 translate-y-0"
+                  leaveTo="opacity-0 translate-y-1"
+                >
+                  <Popover.Panel className="absolute -left-8 top-full z-10 mt-3 w-screen max-w-30 overflow-hidden rounded-3xl bg-white dark:bg-boxdark dark:drop-shadow-none shadow-lg ring-1 ring-gray-900/5">
+                    <div className="p-4">
+                      <div className="group relative flex items-center gap-x-6 rounded-lg p-2 text-sm leading-6 hover:bg-gray-50">
+                        <NavLink
+                          to="/dokumen-publik"
+                          className="text-sm font-semibold leading-6 text-gray-900"
+                        >
+                          Dokumen
+                        </NavLink>
+                      </div>
+                      <div className="group relative flex items-center gap-x-6 rounded-lg p-2 text-sm leading-6 hover:bg-gray-50">
+                        <NavLink
+                          to="/berita-publik"
+                          className="text-sm font-semibold leading-6 text-gray-900"
+                        >
+                          Pengetahuan Bencana
+                        </NavLink>
+                      </div>
+                      <div className="group relative flex items-center gap-x-6 rounded-lg p-2 text-sm leading-6 hover:bg-gray-50">
+                        <NavLink
+                          to="/majalah-publik"
+                          className="text-sm font-semibold leading-6 text-gray-900"
+                        >
+                          Tips Bencana
+                        </NavLink>
+                      </div>
+                    </div>
+                  </Popover.Panel>
+                </Transition>
+              </Popover>
+            </Popover.Group>
 
             <Popover.Group className="hidden lg:flex lg:gap-x-12">
               <Popover className="relative">
@@ -145,14 +195,156 @@ export default function HeaderPublic() {
                           Berita
                         </NavLink>
                       </div>
-                      {/* <div className="group relative flex items-center gap-x-6 rounded-lg p-2 text-sm leading-6 hover:bg-gray-50">
+                      <div className="group relative flex items-center gap-x-6 rounded-lg p-2 text-sm leading-6 hover:bg-gray-50">
                         <NavLink
                           to="/majalah-publik"
                           className="text-sm font-semibold leading-6 text-gray-900"
                         >
                           Majalah
                         </NavLink>
-                      </div> */}
+                      </div>
+                      <div className="group relative flex items-center gap-x-6 rounded-lg p-2 text-sm leading-6 hover:bg-gray-50">
+                        <NavLink
+                          to="/infografis-publik"
+                          className="text-sm font-semibold leading-6 text-gray-900"
+                        >
+                          Infografis Bencana
+                        </NavLink>
+                      </div>
+                    </div>
+                  </Popover.Panel>
+                </Transition>
+              </Popover>
+            </Popover.Group>
+
+            <Popover.Group className="hidden lg:flex lg:gap-x-12">
+              <Popover className="relative">
+                <Popover.Button className="flex items-center gap-x-1 text-sm font-semibold leading-6 text-gray-900">
+                  Kontak
+                  {/* <ChevronDownIcon
+                    className="h-4 w-4 flex-none text-gray-400"
+                    aria-hidden="true"
+                  /> */}
+                </Popover.Button>
+                <Transition
+                  as={Fragment}
+                  enter="transition ease-out duration-200"
+                  enterFrom="opacity-0 translate-y-1"
+                  enterTo="opacity-100 translate-y-0"
+                  leave="transition ease-in duration-150"
+                  leaveFrom="opacity-100 translate-y-0"
+                  leaveTo="opacity-0 translate-y-1"
+                >
+                  <Popover.Panel className="absolute -left-8 top-full z-10 mt-3 w-screen max-w-30 overflow-hidden rounded-3xl bg-white dark:bg-boxdark dark:drop-shadow-none shadow-lg ring-1 ring-gray-900/5">
+                    <div className="p-4">
+                      <div className="group relative flex items-center gap-x-6 rounded-lg p-2 text-sm leading-6 hover:bg-gray-50">
+                        <NavLink
+                          to="/kontak-kami"
+                          className="text-sm font-semibold leading-6 text-gray-900"
+                        >
+                          Hubungi Kami
+                        </NavLink>
+                      </div>
+                      <div className="group relative flex items-center gap-x-6 rounded-lg p-2 text-sm leading-6 hover:bg-gray-50">
+                        <NavLink
+                          to="/kontak-penting"
+                          className="text-sm font-semibold leading-6 text-gray-900"
+                        >
+                          Kontak Penting
+                        </NavLink>
+                      </div>          
+                    </div>
+                  </Popover.Panel>
+                </Transition>
+              </Popover>
+            </Popover.Group>
+
+            <Popover.Group className="hidden lg:flex lg:gap-x-12">
+              <Popover className="relative">
+                <Popover.Button className="flex items-center gap-x-1 text-sm font-semibold leading-6 text-gray-900">
+                  Aplikasi
+                  {/* <ChevronDownIcon
+                    className="h-4 w-4 flex-none text-gray-400"
+                    aria-hidden="true"
+                  /> */}
+                </Popover.Button>
+                <Transition
+                  as={Fragment}
+                  enter="transition ease-out duration-200"
+                  enterFrom="opacity-0 translate-y-1"
+                  enterTo="opacity-100 translate-y-0"
+                  leave="transition ease-in duration-150"
+                  leaveFrom="opacity-100 translate-y-0"
+                  leaveTo="opacity-0 translate-y-1"
+                >
+                  <Popover.Panel className="absolute -left-8 top-full z-10 mt-3 w-screen max-w-30 overflow-hidden rounded-3xl bg-white dark:bg-boxdark dark:drop-shadow-none shadow-lg ring-1 ring-gray-900/5">
+                    <div className="p-4">
+                      <div className="group relative flex items-center gap-x-6 rounded-lg p-2 text-sm leading-6 hover:bg-gray-50">
+                        <NavLink
+                          to="https://dashboard.gis.pusdalops-bpbdsulteng.com/login.php"
+                          className="text-sm font-semibold leading-6 text-gray-900"
+                        >
+                          Web GIS
+                        </NavLink>
+                      </div>
+                      <div className="group relative flex items-center gap-x-6 rounded-lg p-2 text-sm leading-6 hover:bg-gray-50">
+                        <NavLink
+                          to="https://dashboard.core.pusdalops-bpbdsulteng.com/deskrelawan"
+                          className="text-sm font-semibold leading-6 text-gray-900"
+                        >
+                          Deskrelawan
+                        </NavLink>
+                      </div> 
+                      <div className="group relative flex items-center gap-x-6 rounded-lg p-2 text-sm leading-6 hover:bg-gray-50">
+                        <NavLink
+                          to="https://dashboard.core.pusdalops-bpbdsulteng.com/jitupasna_log"
+                          className="text-sm font-semibold leading-6 text-gray-900"
+                        >
+                          E-Jitupasna
+                        </NavLink>
+                      </div>         
+                    </div>
+                  </Popover.Panel>
+                </Transition>
+              </Popover>
+            </Popover.Group>
+
+            <Popover.Group className="hidden lg:flex lg:gap-x-12">
+              <Popover className="relative">
+                <Popover.Button className="flex items-center gap-x-1 text-sm font-semibold leading-6 text-gray-900">
+                  Lapor
+                  {/* <ChevronDownIcon
+                    className="h-4 w-4 flex-none text-gray-400"
+                    aria-hidden="true"
+                  /> */}
+                </Popover.Button>
+                <Transition
+                  as={Fragment}
+                  enter="transition ease-out duration-200"
+                  enterFrom="opacity-0 translate-y-1"
+                  enterTo="opacity-100 translate-y-0"
+                  leave="transition ease-in duration-150"
+                  leaveFrom="opacity-100 translate-y-0"
+                  leaveTo="opacity-0 translate-y-1"
+                >
+                  <Popover.Panel className="absolute -left-8 top-full z-10 mt-3 w-screen max-w-30 overflow-hidden rounded-3xl bg-white dark:bg-boxdark dark:drop-shadow-none shadow-lg ring-1 ring-gray-900/5">
+                    <div className="p-4">
+                      <div className="group relative flex items-center gap-x-6 rounded-lg p-2 text-sm leading-6 hover:bg-gray-50">
+                        <NavLink
+                          to="#"
+                          className="text-sm font-semibold leading-6 text-gray-900"
+                        >
+                          Lapor Bencana
+                        </NavLink>
+                      </div>
+                      <div className="group relative flex items-center gap-x-6 rounded-lg p-2 text-sm leading-6 hover:bg-gray-50">
+                        <NavLink
+                          to="#"
+                          className="text-sm font-semibold leading-6 text-gray-900"
+                        >
+                          Lapor Via Wa
+                        </NavLink>
+                      </div>     
                     </div>
                   </Popover.Panel>
                 </Transition>
@@ -242,6 +434,7 @@ export default function HeaderPublic() {
                       </Transition>
                     </Popover>
                   </Popover.Group>
+                  
                   <NavLink
                     to="/dokumen-publik"
                     className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
@@ -249,14 +442,15 @@ export default function HeaderPublic() {
                   >
                     Dokumen
                   </NavLink>
-                  
+
                   <NavLink
                     to="/dokumen-publik"
                     className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                     onClick={() => setMobileMenuOpen(false)}
                   >
-                    Tessss
+                    Informasi
                   </NavLink>
+                  
                   
                   <Popover.Group className="lg:flex lg:gap-x-12">
                     <Popover className="relative">
@@ -287,14 +481,14 @@ export default function HeaderPublic() {
                                 Berita
                               </NavLink>
                             </div>
-                            {/* <div className="group relative flex items-center gap-x-6 rounded-lg p-2 text-sm leading-6 hover:bg-gray-50">
+                            <div className="group relative flex items-center gap-x-6 rounded-lg p-2 text-sm leading-6 hover:bg-gray-50">
                               <a
                                 href="#"
                                 className="text-sm font-semibold leading-6 text-gray-900"
                               >
                                 Majalah
                               </a>
-                            </div> */}
+                            </div>
                           </div>
                         </Popover.Panel>
                       </Transition>

@@ -18,15 +18,26 @@ const DetailDataBencanaPage = lazy(
 const DataLogpalPage = lazy(
   () => import('../pages/private/DataLogpal/DataLogpalPage'),
 );
-const BeritaPage = lazy(() => import('../pages/private/Publikasi/BeritaPage'));
-const TambahBeritaPage = lazy(() => import('../pages/private/Publikasi/TambahBeritaPage'));
-const UbahBeritaPage = lazy(() => import('../pages/private/Publikasi/UbahBeritaPage'));
+const BeritaPage = lazy(
+  () => import('../pages/private/Publikasi/BeritaPage')
+);
+const TambahBeritaPage = lazy(
+  () => import('../pages/private/Publikasi/TambahBeritaPage')
+);
+const UbahBeritaPage = lazy(
+  () => import('../pages/private/Publikasi/UbahBeritaPage')
+);
+const InfografisPage = lazy(
+  () => import('../pages/private/Publikasi/InfografisPage')
+);
 const MajalahPage = lazy(
   () => import('../pages/private/Publikasi/MajalahPage'),
 );
-const VideoAssetPage = lazy(() => import('../pages/private/Publikasi/VideoAssetPage'));
-
+const VideoAssetPage = lazy(
+  () => import('../pages/private/Publikasi/VideoAssetPage')
+);
 const DokumenPage = lazy(() => import('../pages/private/Dokumen/DokumenPage'));
+
 // Pengelolah
 const PenggunaPage = lazy(
   () => import('../pages/private/Pengguna/PenggunaPage'),
@@ -104,6 +115,11 @@ const coreRoutes = [
     path: '/ubah-berita/:id',
     title: 'Ubah Berita',
     component: UbahBeritaPage,
+  },
+  {
+    path: '/infografis',
+    title: 'Infografis',
+    component: InfografisPage,
   },
   {
     path: '/majalah',

@@ -51,7 +51,7 @@ export default function BeritaPage() {
 
   return (
     <>
-    <Breadcrumb pageName="Dokumen Page" />
+    <Breadcrumb pageName="Berita Page" />
 
     <div className="flex flex-col gap-10">
 

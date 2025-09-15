@@ -13,9 +13,14 @@ import DataLogpalPage from './pages/public/MasterData/DataLogpalPage';
 import DokumenPage from './pages/public/Dokumen/DokumenPage';
 import BeritaPage from './pages/public/Publikasi/BeritaPage';
 import MajalahPage from './pages/public/Publikasi/MajalahPage';
+import InfografisPage from './pages/public/Publikasi/InfografisPage';
+import KontakKamiPage from './pages/public/Kontak/KontakKamiPage';
+import KontakPentingPage from './pages/public/Kontak/KontakPentingPage';
+
 // import Error from './layout/Error';
 import DetailDataBencanaPage from './pages/public/MasterData/DetailDataBencanaPage';
 import DetailBerita from './pages/public/Publikasi/DetailBeritaPage';
+import DetailInfografis from './pages/public/Publikasi/DetailInfografisPage';
 import DashboardPage from './pages/private/Dashboard/DashboardPage';
 
 
@@ -62,8 +67,12 @@ function App() {
           <Route path="/data-logpal-publik" element={<DataLogpalPage />} />
           <Route path="/majalah-publik" element={<MajalahPage />} />
           <Route path="/berita-publik" element={<BeritaPage />} />
+          <Route path="/infografis-publik" element={<InfografisPage />} />
+          <Route path="/detail-infografis-publik" element={<DetailInfografis />} />
           <Route path="/detail-berita-publik/:id" element={<DetailBerita />} />
           <Route path="/dokumen-publik" element={<DokumenPage />} />
+          <Route path="/kontak-kami" element={<KontakKamiPage />} />
+          <Route path="/kontak-penting" element={<KontakPentingPage />} />
           <Route path="/detail-data-bencana-publik/:id" element={<DetailDataBencanaPage />}/>
 
             <Route path="/Auth/SignIn" element={<SignInPage />} />

@@ -180,3 +180,5 @@ export const deleteJenisKejadian = (id: string | any) =>
 // API BMKG
 export const fetchPerkiraanCuaca = () => API.get('https://data.bmkg.go.id/DataMKG/MEWS/DigitalForecast/DigitalForecast-SulawesiTengah.xml');
 export const fetchGempaBumiTerkini = () => API.get('https://data.bmkg.go.id/DataMKG/TEWS/autogempa.xml');
+
+export const fetchKontakSearch = () => API.get('/kontak');
