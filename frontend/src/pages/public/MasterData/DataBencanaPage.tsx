@@ -34,7 +34,7 @@ const DataBencana = () => {
     Reload();
   }, [kab, jenis, tahun, bulan, status, page, limit]);
 
-  // hooks untuk menampilan data saat page on
+  // hooks untuk menampilan data saat page on//
   useEffect(() => {
     const Reload = async () => {
       const response = await api.fetchJenisKejadian();
