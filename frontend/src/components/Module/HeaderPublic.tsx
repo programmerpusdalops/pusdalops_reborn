@@ -61,7 +61,7 @@ export default function HeaderPublic() {
             </button>
           </div>
 
-          <div className="hidden lg:flex lg:flex-1 lg:gap-x-10 lg:justify-end">
+          <div className="hidden lg:flex lg:flex-1 lg:gap-x-7 lg:justify-end">
             <NavLink
               to="/"
               className="text-sm font-semibold leading-6 text-gray-900"
@@ -135,7 +135,7 @@ export default function HeaderPublic() {
                   leaveFrom="opacity-100 translate-y-0"
                   leaveTo="opacity-0 translate-y-1"
                 >
-                  <Popover.Panel className="absolute -left-8 top-full z-10 mt-3 w-screen max-w-30 overflow-hidden rounded-3xl bg-white dark:bg-boxdark dark:drop-shadow-none shadow-lg ring-1 ring-gray-900/5">
+                  <Popover.Panel className="absolute -left-8 top-full z-10 mt-3 w-screen max-w-50 overflow-hidden rounded-3xl bg-white dark:bg-boxdark dark:drop-shadow-none shadow-lg ring-1 ring-gray-900/5">
                     <div className="p-4">
                       <div className="group relative flex items-center gap-x-6 rounded-lg p-2 text-sm leading-6 hover:bg-gray-50">
                         <NavLink
@@ -147,15 +147,19 @@ export default function HeaderPublic() {
                       </div>
                       <div className="group relative flex items-center gap-x-6 rounded-lg p-2 text-sm leading-6 hover:bg-gray-50">
                         <NavLink
-                          to="/berita-publik"
+                          to="/pengetahuan-publik"
                           className="text-sm font-semibold leading-6 text-gray-900"
                         >
-                          Pengetahuan Bencana
+                          Pengetahuan Bencana 
+                          {/* <ChevronDownIcon
+                            className="h-4 w-4 flex-none text-gray-400"
+                            aria-hidden="true"
+                          /> */}
                         </NavLink>
                       </div>
                       <div className="group relative flex items-center gap-x-6 rounded-lg p-2 text-sm leading-6 hover:bg-gray-50">
                         <NavLink
-                          to="/majalah-publik"
+                          to="/tips-publik"
                           className="text-sm font-semibold leading-6 text-gray-900"
                         >
                           Tips Bencana
@@ -185,7 +189,7 @@ export default function HeaderPublic() {
                   leaveFrom="opacity-100 translate-y-0"
                   leaveTo="opacity-0 translate-y-1"
                 >
-                  <Popover.Panel className="absolute -left-8 top-full z-10 mt-3 w-screen max-w-30 overflow-hidden rounded-3xl bg-white dark:bg-boxdark dark:drop-shadow-none shadow-lg ring-1 ring-gray-900/5">
+                  <Popover.Panel className="absolute -left-8 top-full z-10 mt-3 w-screen max-w-50 overflow-hidden rounded-3xl bg-white dark:bg-boxdark dark:drop-shadow-none shadow-lg ring-1 ring-gray-900/5">
                     <div className="p-4">
                       <div className="group relative flex items-center gap-x-6 rounded-lg p-2 text-sm leading-6 hover:bg-gray-50">
                         <NavLink
@@ -235,7 +239,7 @@ export default function HeaderPublic() {
                   leaveFrom="opacity-100 translate-y-0"
                   leaveTo="opacity-0 translate-y-1"
                 >
-                  <Popover.Panel className="absolute -left-8 top-full z-10 mt-3 w-screen max-w-30 overflow-hidden rounded-3xl bg-white dark:bg-boxdark dark:drop-shadow-none shadow-lg ring-1 ring-gray-900/5">
+                  <Popover.Panel className="absolute -left-8 top-full z-10 mt-3 w-screen max-w-50 overflow-hidden rounded-3xl bg-white dark:bg-boxdark dark:drop-shadow-none shadow-lg ring-1 ring-gray-900/5">
                     <div className="p-4">
                       <div className="group relative flex items-center gap-x-6 rounded-lg p-2 text-sm leading-6 hover:bg-gray-50">
                         <NavLink
@@ -277,7 +281,7 @@ export default function HeaderPublic() {
                   leaveFrom="opacity-100 translate-y-0"
                   leaveTo="opacity-0 translate-y-1"
                 >
-                  <Popover.Panel className="absolute -left-8 top-full z-10 mt-3 w-screen max-w-30 overflow-hidden rounded-3xl bg-white dark:bg-boxdark dark:drop-shadow-none shadow-lg ring-1 ring-gray-900/5">
+                  <Popover.Panel className="absolute -left-8 top-full z-10 mt-3 w-screen max-w-40 overflow-hidden rounded-3xl bg-white dark:bg-boxdark dark:drop-shadow-none shadow-lg ring-1 ring-gray-900/5">
                     <div className="p-4">
                       <div className="group relative flex items-center gap-x-6 rounded-lg p-2 text-sm leading-6 hover:bg-gray-50">
                         <NavLink
@@ -327,7 +331,7 @@ export default function HeaderPublic() {
                   leaveFrom="opacity-100 translate-y-0"
                   leaveTo="opacity-0 translate-y-1"
                 >
-                  <Popover.Panel className="absolute -left-8 top-full z-10 mt-3 w-screen max-w-30 overflow-hidden rounded-3xl bg-white dark:bg-boxdark dark:drop-shadow-none shadow-lg ring-1 ring-gray-900/5">
+                  <Popover.Panel className="absolute -left-8 top-full z-10 mt-3 w-screen max-w-40 overflow-hidden rounded-3xl bg-white dark:bg-boxdark dark:drop-shadow-none shadow-lg ring-1 ring-gray-900/5">
                     <div className="p-4">
                       <div className="group relative flex items-center gap-x-6 rounded-lg p-2 text-sm leading-6 hover:bg-gray-50">
                         <NavLink
@@ -339,7 +343,7 @@ export default function HeaderPublic() {
                       </div>
                       <div className="group relative flex items-center gap-x-6 rounded-lg p-2 text-sm leading-6 hover:bg-gray-50">
                         <NavLink
-                          to="#"
+                          to="https://wa.me/628114032247" target='_BLANK'
                           className="text-sm font-semibold leading-6 text-gray-900"
                         >
                           Lapor Via Wa

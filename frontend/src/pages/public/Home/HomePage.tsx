@@ -13,6 +13,7 @@ import xml2js from 'xml2js';
 import { Link } from 'react-router-dom';
 import { InstagramEmbed } from 'react-social-media-embed';
 import parse from 'html-react-parser';
+import Tautan from '../../../components/Module/Tautan';
 
 const HomePage = () => {
   const [beritaTerbaru, setBeritaTerbaru] = useState<any>();
@@ -134,7 +135,7 @@ const HomePage = () => {
 
       <div className="flex flex-col md:flex-row p-5 my-5 bg-white rounded-lg shadow-default dark:border-strokedark dark:bg-boxdark">
         <div className="flex md:w-4/12 mb-5 md:mb-0 items-center justify-center md:justify-start">
-          <label className="text-2xl">Aplikasi Terintegrasi</label>
+          <label className="text-2xl">Sosial Media</label>
         </div>
         <MediaSosial />
       </div>
@@ -158,18 +159,18 @@ const HomePage = () => {
       </section>
 
       <div className="flex flex-col md:flex-row p-5 my-5 bg-white rounded-lg shadow-default dark:border-strokedark dark:bg-boxdark">
-        <div className="flex md:w-10/12 mb-5 md:mb-0 items-center justify-center md:justify-start">
+        <div className="flex md:w-1/5 mb-5 md:mb-0 items-center justify-center md:justify-start">
           <label className="text-2xl">
-            Menjaungkau Anda Lebih Dekat Melalui
+            Tautan Lainnya
           </label>
         </div>
-        <MediaSosial />
+        <Tautan />
       </div>
 
       <div className="lg:flex lg:gap-x-5 pb-5">
         <div className="flex flex-col w-full lg:w-3/4 lg:flex lg:gap-x-2">
           <div className="flex flex-row">
-            <label className="text-2xl">Seputar Bencana</label>
+            <label className="text-2xl">Berita Kebencanaan</label>
           </div>
           <div className="flex-grow border-t border-black dark:border-white mt-3 lg:flex-row mb-3"></div>
           <div className="lg:flex lg:flex-row gap-x-2">
@@ -201,11 +202,11 @@ const HomePage = () => {
               </Link>
             </div>
 
-            <div className="flex flex-col w-full lg:w-1/2 lg:flex lg:flex-col gap-y-2 mt-3 lg:mt-0">
+            <div className="flex flex-col w-full lg:w-2/3 lg:flex lg:flex-col gap-y-6 mt-3 lg:mt-0">
               {empatBeritaTerbaru.map((val) => (
                 <Link
                   to={`/detail-berita-publik/${val?.id}`}
-                  className="flex flex-col h-1/4"
+                  className="flex flex-col h-1/2"
                 >
                   <div className="flex bg-white shadow dark:bg-gray-800 dark:border-gray-700 rounded-lg dark:border-strokedark dark:bg-boxdark  ">
                     <div
@@ -251,18 +252,19 @@ const HomePage = () => {
         </div>
       </div>
 
-      {/* <div className="lg:flex lg:gap-x-5 py-10 flex-row">
-        <div className="flex flex-col w-full lg:w-3/4 lg:flex lg: lg:gap-x-2 ">
+      <div className="lg:flex lg:gap-x-5 py-5 flex-row">
+        <div className="flex flex-col w-full  lg:flex lg: lg:gap-x-2 ">
           <div className="flex flex-row">
-            <label className="text-2xl">Majalah Kebencanaan</label>
+            <label className="text-2xl">Infografis Kebencanaan</label>
           </div>
           <div className="flex-grow border-t border-black dark:border-white mt-3 lg:flex-row mb-3"></div>
-          <div className="lg:flex lg:flex-row gap-x-2">
+          <div className="lg:flex lg:flex-row gap-x-4">
+            
             <div className="flex flex-col w-full lg:w-1/2">
               <div className=" bg-white rounded-lg  shadow dark:bg-gray-800 dark:border-gray-700 dark:border-strokedark dark:bg-boxdark">
                 <img
                   className="w-full py-3 px-3 h-[300px] md:h-[280px] object-cover relative lg:h-[330px]"
-                  src={imageJokowi}
+                  src={'https://backendreboon.api.pusdalops-bpbdsulteng.com/images/1754966105058-7.%20Infografis%20Kejadian%20Bencana%20Juli%202025.jpg'}
                   alt="Sunset in the mountains"
                 />
                 <div className="px-4 py-4">
@@ -276,137 +278,109 @@ const HomePage = () => {
               </div>
             </div>
 
-            <div className="flex flex-col w-full lg:w-1/2 lg:flex lg:flex-col gap-y-2 lg:gap-y-0 mt-3 lg:mt-0">
-              <div className="flex flex-col h-1/3">
-                <div className="flex bg-white shadow dark:bg-gray-800 dark:border-gray-700 rounded-lg dark:border-strokedark dark:bg-boxdark  ">
-                  <div
-                    className="my-3 mx-2 h-48 h-auto w-44 flex-none bg-cover rounded-t rounded-t-none rounded-l text-center overflow-hidden"
-                    style={{ backgroundImage: `url(${imageJokowi})` }}
-                    title="Woman holding a mug"
-                  ></div>
-                  <div className=" bg-white rounded-b rounded-b-none rounded-r p-2 flex flex-col justify-between leading-normal dark:border-strokedark dark:bg-boxdark">
-                    <div className="mb-3">
-                      <div className="font-bold text-sm mb-2">
-                        Craig Brator - 27 Des 2024
-                      </div>
-                      <div className="font-grey-600 text-base text-xl mb-2 ">
-                        Things to Look For in a Financial Trading Platform
-                      </div>
-                    </div>
+            <div className="flex flex-col w-full lg:w-1/2">
+              <div className=" bg-white rounded-lg  shadow dark:bg-gray-800 dark:border-gray-700 dark:border-strokedark dark:bg-boxdark">
+                <img
+                  className="w-full py-3 px-3 h-[300px] md:h-[280px] object-cover relative lg:h-[330px]"
+                  src={'https://backendreboon.api.pusdalops-bpbdsulteng.com/images/1754966105058-7.%20Infografis%20Kejadian%20Bencana%20Juli%202025.jpg'}
+                  alt="Sunset in the mountains"
+                />
+                <div className="px-4 py-4">
+                  <div className="font-bold text-sm mb-2">
+                    Craig Brator - 27 Des 2024
                   </div>
+                  <p className="font-bold text-base">
+                    Now Is the Time to Think About Your Small Business Success
+                  </p>
                 </div>
               </div>
-              <div className="flex flex-col h-1/3">
-                <div className="flex bg-white shadow dark:bg-gray-800 dark:border-gray-700 rounded-lg dark:border-strokedark dark:bg-boxdark">
-                  <div
-                    className="my-3 mx-2 h-48 h-auto w-44 flex-none bg-cover rounded-t rounded-t-none rounded-l text-center overflow-hidden"
-                    style={{ backgroundImage: `url(${imageJokowi})` }}
-                    title="Woman holding a mug"
-                  ></div>
-                  <div className=" bg-white rounded-b rounded-b-none rounded-r p-2 flex flex-col justify-between leading-normal dark:border-strokedark dark:bg-boxdark">
-                    <div className="mb-3">
-                      <div className="font-bold text-sm mb-2">
-                        Craig Brator - 27 Des 2024
-                      </div>
-                      <div className="font-grey-600 text-base text-xl mb-2">
-                        Things to Look For in a Financial Trading Platform
-                      </div>
-                    </div>
+            </div>
+
+            <div className="flex flex-col w-full lg:w-1/2">
+              <div className=" bg-white rounded-lg  shadow dark:bg-gray-800 dark:border-gray-700 dark:border-strokedark dark:bg-boxdark">
+                <img
+                  className="w-full py-3 px-3 h-[300px] md:h-[280px] object-cover relative lg:h-[330px]"
+                  src={'https://backendreboon.api.pusdalops-bpbdsulteng.com/images/1754966105058-7.%20Infografis%20Kejadian%20Bencana%20Juli%202025.jpg'}
+                  alt="Sunset in the mountains"
+                />
+                <div className="px-4 py-4">
+                  <div className="font-bold text-sm mb-2">
+                    Craig Brator - 27 Des 2024
                   </div>
-                </div>
-              </div>
-              <div className="flex flex-col h-1/3">
-                <div className="flex bg-white shadow dark:bg-gray-800 dark:border-gray-700 rounded-lg dark:border-strokedark dark:bg-boxdark">
-                  <div
-                    className="my-3 mx-2 h-48 h-auto w-44 flex-none bg-cover rounded-t rounded-t-none rounded-l text-center overflow-hidden"
-                    style={{ backgroundImage: `url(${imageJokowi})` }}
-                    title="Woman holding a mug"
-                  ></div>
-                  <div className=" bg-white rounded-b rounded-b-none rounded-r p-2 flex flex-col justify-between leading-normal dark:border-strokedark dark:bg-boxdark">
-                    <div className="mb-3">
-                      <div className="font-bold text-sm mb-2">
-                        Craig Brator - 27 Des 2024
-                      </div>
-                      <div className="font-grey-600 text-base text-xl mb-2">
-                        Things to Look For in a Financial Trading Platform
-                      </div>
-                    </div>
-                  </div>
+                  <p className="font-bold text-base">
+                    Now Is the Time to Think About Your Small Business Success
+                  </p>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <div className="flex flex-col w-full pt-2 mt-5 lg:w-1/4 lg:flex lg:mt-0">
-          <div className="flex flex-row border-b pb-3 border-b-black dark:border-b-white">
-            <label className="text-2x1">Link Terkait</label>
+      </div>
+
+      <div className="lg:flex lg:gap-x-5 py-5 flex-row">
+        <div className="flex flex-col w-full  lg:flex lg: lg:gap-x-2 ">
+          <div className="flex flex-row">
+            <label className="text-2xl">Majalah Kebencanaan</label>
           </div>
-          <div className="flex flex-col h-1/4 mt-3">
-            <div className="flex items-center bg-white shadow dark:bg-gray-800 dark:border-gray-700 rounded-lg dark:border-strokedark dark:bg-boxdark  ">
-              <div
-                className="my-3 mx-3 h-18 h-auto w-18 flex-none bg-cover rounded-t rounded-t-none rounded-l text-center overflow-hidden"
-                style={{ backgroundImage: `url(${imageJokowi})` }}
-                title="Woman holding a mug"
-              ></div>
-              <div className=" bg-white rounded-b rounded-b-none rounded-r p-2 flex flex-col justify-between leading-normal dark:border-strokedark dark:bg-boxdark">
-                <div className="mb-3">
-                  <div className="font-grey-600 text-base text-xl mb-2 ">
-                    Things to Look For
+          <div className="flex-grow border-t border-black dark:border-white mt-3 lg:flex-row mb-3"></div>
+          <div className="lg:flex lg:flex-row gap-x-4">
+            
+            <div className="flex flex-col w-full lg:w-1/2">
+              <div className=" bg-white rounded-lg  shadow dark:bg-gray-800 dark:border-gray-700 dark:border-strokedark dark:bg-boxdark">
+                <img
+                  className="w-full py-3 px-3 h-[300px] md:h-[280px] object-cover relative lg:h-[330px]"
+                  src={'https://backendreboon.api.pusdalops-bpbdsulteng.com/images/1754966105058-7.%20Infografis%20Kejadian%20Bencana%20Juli%202025.jpg'}
+                  alt="Sunset in the mountains"
+                />
+                <div className="px-4 py-4">
+                  <div className="font-bold text-sm mb-2">
+                    Craig Brator - 27 Des 2024
                   </div>
+                  <p className="font-bold text-base">
+                    Now Is the Time to Think About Your Small Business Success
+                  </p>
                 </div>
               </div>
             </div>
-          </div>
-          <div className="flex flex-col h-1/4 mt-3">
-            <div className="flex items-center bg-white shadow dark:bg-gray-800 dark:border-gray-700 rounded-lg dark:border-strokedark dark:bg-boxdark  ">
-              <div
-                className="my-3 mx-3 h-18 h-auto w-18 flex-none bg-cover rounded-t rounded-t-none rounded-l text-center overflow-hidden"
-                style={{ backgroundImage: `url(${imageJokowi})` }}
-                title="Woman holding a mug"
-              ></div>
-              <div className=" bg-white rounded-b rounded-b-none rounded-r p-2 flex flex-col justify-between leading-normal dark:border-strokedark dark:bg-boxdark">
-                <div className="mb-3">
-                  <div className="font-grey-600 text-base text-xl mb-2 ">
-                    Things to Look For
+
+            <div className="flex flex-col w-full lg:w-1/2">
+              <div className=" bg-white rounded-lg  shadow dark:bg-gray-800 dark:border-gray-700 dark:border-strokedark dark:bg-boxdark">
+                <img
+                  className="w-full py-3 px-3 h-[300px] md:h-[280px] object-cover relative lg:h-[330px]"
+                  src={'https://backendreboon.api.pusdalops-bpbdsulteng.com/images/1754966105058-7.%20Infografis%20Kejadian%20Bencana%20Juli%202025.jpg'}
+                  alt="Sunset in the mountains"
+                />
+                <div className="px-4 py-4">
+                  <div className="font-bold text-sm mb-2">
+                    Craig Brator - 27 Des 2024
                   </div>
+                  <p className="font-bold text-base">
+                    Now Is the Time to Think About Your Small Business Success
+                  </p>
                 </div>
               </div>
             </div>
-          </div>
-          <div className="flex flex-col h-1/4 mt-3">
-            <div className="flex items-center bg-white shadow dark:bg-gray-800 dark:border-gray-700 rounded-lg dark:border-strokedark dark:bg-boxdark  ">
-              <div
-                className="my-3 mx-3 h-18 h-auto w-18 flex-none bg-cover rounded-t rounded-t-none rounded-l text-center overflow-hidden"
-                style={{ backgroundImage: `url(${imageJokowi})` }}
-                title="Woman holding a mug"
-              ></div>
-              <div className=" bg-white rounded-b rounded-b-none rounded-r p-2 flex flex-col justify-between leading-normal dark:border-strokedark dark:bg-boxdark">
-                <div className="mb-3">
-                  <div className="font-grey-600 text-base text-xl mb-2 ">
-                    Badan Nasional Penanggulangan Bencana
+
+            <div className="flex flex-col w-full lg:w-1/2">
+              <div className=" bg-white rounded-lg  shadow dark:bg-gray-800 dark:border-gray-700 dark:border-strokedark dark:bg-boxdark">
+                <img
+                  className="w-full py-3 px-3 h-[300px] md:h-[280px] object-cover relative lg:h-[330px]"
+                  src={'https://backendreboon.api.pusdalops-bpbdsulteng.com/images/1754966105058-7.%20Infografis%20Kejadian%20Bencana%20Juli%202025.jpg'}
+                  alt="Sunset in the mountains"
+                />
+                <div className="px-4 py-4">
+                  <div className="font-bold text-sm mb-2">
+                    Craig Brator - 27 Des 2024
                   </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="flex flex-col h-1/4 mt-3">
-            <div className="flex items-center bg-white shadow dark:bg-gray-800 dark:border-gray-700 rounded-lg dark:border-strokedark dark:bg-boxdark  ">
-              <div
-                className="my-3 mx-3 h-18 h-auto w-18 flex-none bg-cover rounded-t rounded-t-none rounded-l text-center overflow-hidden"
-                style={{ backgroundImage: `url(${imageJokowi})` }}
-                title="Woman holding a mug"
-              ></div>
-              <div className=" bg-white rounded-b rounded-b-none rounded-r p-2 flex flex-col justify-between leading-normal dark:border-strokedark dark:bg-boxdark">
-                <div className="mb-3">
-                  <div className="font-grey-600 text-base text-xl mb-2 ">
-                    Badan Nasional Penanggulangan Bencana
-                  </div>
+                  <p className="font-bold text-base">
+                    Now Is the Time to Think About Your Small Business Success
+                  </p>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </div> */}
+      </div>
     </div>
   );
 };

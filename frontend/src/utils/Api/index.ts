@@ -2,8 +2,8 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import axios from 'axios';
 
-const API = axios.create({baseURL: 'http://localhost:5001'});
-// const API = axios.create({baseURL: 'https://backendreboon.api.pusdalops-bpbdsulteng.com'});
+// const API = axios.create({baseURL: 'http://localhost:5001'});
+const API = axios.create({baseURL: 'https://backendreboon.api.pusdalops-bpbdsulteng.com'});
 
 API.interceptors.request.use((req) => {
   if (localStorage.getItem('profile')) {

@@ -1,4 +1,6 @@
 import { lazy } from 'react';
+import TambahPengetahuanPage from '../pages/private/Informasi/TambahPengetahuanPage';
+import TambahTipsPage from '../pages/private/Informasi/TambahTipsPage';
 // Batas Awal import page fix
 const DashboardPage = lazy(
   () => import('../pages/private/Dashboard/DashboardPage'),
@@ -36,7 +38,15 @@ const MajalahPage = lazy(
 const VideoAssetPage = lazy(
   () => import('../pages/private/Publikasi/VideoAssetPage')
 );
-const DokumenPage = lazy(() => import('../pages/private/Dokumen/DokumenPage'));
+const DokumenPage = lazy(
+  () => import('../pages/private/Dokumen/DokumenPage')
+);
+const PengetahuanPage = lazy(
+  () => import('../pages/private/Informasi/PengetahuanPage')
+);
+const TipsPage = lazy(
+  () => import('../pages/private/Informasi/TipsPage')
+);
 
 // Pengelolah
 const PenggunaPage = lazy(
@@ -135,6 +145,26 @@ const coreRoutes = [
     path: '/dokumen',
     title: 'Dokumen',
     component: DokumenPage,
+  },
+  {
+    path: '/pengetahuan',
+    title: 'Pengetahuan',
+    component: PengetahuanPage,
+  },
+  {
+    path: '/tambah-pengetahuan',
+    title: 'Tambah Pengetahuan',
+    component: TambahPengetahuanPage,
+  },
+  {
+    path: '/tips',
+    title: 'Tips',
+    component: TipsPage,
+  },
+  {
+    path: '/tambah-tips',
+    title: 'Tambah Tips',
+    component: TambahTipsPage,
   },
   // Pengelola
   {

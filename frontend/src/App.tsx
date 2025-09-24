@@ -11,6 +11,8 @@ import HomePage from './pages/public/Home/HomePage';
 import DataBencanaPage from './pages/public/MasterData/DataBencanaPage';
 import DataLogpalPage from './pages/public/MasterData/DataLogpalPage';
 import DokumenPage from './pages/public/Dokumen/DokumenPage';
+import PengetahuanPage from './pages/public/Informasi/PengetahuanPage';
+import TipsPage from './pages/public/Informasi/TipsPage';
 import BeritaPage from './pages/public/Publikasi/BeritaPage';
 import MajalahPage from './pages/public/Publikasi/MajalahPage';
 import InfografisPage from './pages/public/Publikasi/InfografisPage';
@@ -71,6 +73,8 @@ function App() {
           <Route path="/detail-infografis-publik" element={<DetailInfografis />} />
           <Route path="/detail-berita-publik/:id" element={<DetailBerita />} />
           <Route path="/dokumen-publik" element={<DokumenPage />} />
+          <Route path="/pengetahuan-publik" element={<PengetahuanPage />} />
+          <Route path="/tips-publik" element={<TipsPage />} />
           <Route path="/kontak-kami" element={<KontakKamiPage />} />
           <Route path="/kontak-penting" element={<KontakPentingPage />} />
           <Route path="/detail-data-bencana-publik/:id" element={<DetailDataBencanaPage />}/>
