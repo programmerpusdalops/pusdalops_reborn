@@ -170,6 +170,26 @@ const InfografisPage = () => {
                   </div>
                 </div>
               </div>
+
+              <div className="flex flex-row 1/4">
+                <div className="flex items-center bg-white shadow dark:bg-gray-800 dark:border-gray-700 rounded-lg dark:border-strokedark dark:bg-boxdark  ">
+                  <div>
+                    <img
+                      className="flex items-center h-32 w-h-32 bg-white shadow dark:bg-gray-800 dark:border-gray-700 rounded-lg dark:border-strokedark dark:bg-boxdark  "
+                      src={"https://backendreboon.api.pusdalops-bpbdsulteng.com/images/1758597927853-8.%20Infografis%20Kejadian%20Bencana%20Agustus%202025.jpg"}
+                      alt="Sunset in the mountains"
+                    />
+                  </div>
+                  <div className=" bg-white rounded-b align-middle rounded-b-none rounded-r p-2 flex flex-col justify-center leading-normal dark:border-strokedark dark:bg-boxdark">
+                    <Link
+                        to="https://backendreboon.api.pusdalops-bpbdsulteng.com/images/1758597927853-8.%20Infografis%20Kejadian%20Bencana%20Agustus%202025.jpg"
+                        className="text-sm font-semibold leading-6 text-gray-900"
+                        >
+                        Infografis Bencana Bulan Agustus Tahun 2025
+                    </Link>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>

@@ -47,6 +47,9 @@ const PengetahuanPage = lazy(
 const TipsPage = lazy(
   () => import('../pages/private/Informasi/TipsPage')
 );
+const KontakPentingPage = lazy(
+  () => import('../pages/private/Kontak/KontakPentingPage')
+);
 
 // Pengelolah
 const PenggunaPage = lazy(
@@ -154,7 +157,7 @@ const coreRoutes = [
   {
     path: '/tambah-pengetahuan',
     title: 'Tambah Pengetahuan',
-    component: TambahPengetahuanPage,
+    Component: TambahPengetahuanPage,
   },
   {
     path: '/tips',
@@ -165,6 +168,11 @@ const coreRoutes = [
     path: '/tambah-tips',
     title: 'Tambah Tips',
     component: TambahTipsPage,
+  },
+  {
+    path: '/kontak',
+    title: 'Kontak Penting',
+    component: KontakPentingPage,
   },
   // Pengelola
   {

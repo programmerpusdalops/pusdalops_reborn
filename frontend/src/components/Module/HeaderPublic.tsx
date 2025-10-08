@@ -285,7 +285,7 @@ export default function HeaderPublic() {
                     <div className="p-4">
                       <div className="group relative flex items-center gap-x-6 rounded-lg p-2 text-sm leading-6 hover:bg-gray-50">
                         <NavLink
-                          to="https://dashboard.gis.pusdalops-bpbdsulteng.com/login.php"
+                          to="https://dashboard.gis.pusdalops-bpbdsulteng.com/login.php" target='_BLANK'
                           className="text-sm font-semibold leading-6 text-gray-900"
                         >
                           Web GIS
@@ -293,7 +293,7 @@ export default function HeaderPublic() {
                       </div>
                       <div className="group relative flex items-center gap-x-6 rounded-lg p-2 text-sm leading-6 hover:bg-gray-50">
                         <NavLink
-                          to="https://dashboard.core.pusdalops-bpbdsulteng.com/deskrelawan"
+                          to="https://dashboard.core.pusdalops-bpbdsulteng.com/deskrelawan" target='_BLANK'
                           className="text-sm font-semibold leading-6 text-gray-900"
                         >
                           Deskrelawan
@@ -301,7 +301,7 @@ export default function HeaderPublic() {
                       </div> 
                       <div className="group relative flex items-center gap-x-6 rounded-lg p-2 text-sm leading-6 hover:bg-gray-50">
                         <NavLink
-                          to="https://dashboard.core.pusdalops-bpbdsulteng.com/jitupasna_log"
+                          to="https://dashboard.core.pusdalops-bpbdsulteng.com/jitupasna_log" target='_BLANK'
                           className="text-sm font-semibold leading-6 text-gray-900"
                         >
                           E-Jitupasna

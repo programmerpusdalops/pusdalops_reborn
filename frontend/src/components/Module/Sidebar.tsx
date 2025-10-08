@@ -347,11 +347,11 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen, store }: SidebarProps) => {
               )}
               {/* Menu item Publikasi */}
 
-              {/* Menu item Publikasi */}
+              {/* Menu item Informasi */}
               {Read(menus, "Publikasi", true) && (
               <SidebarLinkGroup
                 activeCondition={
-                  pathname === '/publikasi' || pathname.includes('publikasi')
+                  pathname === '/informasi' || pathname.includes('informasi')
                 }
               >
                 {(handleClick, open) => {
@@ -360,8 +360,8 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen, store }: SidebarProps) => {
                       <NavLink
                         to="#"
                         className={`group relative flex items-center gap-2.5 rounded-sm py-2 px-4 font-medium text-bodydark1 duration-300 ease-in-out hover:bg-graydark dark:hover:bg-meta-4 ${
-                          (pathname === '/publikasi' ||
-                            pathname.includes('publikasi')) &&
+                          (pathname === '/informasi' ||
+                            pathname.includes('informasi')) &&
                           'bg-graydark dark:bg-meta-4'
                         }`}
                         onClick={(e) => {
@@ -468,28 +468,25 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen, store }: SidebarProps) => {
                 }}
               </SidebarLinkGroup>
               )}
-              {/* Menu item Publikasi */}
+              {/* Menu item Informasi */}
 
-              {/* <!-- Menu Item Dokumen --> */}
-              {/* {Read(menus, "Dokumen", true) && (
+              {/* <!-- Menu Item Kontak Penting --> */}
+              {Read(menus, "Dokumen", true) && (
               <li>
                 <NavLink
-                  to="/dokumen"
+                  to="/kontak"
                   className={`group relative flex items-center gap-2.5 rounded-sm py-2 px-4 font-medium text-bodydark1 duration-300 ease-in-out hover:bg-graydark dark:hover:bg-meta-4 ${
-                    pathname.includes('dokumen') && 'bg-graydark dark:bg-meta-4'
+                    pathname.includes('kontak') && 'bg-graydark dark:bg-meta-4'
                   }`}
                 >
-                  <img src={IconWallet} alt="icon-wallet" />
-                  Dokumen
+                  <img src={IconUser} alt="icon-user" />
+                  Kontak Penting
                 </NavLink>
               </li>
-              )} */}
-              {/* <!-- Menu Item Dokumen --> */}
+              )}
+              {/* <!-- Menu Item Kontak Penting --> */}
             </ul>
           </div>
-
-
-
 
 
 

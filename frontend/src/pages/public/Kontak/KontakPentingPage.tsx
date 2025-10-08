@@ -1,8 +1,8 @@
 import { useState, useEffect, SetStateAction } from 'react';
 import * as api from '../../../utils/Api';
 import Pagination from '../../../components/Module/Pagination';
-// import Select from '../../../components/Module/Select';
-// import { Link } from 'react-router-dom';
+import Select from '../../../components/Module/Select';
+import { Link } from 'react-router-dom';
 
 const KontakPentingPage = () => {
 //   const[data, setData] = useState<Array<any>>([])
@@ -14,16 +14,16 @@ const KontakPentingPage = () => {
   const [keyword, setKeyword] = useState("");
 
   
-  // useEffect(() => {
-  //   const Reload = async () => {
-  //     const response = await api.fetchKontakSearch;
-  //   //   setData(response?.data?.result);
-  //     setPage(response?.data?.page);
-  //     setPages(response?.data?.totalPage);
-  //     setRows(response?.data?.totalRows);
-  //   };
-  //   Reload();
-  // }, [keyword, page, limit]);
+  useEffect(() => {
+    const Reload = async () => {
+      const response = await api.fetchKontakSearch;
+    //   setData(response?.data?.result);
+      setPage(response?.data?.page);
+      setPages(response?.data?.totalPage);
+      setRows(response?.data?.totalRows);
+    };
+    Reload();
+  }, [keyword, page, limit]);
 
   useEffect(() => {
     const JenisKontak = async () => {
@@ -42,7 +42,7 @@ const KontakPentingPage = () => {
     <div className="mb-4.5 flex flex-col gap-6 xl:flex-row">
       {/* <Select label="--Jenis Dokumen--" onChange={(e: { target: { value: SetStateAction<string>; }; }) => setKeyword(e.target.value)} option={jenisDokumen.map((a) => ({value: a?.id, label: a?.nama}))}/>
       <Select label="--Tahun--" onChange={(e: { target: { value: SetStateAction<string>; }; }) => setKeyword(e.target.value)} option={[{value: "2025", label: "2025"}, {value: "2024", label: "2024"}, {value: "2023", label: "2023"}, {value: "2022", label: "2022"},]}/> */}
-      <div>
+      {/* <div>
           <input
             type="text"
             onChange={(e: { target: { value: SetStateAction<string>; }; }) => setKeyword(e.target.value)}
@@ -52,7 +52,7 @@ const KontakPentingPage = () => {
       </div>
       <button onClick={() => setKeyword("")} className="flex w-full xl:w-auto justify-center rounded border border-primary px-5 p-2 font-medium text-primary">
         Clear
-      </button>
+      </button> */}
     </div>
     <div className="max-w-full overflow-x-auto">
       <table className="w-full table-auto">
@@ -75,21 +75,153 @@ const KontakPentingPage = () => {
                 <p>1</p>
               </td>
               <td className="border-b border-[#eee] py-3 px-4 dark:border-strokedark">
-                <p>BNPB</p>
+                <p>PUSDALOPS BNPB</p>
               </td>
               <td className="border-b border-[#eee] py-3 px-4 dark:border-strokedark">
-                <p>081134447623</p>
+                <p>0812-1237-575</p>
               </td>
             </tr>
             <tr>
               <td className="border-b border-[#eee] py-3 px-4 dark:border-strokedark">
-                <p>1</p>
+                <p>2</p>
               </td>
               <td className="border-b border-[#eee] py-3 px-4 dark:border-strokedark">
-                <p>pmi</p>
+                <p>BNPB</p>
               </td>
               <td className="border-b border-[#eee] py-3 px-4 dark:border-strokedark">
-                <p>081134447623</p>
+                <p>021-29827793</p>
+              </td>
+            </tr>
+            <tr>
+              <td className="border-b border-[#eee] py-3 px-4 dark:border-strokedark">
+                <p>3</p>
+              </td>
+              <td className="border-b border-[#eee] py-3 px-4 dark:border-strokedark">
+                <p>BPBD KOTA PALU</p>
+              </td>
+              <td className="border-b border-[#eee] py-3 px-4 dark:border-strokedark">
+                <p>0853-4192-7281</p>
+              </td>
+            </tr>
+            <tr>
+              <td className="border-b border-[#eee] py-3 px-4 dark:border-strokedark">
+                <p>4</p>
+              </td>
+              <td className="border-b border-[#eee] py-3 px-4 dark:border-strokedark">
+                <p>BPBD KAB. SIGI</p>
+              </td>
+              <td className="border-b border-[#eee] py-3 px-4 dark:border-strokedark">
+                <p>0811-4595-888</p>
+              </td>
+            </tr>
+            <tr>
+              <td className="border-b border-[#eee] py-3 px-4 dark:border-strokedark">
+                <p>5</p>
+              </td>
+              <td className="border-b border-[#eee] py-3 px-4 dark:border-strokedark">
+                <p>BPBD KAB. DONGGALA</p>
+              </td>
+              <td className="border-b border-[#eee] py-3 px-4 dark:border-strokedark">
+                <p>0811-4599-000</p>
+              </td>
+            </tr>
+            <tr>
+              <td className="border-b border-[#eee] py-3 px-4 dark:border-strokedark">
+                <p>6</p>
+              </td>
+              <td className="border-b border-[#eee] py-3 px-4 dark:border-strokedark">
+                <p>BPBD KAB. PARIGI MOUTONG</p>
+              </td>
+              <td className="border-b border-[#eee] py-3 px-4 dark:border-strokedark">
+                <p>0811-4180-117</p>
+              </td>
+            </tr>
+            <tr>
+              <td className="border-b border-[#eee] py-3 px-4 dark:border-strokedark">
+                <p>7</p>
+              </td>
+              <td className="border-b border-[#eee] py-3 px-4 dark:border-strokedark">
+                <p>BPBD KAB. TOJO UNA-UNA</p>
+              </td>
+              <td className="border-b border-[#eee] py-3 px-4 dark:border-strokedark">
+                <p>0821-8787-8554</p>
+              </td>
+            </tr>
+            <tr>
+              <td className="border-b border-[#eee] py-3 px-4 dark:border-strokedark">
+                <p>8</p>
+              </td>
+              <td className="border-b border-[#eee] py-3 px-4 dark:border-strokedark">
+                <p>BPBD KAB. MOROWALI UTARA</p>
+              </td>
+              <td className="border-b border-[#eee] py-3 px-4 dark:border-strokedark">
+                <p>0851-8686-0247</p>
+              </td>
+            </tr>
+            <tr>
+              <td className="border-b border-[#eee] py-3 px-4 dark:border-strokedark">
+                <p>9</p>
+              </td>
+              <td className="border-b border-[#eee] py-3 px-4 dark:border-strokedark">
+                <p>BPBD KAB. MOROWALI</p>
+              </td>
+              <td className="border-b border-[#eee] py-3 px-4 dark:border-strokedark">
+                <p>0852-4030-1028</p>
+              </td>
+            </tr>
+            <tr>
+              <td className="border-b border-[#eee] py-3 px-4 dark:border-strokedark">
+                <p>10</p>
+              </td>
+              <td className="border-b border-[#eee] py-3 px-4 dark:border-strokedark">
+                <p>BPBD KAB. BUOL</p>
+              </td>
+              <td className="border-b border-[#eee] py-3 px-4 dark:border-strokedark">
+                <p>0821-9021-0693</p>
+              </td>
+            </tr>
+            <tr>
+              <td className="border-b border-[#eee] py-3 px-4 dark:border-strokedark">
+                <p>11</p>
+              </td>
+              <td className="border-b border-[#eee] py-3 px-4 dark:border-strokedark">
+                <p>BPBD KAB. TOLITOLI</p>
+              </td>
+              <td className="border-b border-[#eee] py-3 px-4 dark:border-strokedark">
+                <p>0823-5206-4014</p>
+              </td>
+            </tr>
+            <tr>
+              <td className="border-b border-[#eee] py-3 px-4 dark:border-strokedark">
+                <p>12</p>
+              </td>
+              <td className="border-b border-[#eee] py-3 px-4 dark:border-strokedark">
+                <p>BPBD KAB. BANGGAI</p>
+              </td>
+              <td className="border-b border-[#eee] py-3 px-4 dark:border-strokedark">
+                <p>0852-3783-6336</p>
+              </td>
+            </tr>
+            <tr>
+              <td className="border-b border-[#eee] py-3 px-4 dark:border-strokedark">
+                <p>13</p>
+              </td>
+              <td className="border-b border-[#eee] py-3 px-4 dark:border-strokedark">
+                <p>BPBD KAB. BANGGAI KEPULAUAN</p>
+              </td>
+              <td className="border-b border-[#eee] py-3 px-4 dark:border-strokedark">
+                <p>0812-1860-3388</p>
+              </td>
+            </tr>
+            <tr>
+              <td className="border-b border-[#eee] py-3 px-4 dark:border-strokedark">
+                <p>14</p>
+              </td>
+              <td className="border-b border-[#eee] py-3 px-4 dark:border-strokedark">
+                <p>BPBD KAB. BANGGAI LAUT</p>
+              </td>
+              <td className="border-b border-[#eee] py-3 px-4 dark:border-strokedark">
+                <p>0823-4930-5512</p>
               </td>
             </tr>
           {/* {data.map((value: {} | any, _index: any) => (
@@ -114,13 +246,13 @@ const KontakPentingPage = () => {
   
         </tbody>
       </table>
-      <Pagination
+      {/* <Pagination
         setLimit={setLimit}
         rows={rows}
         page={page}
         pages={pages}
         changePage={changePage}
-      />
+      /> */}
     </div>
     
   </div>

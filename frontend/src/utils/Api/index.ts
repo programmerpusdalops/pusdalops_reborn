@@ -130,6 +130,20 @@ export const patchDokumen = (id: string | any, data: {} | any) =>
   API.patch(`/dokumen/${id}`, data);
 export const deleteDokumen = (id: string | any) => API.delete(`/dokumen/${id}`);
 
+// API KONTAK PENTING
+export const fetchKontak = () => API.get('/kontak');
+export const fetchKontakSearch = (keyword: any, page: any, limit: any) =>
+  API.get(
+    `/kontak/search?search_query=${keyword}&page=${page}&limit=${limit}`,
+  );
+export const fetchKontakById = (id: string | any) => API.get(`/kontak/${id}`);
+export const postKontak = (data: {} | any) => API.post('/kontak', data);
+export const patchKontak = (id: string | any, data: {} | any) =>
+  API.patch(`/kontak/${id}`, data);
+export const deleteKontak = (id: string | any) => API.delete(`/kontak/${id}`);
+
+export const fetchInformasi = () => API.get('/informasi');
+
 // API BERITA
 export const fetchBerita = () => API.get('/berita');
 export const fetchBeritaLatest = () => API.get('/berita/latest');
@@ -184,4 +198,4 @@ export const deleteJenisKejadian = (id: string | any) =>
 export const fetchPerkiraanCuaca = () => API.get('https://data.bmkg.go.id/DataMKG/MEWS/DigitalForecast/DigitalForecast-SulawesiTengah.xml');
 export const fetchGempaBumiTerkini = () => API.get('https://data.bmkg.go.id/DataMKG/TEWS/autogempa.xml');
 
-export const fetchKontakSearch = () => API.get('/kontak');
+// export const fetchKontakSearch = () => API.get('/kontak');
