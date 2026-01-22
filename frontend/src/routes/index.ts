@@ -53,6 +53,9 @@ const TipsPage = lazy(
 const UbahTipsPage = lazy(
   () => import('../pages/private/Informasi/UbahTipspage')
 );
+const KontakPentingPage = lazy(
+  () => import('../pages/private/Kontak/KontakPentingPage')
+);
 
 // Pengelolah
 const PenggunaPage = lazy(
@@ -160,7 +163,7 @@ const coreRoutes = [
   {
     path: '/tambah-pengetahuan',
     title: 'Tambah Pengetahuan',
-    component: TambahPengetahuanPage,
+    Component: TambahPengetahuanPage,
   },
   {
     path: '/ubah-pengetahuan/:id',
@@ -183,7 +186,11 @@ const coreRoutes = [
     title: 'Ubah Tips',
     component: UbahTipsPage,
   },
-
+{
+    path: '/kontak',
+    title: 'Kontak Penting',
+    component: KontakPentingPage,
+  },
   // Pengelola
   {
     path: '/pengguna',
