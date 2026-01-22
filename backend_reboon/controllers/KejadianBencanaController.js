@@ -712,8 +712,9 @@ const deleteKejadian = async (req, res) => {
 
 const getKejadianPerTahun = async (req, res) => {
   try {
-    const tahun = req.query.tahun || new Date().getFullYear().toString();
-
+    // const tahun = req.query.tahun || new Date().getFullYear().toString();
+    const tahun = 2025;
+    
     const { Kejadian, LokasiKejadian, Kabupaten, Kecamatan, Kelurahan } = require("../models/Connector.js");
     const kejadianList = await Kejadian.findAll({
       where: { tanggal: { [Op.like]: `%${tahun}%` } },
