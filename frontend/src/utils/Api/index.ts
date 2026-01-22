@@ -2,8 +2,8 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import axios from 'axios';
 
-// const API = axios.create({baseURL: 'http://localhost:5001'});
-const API = axios.create({baseURL: 'https://backendreboon.api.pusdalops-bpbdsulteng.com'});
+const API = axios.create({baseURL: 'http://localhost:5001'});
+// const API = axios.create({baseURL: 'https://backendreboon.api.pusdalops-bpbdsulteng.com'});
 
 API.interceptors.request.use((req) => {
   if (localStorage.getItem('profile')) {
@@ -185,3 +185,24 @@ export const fetchPerkiraanCuaca = () => API.get('https://data.bmkg.go.id/DataMK
 export const fetchGempaBumiTerkini = () => API.get('https://data.bmkg.go.id/DataMKG/TEWS/autogempa.xml');
 
 export const fetchKontakSearch = () => API.get('/kontak');
+
+// API Pengetahuan
+export const fetchPengetahuan = () => API.get('/pengetahuan');
+// export const fetchBeritaLatestFour = () => API.get('/berita/latest/four');
+// export const fetchBeritaLatestRecommended = () => API.get('/berita/latest/recommended');
+// export const fetchBeritaLatestFavorit = () => API.get('/berita/latest/favorit');
+export const fetchPengetahuanSearch = (keyword: any, page: any, limit: any) => API.get(`/pengetahuan/search?search_query=${keyword}&page=${page}&limit=${limit}`);
+export const fetchPengetahuanById = (id: string | any) => API.get(`/pengetahuan/${id}`);
+export const postPengetahuan = (data: {} | any) => API.post('/pengetahuan', data);
+export const patchPengetahuan = (id: string | any, data: {} | any) =>
+  API.patch(`/pengetahuan/${id}`, data);
+export const deletePengetahuan = (id: string | any) => API.delete(`/pengetahuan/${id}`);
+
+// API Tips Bencana
+export const fetchTipsBencana = () => API.get('/tips_bencana');
+export const fetchTipsBencanaSearch = (keyword: any, page: any, limit: any) => API.get(`/tips_bencana/search?search_query=${keyword}&page=${page}&limit=${limit}`);
+export const fetchTipsBencanaById = (id: string | any) => API.get(`/tips_bencana/${id}`);
+export const postTipsBencana = (data: {} | any) => API.post('/tips_bencana', data);
+export const patchTipsBencana = (id: string | any, data: {} | any) =>
+  API.patch(`/tips_bencana/${id}`, data);
+export const deleteTipsBencana = (id: string | any) => API.delete(`/tips_bencana/${id}`);

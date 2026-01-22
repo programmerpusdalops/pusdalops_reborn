@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/ban-types */
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { useEffect, useState } from 'react'
 import Breadcrumb from '../../../components/Breadcrumb'
 import { MdOutlineEdit } from 'react-icons/md'

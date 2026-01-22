@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import Breadcrumb from '../../../components/Breadcrumb'
-import ReactQuill from 'react-quill';
+// import ReactQuill from 'react-quill';
 import 'react-quill/dist/quill.snow.css';
 // import RadioButtonTrue from '../../../components/Module/RadioButtonTrue';
 // import RadioButtonFalse from '../../../components/Module/RadioButtonFalse';
@@ -13,11 +13,11 @@ export default function TambahTipsPage() {
   const[file, setFile] = useState("")
   const [item, setItem] = useState({
     judul: "",
-    kategori: "",
-    tanggal: "",
-    penulis: "",
-    status: "Ya",
-    content: ""
+    // kategori: "",
+    // tanggal: "",
+    // penulis: "",
+    // status: "Ya",
+    // content: ""
   })
 
   const loadImage = (event: any) => {
@@ -40,13 +40,18 @@ export default function TambahTipsPage() {
       formData.append("judul", item?.judul);
     //   formData.append("kategori", item?.kategori);
     //   formData.append("tanggal", item?.tanggal);
-      formData.append("penulis", item?.penulis);
+      // formData.append("penulis", item?.penulis);
     //   formData.append("status", item?.status);
     //   formData.append("content", item?.content);
+    // Ambil tahun saat ini
+      const tahunSekarang = new Date().getFullYear().toString();
+      formData.append("tahun", tahunSekarang);
       formData.append("file", file);
 
+      console.log(...formData);
+
       try {
-        await api.postBerita(formData)
+        await api.postTipsBencana(formData)
         Success()
       } catch (error) {
         Error()
@@ -132,7 +137,7 @@ export default function TambahTipsPage() {
                   />
                 </div>
               </div> */}
-              <div className="flex flex-col md:flex-row w-full gap-3">
+              {/* <div className="flex flex-col md:flex-row w-full gap-3">
                 <div className="flex flex-col md:w-1/2">
                   <label className="mb-3 block text-black dark:text-white">
                     Penulis
@@ -145,7 +150,7 @@ export default function TambahTipsPage() {
                     className="w-full rounded-lg border-[1.5px] border-stroke bg-transparent py-3 px-5 font-medium outline-none transition focus:border-primary active:border-primary disabled:cursor-default disabled:bg-whiter dark:bg-form-input dark:border-form-strokedark"
                   />
                 </div>
-              </div>
+              </div> */}
               
 
               <div className="flex flex-col md:flex-row w-full gap-3">
@@ -172,14 +177,14 @@ export default function TambahTipsPage() {
                 </div>
               </div> */}
 
-              <div>
+              {/* <div>
                 <ReactQuill
                   theme="snow"
                   onChange={(event) => setItem({ ...item, content: event })}
                   className="h-100 w-full mb-10 rounded-lg bg-transparent py-3 px-5 font-medium outline-none transition focus:border-primary active:border-primary disabled:cursor-default disabled:bg-whiter dark:bg-form-input"
                 />
               
-              </div>
+              </div> */}
               <div className="flex gap-3 justify-end">
                 <button type='reset' className="px-5 py-2 border border-primary rounded-md text-primary hover:text-button-primary hover:border-button-primary dark:text-bodydark dark:border-form-strokedark dark:hover:text-white dark:hover:border-white dark:hover:bg-transparent">
                   Kosongkan

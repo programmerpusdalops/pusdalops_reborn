@@ -16,7 +16,7 @@ export default function PetaInteraktif() {
   const [totalKejadian, setTotalKejadian] = useState();
   const [bencana, setBencana] = useState<any>([]);
   // const[bencana] = useState<any>(testing);
-  console.log(bencana);
+  //console.log(bencana);
   const[batasKab] = useState<any>(batas_kab)
 
   const geo = useRef(null);

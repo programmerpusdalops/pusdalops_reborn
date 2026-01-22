@@ -44,8 +44,14 @@ const DokumenPage = lazy(
 const PengetahuanPage = lazy(
   () => import('../pages/private/Informasi/PengetahuanPage')
 );
+const UbahPengetahuanPage = lazy(
+  () => import('../pages/private/Informasi/UbahPengetahuanPage')
+);
 const TipsPage = lazy(
   () => import('../pages/private/Informasi/TipsPage')
+);
+const UbahTipsPage = lazy(
+  () => import('../pages/private/Informasi/UbahTipspage')
 );
 
 // Pengelolah
@@ -157,6 +163,12 @@ const coreRoutes = [
     component: TambahPengetahuanPage,
   },
   {
+    path: '/ubah-pengetahuan/:id',
+    title: 'Ubah Pengetahuan',
+    component: UbahPengetahuanPage,
+  },
+ 
+  {
     path: '/tips',
     title: 'Tips',
     component: TipsPage,
@@ -166,6 +178,12 @@ const coreRoutes = [
     title: 'Tambah Tips',
     component: TambahTipsPage,
   },
+  {
+    path: '/ubah-tips/:id',
+    title: 'Ubah Tips',
+    component: UbahTipsPage,
+  },
+
   // Pengelola
   {
     path: '/pengguna',

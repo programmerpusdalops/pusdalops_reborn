@@ -1,4 +1,5 @@
-// const { Sequelize } = require("sequelize");
+const { Sequelize } = require("sequelize");
+
 const db = require("../config/Database.js");
 const Kabupaten = require("./KabupatenModel");
 const Kecamatan = require("./KecamatanModel");
@@ -40,4 +41,5 @@ module.exports = {
   Kabupaten,
   Kecamatan,
   Kelurahan,
+  Sequelize,
 };

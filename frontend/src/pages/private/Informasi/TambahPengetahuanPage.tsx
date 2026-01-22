@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { useState } from 'react';
 import Breadcrumb from '../../../components/Breadcrumb'
 import ReactQuill from 'react-quill';
@@ -14,9 +15,8 @@ export default function TambahPengetahuanPage() {
   const [item, setItem] = useState({
     judul: "",
     kategori: "",
-    tanggal: "",
     penulis: "",
-    status: "Ya",
+    // status: "Ya",
     content: ""
   })
 
@@ -38,15 +38,15 @@ export default function TambahPengetahuanPage() {
 
     const formData = new FormData();
       formData.append("judul", item?.judul);
-    //   formData.append("kategori", item?.kategori);
+      formData.append("kategori", item?.kategori);
     //   formData.append("tanggal", item?.tanggal);
       formData.append("penulis", item?.penulis);
     //   formData.append("status", item?.status);
-    //   formData.append("content", item?.content);
+      formData.append("content", item?.content);
       formData.append("file", file);
 
       try {
-        await api.postBerita(formData)
+        await api.postPengetahuan(formData)
         Success()
       } catch (error) {
         Error()
@@ -79,11 +79,12 @@ export default function TambahPengetahuanPage() {
                     onChange={(e) => setItem({ ...item, judul: e.target.value })}
                     placeholder="Penulis"
                     className="w-full rounded-lg border-[1.5px] border-stroke bg-transparent py-3 px-5 font-medium outline-none transition focus:border-primary active:border-primary disabled:cursor-default disabled:bg-whiter dark:bg-form-input dark:border-form-strokedark"
+                    required
                   />
                 </div>
               </div>
               
-                {/* <div className="flex flex-col md:w-1/2">
+                 <div className="flex flex-col md:w-1/2">
                   <label className="mb-3 block text-black dark:text-white">
                     Kategori
                   </label>
@@ -92,6 +93,7 @@ export default function TambahPengetahuanPage() {
                       name="kategori"
                       onChange={(e) => setItem({ ...item, kategori: e.target.value })}
                       className="relative z-20 w-full appearance-none rounded border border-stroke bg-transparent py-3 px-5 outline-none transition focus:border-primary active:border-primary dark:border-form-strokedark dark:bg-form-input"
+                      required
                     >
                       <option value="terbaru">--Pilih Kategori--</option>
                       <option value="terbaru">terbaru</option>
@@ -117,7 +119,7 @@ export default function TambahPengetahuanPage() {
                       </svg>
                     </span>
                   </div>
-                </div> */}
+                </div> 
               {/* <div className="flex flex-col md:flex-row w-full gap-3">
                 <div className="flex flex-col md:w-1/2">
                   <label className="mb-3 block text-black dark:text-white">
@@ -143,6 +145,7 @@ export default function TambahPengetahuanPage() {
                     onChange={(e) => setItem({ ...item, penulis: e.target.value })}
                     placeholder="Penulis"
                     className="w-full rounded-lg border-[1.5px] border-stroke bg-transparent py-3 px-5 font-medium outline-none transition focus:border-primary active:border-primary disabled:cursor-default disabled:bg-whiter dark:bg-form-input dark:border-form-strokedark"
+                    required
                   />
                 </div>
               </div>
@@ -158,6 +161,7 @@ export default function TambahPengetahuanPage() {
                     accept='.png, .jpg, .jpeg'
                     onChange={(event) => loadImage(event)}
                     className="w-full cursor-pointer rounded-lg border-[1.5px] border-stroke bg-transparent font-medium outline-none transition file:mr-5 file:border-collapse file:cursor-pointer file:border-0 file:border-r file:border-solid file:border-stroke file:bg-whiter file:py-3 file:px-5 file:hover:bg-primary file:hover:bg-opacity-10 focus:border-primary active:border-primary disabled:cursor-default disabled:bg-whiter dark:border-form-strokedark dark:bg-form-input dark:file:border-form-strokedark dark:file:bg-white/30 dark:file:text-white dark:focus:border-primary"
+                    required
                   />
                 </div>
               </div>

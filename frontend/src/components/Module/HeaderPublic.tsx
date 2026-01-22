@@ -284,28 +284,53 @@ export default function HeaderPublic() {
                   <Popover.Panel className="absolute -left-8 top-full z-10 mt-3 w-screen max-w-40 overflow-hidden rounded-3xl bg-white dark:bg-boxdark dark:drop-shadow-none shadow-lg ring-1 ring-gray-900/5">
                     <div className="p-4">
                       <div className="group relative flex items-center gap-x-6 rounded-lg p-2 text-sm leading-6 hover:bg-gray-50">
-                        <NavLink
+                        {/* <NavLink
+                        //tolong tambah blank untuk link ini biar buka tab baru tambah di bawah komen ini
                           to="https://dashboard.gis.pusdalops-bpbdsulteng.com/login.php"
+                          className="text-sm font-semibold leading-6 text-gray-900 blank"
+                        >
+                          Web GIS
+                        </NavLink> */}
+                        <a
+                          href="https://dashboard.gis.pusdalops-bpbdsulteng.com/login.php"
+                          target="_blank"
+                          rel="noopener noreferrer"
                           className="text-sm font-semibold leading-6 text-gray-900"
                         >
                           Web GIS
-                        </NavLink>
+                        </a>
                       </div>
                       <div className="group relative flex items-center gap-x-6 rounded-lg p-2 text-sm leading-6 hover:bg-gray-50">
-                        <NavLink
+                        {/* <NavLink
                           to="https://dashboard.core.pusdalops-bpbdsulteng.com/deskrelawan"
                           className="text-sm font-semibold leading-6 text-gray-900"
                         >
                           Deskrelawan
-                        </NavLink>
+                        </NavLink> */}
+                        <a
+                          href="https://dashboard.core.pusdalops-bpbdsulteng.com/deskrelawan"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-sm font-semibold leading-6 text-gray-900"
+                        >
+                          Deskrelawan
+                        </a>
                       </div> 
                       <div className="group relative flex items-center gap-x-6 rounded-lg p-2 text-sm leading-6 hover:bg-gray-50">
-                        <NavLink
+                        {/* <NavLink
                           to="https://dashboard.core.pusdalops-bpbdsulteng.com/jitupasna_log"
                           className="text-sm font-semibold leading-6 text-gray-900"
                         >
                           E-Jitupasna
-                        </NavLink>
+                        </NavLink> */}
+                        <a
+                          href="https://dashboard.core.pusdalops-bpbdsulteng.com/jitupasna_log"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-sm font-semibold leading-6 text-gray-900"
+                        >
+                          E-Jitupasna
+                        </a>
                       </div>         
                     </div>
                   </Popover.Panel>

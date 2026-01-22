@@ -17,6 +17,8 @@ const Lokasi = require("./routes/LokasiRoutes.js");
 const Berita = require("./routes/BeritaRoutes.js");
 const Logpal = require("./routes/LogpalRoutes.js");
 const VideoAsset = require("./routes/VideoAssetRoutes.js");
+const Pengetahuan = require("./routes/PengetahuanRoutes.js");
+const TipsBencana = require("./routes/TipsBencanaRoutes.js");
 
 ////
 // const PembuatanTabel = require("./models/VideoAssetModel.js");
@@ -42,7 +44,7 @@ const storage = multer.diskStorage({
 const upload = multer({ storage: storage });
 app.use(cors({
   origin: "http://localhost:5173",
-  methods: ["GET", "POST", "PUT", "DELETE"],
+  methods: ["GET", "POST", "PUT", "DELETE", "PATCH"],
 }));
 app.use(express.json());
 
@@ -62,6 +64,8 @@ app.use("/lokasi", Lokasi);
 app.use("/berita", upload.single("file"), Berita);
 app.use("/logpal", Logpal);
 app.use("/asset", VideoAsset);
+app.use("/pengetahuan", upload.single("file"), Pengetahuan);
+app.use("/tips_bencana", upload.single("file"), TipsBencana);
 // AKHIR URL API
 
 const port = process.env.PORT || 5001;

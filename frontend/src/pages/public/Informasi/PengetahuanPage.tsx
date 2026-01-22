@@ -1,48 +1,49 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import * as api from '../../../utils/Api';
-import parse from 'html-react-parser';
-import CarouselCard from '../../../components/Module/CarouselCard';
-import { YouTubeEmbed } from 'react-social-media-embed';
-import CarouselCardVideo from '../../../components/Module/CarouselCardVideo';
+// import parse from 'html-react-parser';
+// import CarouselCard from '../../../components/Module/CarouselCard';
+// import { YouTubeEmbed } from 'react-social-media-embed';
+// import CarouselCardVideo from '../../../components/Module/CarouselCardVideo';
 
 const PengetahuanPage = () => {
-  const [beritaTerbaru, setBeritaTerbaru] = useState<Array<any>>([]);
-  const [empatBeritaTerbaru, setEmpatBeritaTerbaru] = useState<Array<any>>([]);
-  const [beritaRekomendasi, setBeritaRekomendasi] = useState<Array<any>>([]);
-  const [beritaFavorit, setBeritaFavorit] = useState<Array<any>>([]);
-  const [assetVideo, setAssetVideo] = useState<Array<any>>([]);
+  const [pengetahuanTerbaru, setPengetahuanTerbaru] = useState<Array<any>>([]);
+  // const [empatPengetahuanTerbaru, setEmpatPengetahuanTerbaru] = useState<Array<any>>([]);
+  // const [pengetahuanRekomendasi, setPengetahuanRekomendasi] = useState<Array<any>>([]);
+  // const [pengetahuanFavorit, setPengetahuanFavorit] = useState<Array<any>>([]);
+  // const [assetVideo, setAssetVideo] = useState<Array<any>>([]);
 
   useEffect(() => {
-    const BeritaTerbaru = async () => {
-      const response = await api.fetchBerita();
-      setBeritaTerbaru(response.data);
+    const PengetahuanTerbaru = async () => {
+      const response = await api.fetchPengetahuan();
+      setPengetahuanTerbaru(response.data);
     };
-    BeritaTerbaru();
+    PengetahuanTerbaru();
 
-    const EmpatBeritaTerbaru = async () => {
-      const response = await api.fetchBeritaLatestFour();
-      setEmpatBeritaTerbaru(response.data);
-    };
-    EmpatBeritaTerbaru();
+    // const EmpatPengetahuanTerbaru = async () => {
+    //   const response = await api.fetchPengetahuanLatestFour();
+    //   setEmpatPengetahuanTerbaru(response.data);
+    // };
+    // EmpatPengetahuanTerbaru();
 
-    const BeritaRekomendasi = async () => {
-      const response = await api.fetchBeritaLatestRecommended();
-      setBeritaRekomendasi(response.data);
-    };
-    BeritaRekomendasi();
+    // const PengetahuanRekomendasi = async () => {
+    //   const response = await api.fetchPengetahuanLatestRecommended();
+    //   setPengetahuanRekomendasi(response.data);
+    // };
+    // PengetahuanRekomendasi();
 
-    const BeritaFavorit = async () => {
-      const response = await api.fetchBeritaLatestFavorit();
-      setBeritaFavorit(response.data);
-    };
-    BeritaFavorit();
+    // const PengetahuanFavorit = async () => {
+    //   const response = await api.fetchPengetahuanLatestFavorit();
+    //   setPengetahuanFavorit(response.data);
+    // };
+    // PengetahuanFavorit();
 
-    const AssetVideo = async () => {
-      const response = await api.fetchAssetVideoLimit();
-      setAssetVideo(response.data);
-    };
-    AssetVideo();
+    // const AssetVideo = async () => {
+    //   const response = await api.fetchAssetVideoLimit();
+    //   setAssetVideo(response.data);
+    // };
+    // AssetVideo();
   }, []);
 
   return (
@@ -53,14 +54,15 @@ const PengetahuanPage = () => {
             Pengetahuan Bencana
           </label>
           <div className="w-full mt-5 md:hidden">
-            <CarouselCard empatBeritaTerbaru={empatBeritaTerbaru} />
+            {/* <CarouselCard pengetahuanTerbaru={pengetahuanTerbaru} /> */}
           </div>
           <div className="flex-wrap mt-5 gap-3 hidden md:flex">
-            {empatBeritaTerbaru.map((val) => {
+            {pengetahuanTerbaru.map((val) => {
+              console.log(val);
               return (
                 <Link
                   key={val?.id}
-                  to={`/detail-berita-publik/${val?.id}`}
+                  to={`/detail-pengetahuan-publik/${val?.id}`}
                   className="flex flex-col w-full md:w-[49%] rounded-xl overflow-hidden"
                 >
                   <div
@@ -84,16 +86,16 @@ const PengetahuanPage = () => {
             })}
           </div>
         </div>
-        <div className="flex flex-col md:w-3/12">
+        {/* <div className="flex flex-col md:w-3/12">
           <label className="border-l-2 pl-3 border-l-meta-1 text-2xl text-black-2 dark:text-white">
             Rekomendasi
           </label>
           <div className="flex flex-col gap-y-3 mt-5">
-            {beritaRekomendasi.map((val) => {
+            {pengetahuanRekomendasi.map((val) => {
               return (
                 <Link
                   key={val?.id}
-                  to={`/detail-berita-publik/${val?.id}`}
+                  to={`/detail-pengetahuan-publik/${val?.id}`}
                   className="flex bg-white rounded-lg overflow-hidden shadow-default dark:border-strokedark dark:bg-boxdark"
                 >
                   <div
@@ -107,7 +109,7 @@ const PengetahuanPage = () => {
               );
             })}
           </div>
-        </div>
+        </div> */}
       </div>
 
       {/* <div className="flex mt-20 flex-col">
@@ -115,11 +117,11 @@ const PengetahuanPage = () => {
           Kejadian Bencana Terbaru
         </label>
         <div className="flex overflow-x-scroll gap-2 w-full no-scrollbar mt-5">
-          {beritaTerbaru.map((val) => {
+          {pengetahuanTerbaru.map((val) => {
             return (
               <Link
                 key={val?.id}
-                to={`/detail-berita-publik/${val?.id}`}
+                to={`/detail-pengetahuan-publik/${val?.id}`}
                 className="flex flex-col min-w-60 rounded-md bg-white p-2 shadow-default dark:border-gray-100 dark:bg-boxdark"
               >
                 <div
@@ -167,11 +169,11 @@ const PengetahuanPage = () => {
             Paling Disukai
           </label>
           <div className="flex flex-col gap-y-3 mt-5">
-            {beritaFavorit.map((val) => {
+            {pengetahuanFavorit.map((val) => {
               return (
                 <Link
                   key={val?.id}
-                  to={`/detail-berita-publik/${val?.id}`}
+                  to={`/detail-pengetahuan-publik/${val?.id}`}
                   className="flex bg-white rounded-lg overflow-hidden shadow-default dark:border-strokedark dark:bg-boxdark"
                 >
                   <div

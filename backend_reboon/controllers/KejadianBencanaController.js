@@ -6,6 +6,7 @@ const Kerusakan = require("../models/KerusakanModel.js");
 const Dokumentasi = require("../models/DokumentasiModel.js");
 const JenisKejadian = require("../models/JenisKejadianModel.js");
 const {Op} = require("sequelize");
+const sequelize1 = require("../config/Database.js");
 const fs = require("fs");
 const Kabupaten = require("../models/KabupatenModel.js");
 const Kecamatan = require("../models/KecamatanModel.js");
@@ -563,43 +564,99 @@ const getKejadianForUpdate = async (req, res) => {
   }
 };
 
+// const deleteKejadian = async (req, res) => {
+//   const dokumentasi = await Dokumentasi.findAll({where:{id_kejadian: req.params.id}});
+//   dokumentasi.map((val) => {
+//     const filepath = `./public/images/${val?.dataValues?.image}`;
+//     fs.unlinkSync(filepath);
+//   })
+//   console.log("log 1");
+
+//   try {
+//     await Kejadian.destroy({
+//       where: {
+//         id_kejadian: req.params.id,
+//       },
+//     });
+//     console.log("log 2");
+//     await LokasiKejadian.destroy({
+//       where: {
+//         id_kejadian: req.params.id,
+//       },
+//     });
+//     console.log("log 3");
+//     await Korban.destroy({
+//       where: {
+//         id_kejadian: req.params.id,
+//       },
+//     });
+//     console.log("log 4");
+//     await Kerusakan.destroy({
+//       where: {
+//         id_kejadian: req.params.id,
+//       },
+//     });
+//     console.log("log 5");
+//     await Dokumentasi.destroy({
+//       where: {
+//         id_kejadian: req.params.id,
+//       },
+//     });
+//     console.log("log 6");
+//     res.status(200).json({ message: "Kejadian Deleted Successfuly" });
+//   } catch (error) {
+//     console.log("ini errroorr : ", error.message);
+//     res.status(400).json({ message: error.message });
+//   }
+// };
+
 const deleteKejadian = async (req, res) => {
-  const dokumentasi = await Dokumentasi.findAll({where:{id_kejadian: req.params.id}});
-  dokumentasi.map((val) => {
-    const filepath = `./public/images/${val?.dataValues?.image}`;
-    fs.unlinkSync(filepath);
-  })
+  const id = req.params.id;
 
+  // 1. Ambil dulu data dokumentasi (supaya tahu file apa yang mau dihapus nanti)
+  const dokumentasi = await Dokumentasi.findAll({ where: { id_kejadian: id } });
+
+  // 2. Mulai transaction
+  const t = await sequelize1.transaction();
   try {
-    await Kejadian.destroy({
-      where: {
-        id_kejadian: req.params.id,
-      },
-    });
-    await LokasiKejadian.destroy({
-      where: {
-        id_kejadian: req.params.id,
-      },
-    });
-    await Korban.destroy({
-      where: {
-        id_kejadian: req.params.id,
-      },
-    });
-    await Kerusakan.destroy({
-      where: {
-        id_kejadian: req.params.id,
-      },
-    });
-    await Dokumentasi.destroy({
-      where: {
-        id_kejadian: req.params.id,
-      },
-    });
+    // Hapus tabel child lebih dulu (pakai transaction)
+    await LokasiKejadian.destroy({ where: { id_kejadian: id }, transaction: t });
+    await Korban.destroy({ where: { id_kejadian: id }, transaction: t });
+    await Kerusakan.destroy({ where: { id_kejadian: id }, transaction: t });
+    await Dokumentasi.destroy({ where: { id_kejadian: id }, transaction: t });
 
-    res.status(200).json({ message: "Kejadian Deleted Successfuly" });
+    // Baru hapus parent
+    await Kejadian.destroy({ where: { id_kejadian: id }, transaction: t });
+
+    // Commit transaction
+    await t.commit();
+
+    // 3. Kalau commit sukses → hapus file gambar
+    for (const d of dokumentasi) {
+      const filename = d?.dataValues?.image;
+      if (!filename) continue;
+      const filepath = path.join(__dirname, '..', 'public', 'images', filename);
+      try {
+        if (fs.existsSync(filepath)) {
+          await fs.promises.unlink(filepath);
+          console.log(`File dihapus: ${filepath}`);
+        }
+      } catch (err) {
+        // Kalau gagal hapus file, jangan bikin API gagal → cukup log
+        console.warn(`Gagal hapus file ${filepath}:`, err.message);
+      }
+    }
+
+    return res.status(200).json({ message: 'Kejadian Deleted Successfully' });
   } catch (error) {
-    res.status(400).json({ message: error.message });
+    // Rollback kalau ada error
+    try {
+      await t.rollback();
+    } catch (rollbackErr) {
+      console.error('Rollback gagal:', rollbackErr);
+    }
+    console.error('deleteKejadian error:', error);
+    return res.status(400).json({ message: error.message });
   }
 };
 

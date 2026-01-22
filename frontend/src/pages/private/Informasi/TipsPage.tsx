@@ -3,9 +3,10 @@ import Breadcrumb from "../../../components/Breadcrumb";
 // import Select from "../../../components/Module/Select";
 import { MdOutlineEdit } from "react-icons/md";
 import { FaRegTrashAlt } from "react-icons/fa";
+import { FaFileAlt } from "react-icons/fa";
 import Pagination from "../../../components/Module/Pagination";
 import * as api from '../../../utils/Api';
-import { Error, Success } from "../../../utils/Alerts";
+import { Confirm, Error, Success } from "../../../utils/Alerts";
 import { NavLink } from "react-router-dom";
 import { FiPlus } from "react-icons/fi";
 
@@ -21,7 +22,7 @@ export default function TipsPage() {
 
   
   const Reload = async () => {
-    const response = await api.fetchBeritaSearch(keyword, page, limit);
+    const response = await api.fetchTipsBencanaSearch(keyword, page, limit);
     setData(response?.data?.result);
     setPage(response?.data?.page);
     setPages(response?.data?.totalPage);
@@ -37,17 +38,16 @@ export default function TipsPage() {
   };
 
   const OnDelete = async (id: any) => {
+    const konfirmasi = await Confirm("Apakah Anda yakin ingin menghapus data ini?");
+    if (!konfirmasi) return; // user batal
     try {
-      await api.deleteBerita(id)
+      await api.deleteTipsBencana(id)
       Success()
       Reload()
     } catch (error) {
       Error()
     }
   }
-
-
-
 
   return (
     <>
@@ -94,7 +94,7 @@ export default function TipsPage() {
                     Judul
                   </th>
                   <th className="w-[28%] py-4 px-4 font-semibold text-black dark:text-white">
-                    Penulis
+                    Dokumen
                   </th>
                   <th className="py-4 px-4 font-semibold text-black dark:text-white">
                     Aksi
@@ -111,7 +111,13 @@ export default function TipsPage() {
                       <p className="text-black dark:text-white">{value?.judul}</p>
                     </td>
                     <td className="border-b border-[#eee] py-3 px-4 dark:border-strokedark">
-                      <p className="text-black dark:text-white">{value?.penulis}</p>
+                      <a href={value?.url}>
+                        <div className="flex items-center gap-2">
+                          <p className="text-black dark:text-white">Dokumen</p> 
+                          <FaFileAlt />
+                        </div>
+                        </a>
+                      
                     </td>
                     {/* <td className="border-b border-[#eee] py-3 px-4 dark:border-strokedark">
                       <div className="text-black dark:text-white">
@@ -120,7 +126,7 @@ export default function TipsPage() {
                     </td> */}
                     <td className="border-b border-[#eee] py-3 px-4 dark:border-strokedark">
                       <div className="flex items-center space-x-3.5">
-                        <NavLink to={`/ubah-pengetahuan/${value?.id}`} className="hover:text-primary">
+                        <NavLink to={`/ubah-tips/${value?.id}`} className="hover:text-primary">
                           <MdOutlineEdit />
                         </NavLink>
                         <button className="hover:text-primary" onClick={() => OnDelete(value?.id)}>

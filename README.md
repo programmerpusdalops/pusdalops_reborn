@@ -37,3 +37,17 @@ try {
 
 
 * "nodemon index" untuk menjalankan backend
+
+
+* backend - tambah di controller, di router, di model, 
+* tambah patch di httpReq
+* pengetahuan, tips bencana, index
+
+tambah table
+* catatan backend :
+Table : pengetahuan
+pengetahuan ikuti berita (inputannya)
+
+Table : tips bencaha
+tisp bencana mengikuti dokument
+

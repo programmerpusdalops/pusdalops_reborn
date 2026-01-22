@@ -5,13 +5,13 @@ import { NavLink } from 'react-router-dom';
 import { FiEye, FiPlus } from 'react-icons/fi';
 import { MdOutlineModeEditOutline } from 'react-icons/md';
 import { FaRegTrashAlt } from 'react-icons/fa';
-import { CiMenuKebab } from 'react-icons/ci';
+// import { CiMenuKebab } from 'react-icons/ci';
 import * as api from '../../../utils/Api';
 
 import ViewKabupaten from '../../../components/Module/ViewKabupaten';
 import Select from '../../../components/Module/Select';
 import Pagination from '../../../components/Module/Pagination';
-import { Success } from '../../../utils/Alerts';
+import { Confirm, Success } from '../../../utils/Alerts';
 import Error from '../../../layout/Error';
 
 const DataBencana = () => {
@@ -129,6 +129,8 @@ const DataBencana = () => {
   };
 
   const OnDelete = async (id: any) => {
+    const konfirmasi = await Confirm("Apakah Anda yakin ingin menghapus data ini?");
+    if (!konfirmasi) return; // user batal
     try {
       await api.deleteKejadian(id)
       Success()
@@ -299,9 +301,9 @@ const DataBencana = () => {
                       <button onClick={() => OnDelete(value?.id_kejadian)}>
                         <FaRegTrashAlt />
                       </button>
-                      <a href="#">
+                      {/* <a href="#">
                         <CiMenuKebab />
-                      </a>
+                      </a> */}
                     </div>
                   </td>
                 </tr>

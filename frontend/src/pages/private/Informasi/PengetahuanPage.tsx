@@ -1,13 +1,16 @@
+/* eslint-disable @typescript-eslint/ban-types */
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { SetStateAction, useEffect, useState } from "react";
 import Breadcrumb from "../../../components/Breadcrumb";
 // import Select from "../../../components/Module/Select";
 import { MdOutlineEdit } from "react-icons/md";
-import { FaRegTrashAlt } from "react-icons/fa";
+import { FaRegTrashAlt, FaFileAlt  } from "react-icons/fa";
 import Pagination from "../../../components/Module/Pagination";
 import * as api from '../../../utils/Api';
-import { Error, Success } from "../../../utils/Alerts";
+import { Confirm, Error, Success } from "../../../utils/Alerts";
 import { NavLink } from "react-router-dom";
 import { FiPlus } from "react-icons/fi";
+import parse from 'html-react-parser';
 
 
 
@@ -21,7 +24,7 @@ export default function PengetahuanPage() {
 
   
   const Reload = async () => {
-    const response = await api.fetchBeritaSearch(keyword, page, limit);
+    const response = await api.fetchPengetahuanSearch(keyword, page, limit);
     setData(response?.data?.result);
     setPage(response?.data?.page);
     setPages(response?.data?.totalPage);
@@ -37,8 +40,10 @@ export default function PengetahuanPage() {
   };
 
   const OnDelete = async (id: any) => {
+    const konfirmasi = await Confirm("Apakah Anda yakin ingin menghapus data ini?");
+      if (!konfirmasi) return; // user batal
     try {
-      await api.deleteBerita(id)
+      await api.deletePengetahuan(id)
       Success()
       Reload()
     } catch (error) {
@@ -90,11 +95,17 @@ export default function PengetahuanPage() {
                   <th className="w-[10%] py-4 px-4 font-semibold text-black dark:text-white">
                     No
                   </th>
-                  <th className="w-[50%] py-4 px-4 font-semibold text-black dark:text-white">
+                  <th className="w-[30%] py-4 px-4 font-semibold text-black dark:text-white">
                     Judul
                   </th>
                   <th className="w-[28%] py-4 px-4 font-semibold text-black dark:text-white">
                     Penulis
+                  </th>
+                  <th className="w-[28%] py-4 px-4 font-semibold text-black dark:text-white">
+                    Dokumen
+                  </th>
+                  <th className="w-[28%] py-4 px-4 font-semibold text-black dark:text-white">
+                    Content
                   </th>
                   <th className="py-4 px-4 font-semibold text-black dark:text-white">
                     Aksi
@@ -113,11 +124,19 @@ export default function PengetahuanPage() {
                     <td className="border-b border-[#eee] py-3 px-4 dark:border-strokedark">
                       <p className="text-black dark:text-white">{value?.penulis}</p>
                     </td>
-                    {/* <td className="border-b border-[#eee] py-3 px-4 dark:border-strokedark">
+                    <td className="border-b border-[#eee] py-3 px-4 dark:border-strokedark">
+                      <a href={value?.url}>
+                        <div className="flex items-center gap-2">
+                          <p className="text-black dark:text-white">Dokumen</p> 
+                          <FaFileAlt />
+                        </div>
+                      </a>
+                    </td>
+                    <td className="border-b border-[#eee] py-3 px-4 dark:border-strokedark">
                       <div className="text-black dark:text-white">
                         {parse(value?.content)}
                       </div>
-                    </td> */}
+                    </td>
                     <td className="border-b border-[#eee] py-3 px-4 dark:border-strokedark">
                       <div className="flex items-center space-x-3.5">
                         <NavLink to={`/ubah-pengetahuan/${value?.id}`} className="hover:text-primary">

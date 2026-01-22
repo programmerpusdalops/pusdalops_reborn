@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { SetStateAction, useEffect, useState } from 'react';
 import { FiEye } from 'react-icons/fi';
 import * as api from '../../../utils/Api';
