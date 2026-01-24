@@ -29,9 +29,9 @@ const TambahBeritaPage = lazy(
 const UbahBeritaPage = lazy(
   () => import('../pages/private/Publikasi/UbahBeritaPage')
 );
-const InfografisPage = lazy(
-  () => import('../pages/private/Publikasi/InfografisPage')
-);
+// const InfografisPage = lazy(
+//   () => import('../pages/private/Publikasi/InfografisPage')
+// );
 const MajalahPage = lazy(
   () => import('../pages/private/Publikasi/MajalahPage'),
 );
@@ -135,11 +135,11 @@ const coreRoutes = [
     title: 'Ubah Berita',
     component: UbahBeritaPage,
   },
-  {
-    path: '/infografis',
-    title: 'Infografis',
-    component: InfografisPage,
-  },
+  // {
+  //   path: '/infografis',
+  //   title: 'Infografis',
+  //   component: InfografisPage,
+  // },
   {
     path: '/majalah',
     title: 'majalah',

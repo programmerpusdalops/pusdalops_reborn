@@ -41,69 +41,274 @@ const getCountKejadian = async (req, res) => {
   }
 };
 
+// const getCountKorbanTerdampak = async (req, res) => {
+//   try {
+//     const tahun_2025 = '2025'
+//     const tahun_2024 = '2024'
+//     const subjek = ['meninggal', 'hilang', 'menderita_jiwa', 'mengungsi_jiwa']
+
+
+//     let list_2025 = []
+//     for (let i = 0; i < subjek?.length; i++) {
+//       const korban = await Korban.sum(subjek[i], {
+//         include: [
+//           {
+//             model: Kejadian,
+//             where: {
+//               tanggal: {[Op.like]: '%'+tahun_2025+'%'}
+//             }
+//           }
+//         ]
+//       });
+//       list_2025.push(korban)
+//     }
+
+//     let list_2024 = []
+//     for (let i = 0; i < subjek?.length; i++) {
+//       const korban = await Korban.sum(subjek[i], {
+//         include: [
+//           {
+//             model: Kejadian,
+//             where: {
+//               tanggal: {[Op.like]: '%'+tahun_2024+'%'}
+//             }
+//           }
+//         ]
+//       });
+//       list_2024.push(korban)
+//     }
+
+//    const total_2025 = list_2025.reduce((a, i) => a + i)
+
+//    const total_2024 = list_2024.reduce((a, i) => a + i)
+
+//     // query perhitungan persentase
+//     const nilai_awal = total_2024
+//     const nilai_akhir = total_2025
+//     const hasil_pengurangan =  nilai_akhir - nilai_awal
+//     const hasil_pembagian = hasil_pengurangan / nilai_awal
+//     const hasil_kali = hasil_pembagian * 100
+//     // query perhitungan persentase
+
+//     res.json({
+//       meninggal: list_2025[0],
+//       hilang: list_2025[1],
+//       menderita: list_2025[2],
+//       mengungsi: list_2025[3],
+//       hasil_persentase: hasil_kali 
+//     });
+//   } catch (error) {
+//     res.status(500).json({ message: error.message });
+//   }
+// };
+// const getCountKorbanTerdampak = async (req, res) => {
+//   try {
+//     // =========================
+//     // TAHUN DINAMIS OTOMATIS
+//     // =========================
+//     const tahun_sekarang = new Date().getFullYear().toString();      // contoh: "2026"
+//     const tahun_sebelumnya = (new Date().getFullYear() - 1).toString(); // contoh: "2025"
+
+//     const subjek = ['meninggal', 'hilang', 'menderita_jiwa', 'mengungsi_jiwa']
+
+//     // =========================
+//     // HITUNG DATA TAHUN SEKARANG
+//     // =========================
+//     let list_sekarang = []
+
+//     for (let i = 0; i < subjek.length; i++) {
+//       const korban = await Korban.sum(subjek[i], {
+//         include: [
+//           {
+//             model: Kejadian,
+//             required: true,
+//             attributes: [],
+//             where: {
+//               tanggal: { [Op.like]: `%${tahun_sekarang}%` }
+//             }
+//           }
+//         ],
+//         raw: true
+//       });
+
+//       list_sekarang.push(korban || 0);
+//     }
+
+//     // =========================
+//     // HITUNG DATA TAHUN SEBELUMNYA
+//     // =========================
+//     let list_sebelumnya = []
+
+//     for (let i = 0; i < subjek.length; i++) {
+//       const korban = await Korban.sum(subjek[i], {
+//         include: [
+//           {
+//             model: Kejadian,
+//             required: true,
+//             attributes: [],
+//             where: {
+//               tanggal: { [Op.like]: `%${tahun_sebelumnya}%` }
+//             }
+//           }
+//         ],
+//         raw: true
+//       });
+
+//       list_sebelumnya.push(korban || 0);
+//     }
+
+//     // =========================
+//     // TOTAL PER TAHUN
+//     // =========================
+//     const total_sekarang = list_sekarang.reduce((a, b) => a + b, 0)
+//     const total_sebelumnya = list_sebelumnya.reduce((a, b) => a + b, 0)
+
+//     // =========================
+//     // HITUNG PERSENTASE PERUBAHAN
+//     // =========================
+//     let hasil_persentase = 0
+//     let status = 'stabil'
+
+//     if (total_sebelumnya > 0) {
+//       const selisih = total_sekarang - total_sebelumnya
+//       const rasio = selisih / total_sebelumnya
+//       hasil_persentase = rasio * 100
+
+//       if (hasil_persentase > 0) status = 'naik'
+//       else if (hasil_persentase < 0) status = 'turun'
+//     }
+
+//     // =========================
+//     // RESPONSE API
+//     // =========================
+//     res.json({
+//       tahun_sekarang: tahun_sekarang,
+//       tahun_sebelumnya: tahun_sebelumnya,
+
+//       data_tahun_sekarang: {
+//         meninggal: list_sekarang[0],
+//         hilang: list_sekarang[1],
+//         menderita_jiwa: list_sekarang[2],
+//         mengungsi_jiwa: list_sekarang[3],
+//         total: total_sekarang
+//       },
+
+//       data_tahun_sebelumnya: {
+//         meninggal: list_sebelumnya[0],
+//         hilang: list_sebelumnya[1],
+//         menderita_jiwa: list_sebelumnya[2],
+//         mengungsi_jiwa: list_sebelumnya[3],
+//         total: total_sebelumnya
+//       },
+
+//       perubahan: {
+//         status: status,                 // naik / turun / stabil
+//         persentase: hasil_persentase    // contoh: 25.5
+//       }
+//     });
+
+//   } catch (error) {
+//     console.error(error);
+//     res.status(500).json({ 
+//       message: "Gagal mengambil data korban terdampak", 
+//       error: error.message 
+//     });
+//   }
+// };
+
 const getCountKorbanTerdampak = async (req, res) => {
   try {
-    const tahun_2025 = '2025'
-    const tahun_2024 = '2024'
+    // =========================
+    // TAHUN DINAMIS OTOMATIS
+    // =========================
+    const tahun_sekarang = new Date().getFullYear().toString();      
+    const tahun_sebelumnya = (new Date().getFullYear() - 1).toString(); 
+
     const subjek = ['meninggal', 'hilang', 'menderita_jiwa', 'mengungsi_jiwa']
 
+    // =========================
+    // DATA TAHUN SEKARANG
+    // =========================
+    let list_sekarang = []
 
-    let list_2025 = []
-    for (let i = 0; i < subjek?.length; i++) {
+    for (let i = 0; i < subjek.length; i++) {
       const korban = await Korban.sum(subjek[i], {
         include: [
           {
             model: Kejadian,
+            required: true,
+            attributes: [],
             where: {
-              tanggal: {[Op.like]: '%'+tahun_2025+'%'}
+              tanggal: { [Op.like]: `%${tahun_sekarang}%` }
             }
           }
-        ]
+        ],
+        raw: true
       });
-      list_2025.push(korban)
+
+      list_sekarang.push(korban || 0);
     }
 
-    let list_2024 = []
-    for (let i = 0; i < subjek?.length; i++) {
+    // =========================
+    // DATA TAHUN SEBELUMNYA
+    // =========================
+    let list_sebelumnya = []
+
+    for (let i = 0; i < subjek.length; i++) {
       const korban = await Korban.sum(subjek[i], {
         include: [
           {
             model: Kejadian,
+            required: true,
+            attributes: [],
             where: {
-              tanggal: {[Op.like]: '%'+tahun_2024+'%'}
+              tanggal: { [Op.like]: `%${tahun_sebelumnya}%` }
             }
           }
-        ]
+        ],
+        raw: true
       });
-      list_2024.push(korban)
+
+      list_sebelumnya.push(korban || 0);
     }
 
-   const total_2025 = list_2025.reduce((a, i) => a + i)
+    // =========================
+    // TOTAL PER TAHUN
+    // =========================
+    const total_sekarang = list_sekarang.reduce((a, b) => a + b, 0)
+    const total_sebelumnya = list_sebelumnya.reduce((a, b) => a + b, 0)
 
-   const total_2024 = list_2024.reduce((a, i) => a + i)
+    // =========================
+    // HITUNG PERSENTASE (SAMA SEPERTI KODE AWAL)
+    // =========================
+    const nilai_awal = total_sebelumnya
+    const nilai_akhir = total_sekarang
 
-    // query perhitungan persentase
-    const nilai_awal = total_2024
-    const nilai_akhir = total_2025
-    const hasil_pengurangan =  nilai_akhir - nilai_awal
-    const hasil_pembagian = hasil_pengurangan / nilai_awal
-    const hasil_kali = hasil_pembagian * 100
-    // query perhitungan persentase
+    let hasil_kali = 0
+    if (nilai_awal > 0) {
+      const hasil_pengurangan = nilai_akhir - nilai_awal
+      const hasil_pembagian = hasil_pengurangan / nilai_awal
+      hasil_kali = hasil_pembagian * 100
+    }
 
-
-
-
+    // =========================
+    // RESPONSE (SAMA PERSIS FORMAT LAMA)
+    // =========================
     res.json({
-      meninggal: list_2025[0],
-      hilang: list_2025[1],
-      menderita: list_2025[2],
-      mengungsi: list_2025[3],
-      hasil_persentase: hasil_kali 
+      meninggal: list_sekarang[0],
+      hilang: list_sekarang[1],
+      menderita: list_sekarang[2],
+      mengungsi: list_sekarang[3],
+      hasil_persentase: hasil_kali
     });
+
   } catch (error) {
+    console.error(error);
     res.status(500).json({ message: error.message });
   }
 };
+
+
 
 const getCountKejadianPerTahun = async (req, res) => {
 

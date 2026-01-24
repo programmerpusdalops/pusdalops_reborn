@@ -18,7 +18,7 @@ import BeritaPage from './pages/public/Publikasi/BeritaPage';
 import MajalahPage from './pages/public/Publikasi/MajalahPage';
 import InfografisPage from './pages/public/Publikasi/InfografisPage';
 import KontakKamiPage from './pages/public/Kontak/KontakKamiPage';
-import KontakPentingPage from './pages/public/Kontak/KontakPentingPage';
+// import KontakPentingPage from './pages/public/Kontak/KontakPentingPage';
 
 // import Error from './layout/Error';
 import DetailDataBencanaPage from './pages/public/MasterData/DetailDataBencanaPage';
@@ -77,7 +77,7 @@ function App() {
           <Route path="/pengetahuan-publik" element={<PengetahuanPage />} />
           <Route path="/tips-publik" element={<TipsPage />} />
           <Route path="/kontak-kami" element={<KontakKamiPage />} />
-          <Route path="/kontak-penting" element={<KontakPentingPage />} />
+          {/* <Route path="/kontak-penting" element={<KontakPentingPage />} /> */}
           <Route path="/detail-data-bencana-publik/:id" element={<DetailDataBencanaPage />}/>
 
             <Route path="/Auth/SignIn" element={<SignInPage />} />
@@ -101,7 +101,7 @@ function App() {
                   path={path}
                   element={
                     <Suspense fallback={<Loader />}>
-                      <Component/>
+                      {Component ? <Component /> : null}
                     </Suspense>
                   }
                 />

@@ -2,11 +2,11 @@ import { SetStateAction, useEffect, useState } from 'react';
 import Breadcrumb from '../../../components/Breadcrumb';
 import { Error, Success } from '../../../utils/Alerts';
 import * as api from '../../../utils/Api';
-import Swal from 'sweetalert2';
+// import Swal from 'sweetalert2';
 import { FaRegTrashAlt } from 'react-icons/fa';
 import { MdOutlineEdit } from 'react-icons/md';
-import { Link } from 'react-router-dom';
-import Select from '../../../components/Module/Select';
+// import { Link } from 'react-router-dom';
+// import Select from '../../../components/Module/Select';
 import Pagination from '../../../components/Module/Pagination';
 
 const KontakPentingPage = () => {
@@ -17,7 +17,7 @@ const KontakPentingPage = () => {
   const [keyword, setKeyword] = useState("");
   const[data, setData] = useState<Array<any>>([])
 
-  const[jenisKontak, setJenisKontak] = useState<Array<any>>([])
+  // const[jenisKontak, setJenisKontak] = useState<Array<any>>([])
   const [ids, setIds] = useState(null)
   const[file, setFile] = useState("")
   const[item, setItem] = useState<any>({
@@ -27,18 +27,18 @@ const KontakPentingPage = () => {
   })
 
 
-  const loadImage = (event: any) => {
-    const image = event.target.files[0];
-    if(image.size > 5000000) return  Swal.fire({
-      position: "top-end",
-      icon: "error",
-      title: "Gagal",
-      text: "File Melebihi Kapasitas Penyimpanan, Max 5 MB",
-      showConfirmButton: false,
-      timer: 1500
-    });
-    setFile(image);
-  };
+  // const loadImage = (event: any) => {
+  //   const image = event.target.files[0];
+  //   if(image.size > 5000000) return  Swal.fire({
+  //     position: "top-end",
+  //     icon: "error",
+  //     title: "Gagal",
+  //     text: "File Melebihi Kapasitas Penyimpanan, Max 5 MB",
+  //     showConfirmButton: false,
+  //     timer: 1500
+  //   });
+  //   setFile(image);
+  // };
 
   const OnSubmit = async (e: { preventDefault: () => void; }) => {
     e.preventDefault();
@@ -97,13 +97,13 @@ const KontakPentingPage = () => {
     }
   }, [ids]);
 
-  useEffect(() => {
-    const JenisKontak = async () => {
-      const response = await api.fetchJenisKontak();
-      setJenisKontak(response.data);
-    };
-    JenisKontak()
-  }, [])
+  // useEffect(() => {
+  //   const JenisKontak = async () => {
+  //     const response = await api.fetchJenisKontak();
+  //     setJenisKontak(response.data);
+  //   };
+  //   JenisKontak()
+  // }, [])
   
   const changePage = ({ selected } : any) => {
     setPage(selected);
