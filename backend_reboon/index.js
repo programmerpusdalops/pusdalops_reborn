@@ -3,6 +3,7 @@ const cors = require("cors");
 const multer = require("multer");
 const path = require("path");
 const db = require("./config/Database.js");
+require("dotenv").config();
 
 // url
 const Auth = require("./routes/AuthRoutes.js");
@@ -44,6 +45,7 @@ const storage = multer.diskStorage({
 const upload = multer({ storage: storage });
 app.use(cors({
   origin: "http://localhost:5173",
+  // origin: "https://pusdalops-bpbdsulteng.com",
   methods: ["GET", "POST", "PUT", "DELETE", "PATCH"],
 }));
 app.use(express.json());

@@ -79,7 +79,7 @@ const options: ApexOptions = {
 
 const ChartPerWilayah: React.FC = () => {
   const[countKejadian, setCountKejadian] = useState<any>();
-  const[keyword, setKeyword] = useState("2025")
+  const[keyword, setKeyword] = useState("2026")
 
   useEffect(() => {
     const Count = async () => {
@@ -116,6 +116,7 @@ const ChartPerWilayah: React.FC = () => {
               onChange={(e) => setKeyword(e.target.value)}
               className="relative z-20 inline-flex appearance-none bg-transparent py-1 pl-3 pr-8 text-sm font-medium outline-none"
             >
+              <option value="2026">2026</option>
               <option value="2025">2025</option>
               <option value="2024">2024</option>
               <option value="2023">2023</option>

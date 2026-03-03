@@ -24,7 +24,7 @@ export default function CardTotalPerJenisBencana() {
                 Master Data
               </p>
               <h1 className="text-xl text-black font-bold dark:text-gray">
-                Data Bencana 2025
+                Data Bencana 2026
               </h1>
             </div>
             <div>
@@ -49,7 +49,7 @@ export default function CardTotalPerJenisBencana() {
                 Master Data
               </p>
               <h1 className="text-xl text-black font-bold dark:text-gray">
-                Data Bencana 2025
+                Data Bencana 2026
               </h1>
             </div>
             <div>

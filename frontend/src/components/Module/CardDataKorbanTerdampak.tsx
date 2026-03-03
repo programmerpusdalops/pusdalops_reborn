@@ -20,7 +20,7 @@ export default function CardDataKorbanTerdampak() {
              <div className="flex bg-white p-4 gap-x-4 rounded-xl justify-between border border-stroke shadow-default dark:border-strokedark dark:bg-boxdark">
               <div className="flex flex-col w-4/6 gap-2">
                 <p className="font-bold">
-                  Data Korban Terdampak 2025{' '}
+                  Data Korban Terdampak 2026{' '}
                   <small className="font-light text-xs">(Jiwa)</small>
                 </p>
   
@@ -73,7 +73,7 @@ export default function CardDataKorbanTerdampak() {
                         </label>
                         </>
                       )}
-                  dari 2024
+                  dari 2025
                 </p>
               </div>
             </div>

@@ -28,7 +28,7 @@ export default function CardDataBencana() {
     <>
     <div className="flex flex-col md:flex-row bg-white p-4 rounded-xl items  border border-stroke shadow-default dark:border-strokedark dark:bg-boxdark">
               <div className="flex flex-col gap-2 justify-center">
-                <p className="font-bold">Data Bencana 2025</p>
+                <p className="font-bold">Data Bencana 2026</p>
                 <div className="flex gap-2">
                   <div className="py-1 px-2 bg-meta-6 items-center flex rounded-md font-bold text-xl text-meta-2">
                     {totalKejadian}
@@ -51,7 +51,7 @@ export default function CardDataBencana() {
                         </label>
                         </>
                       )}
-                      dari 2024
+                      dari 2025
                     </p>
                   </div>
                 </div>

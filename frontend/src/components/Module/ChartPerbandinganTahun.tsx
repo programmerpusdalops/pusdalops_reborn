@@ -140,12 +140,12 @@ const ChartPerbandinganTahun: React.FC = () => {
 
     const state = [
       {
-        name: 'Data Bencana 2024',
-        data: countKejadian.total_2024,
-      },
-      {
         name: 'Data Bencana 2025',
         data: countKejadian.total_2025,
+      },
+      {
+        name: 'Data Bencana 2026',
+        data: countKejadian.total_2026,
       }
     ]
 

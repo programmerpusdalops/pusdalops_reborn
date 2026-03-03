@@ -21,7 +21,7 @@ const getCountKejadian = async (req, res) => {
       const kejadian = await Kejadian.findAndCountAll({
         where:{
           [Op.and]: [{tanggal:{
-              [Op.like]: '%'+'2025'+'%'
+              [Op.like]: '%'+'2026'+'%'
           }}, {id_jenis_kejadian:{
               [Op.like]: '%'+jenisKejadian[i]?.id+'%'
           }}],
@@ -294,6 +294,8 @@ const getCountKorbanTerdampak = async (req, res) => {
     // =========================
     // RESPONSE (SAMA PERSIS FORMAT LAMA)
     // =========================
+    console.log('Korban Terdampak Tahun', tahun_sekarang, ':', list_sekarang);
+    console.log('Korban Terdampak Tahun', tahun_sebelumnya, ':', list_sebelumnya);
     res.json({
       meninggal: list_sekarang[0],
       hilang: list_sekarang[1],
@@ -312,11 +314,31 @@ const getCountKorbanTerdampak = async (req, res) => {
 
 const getCountKejadianPerTahun = async (req, res) => {
 
-  const tgl_2024 = ['2024-01', '2024-02', '2024-03', '2024-04', '2024-05', '2024-06', '2024-07', '2024-08', '2024-09', '2024-10', '2024-11', '2024-12']
-  const tgl_2025 = ['2025-01', '2025-02', '2025-03', '2025-04', '2025-05', '2025-06', '2025-07', '2025-08', '2025-09', '2025-10', '2025-11', '2025-12']
+  // const tgl_2025 = ['2024-01', '2024-02', '2024-03', '2024-04', '2024-05', '2024-06', '2024-07', '2024-08', '2024-09', '2024-10', '2024-11', '2024-12']
+  // const tgl_2026 = ['2025-01', '2025-02', '2025-03', '2025-04', '2025-05', '2025-06', '2025-07', '2025-08', '2025-09', '2025-10', '2025-11', '2025-12']
+  const generateBulan = (tahun) => {
+  return Array.from({ length: 12 }, (_, i) => {
+    const bulan = String(i + 1).padStart(2, '0')
+    return `${tahun}-${bulan}`
+  })
+}
 
+const tahunSekarang = new Date().getFullYear()
+
+const tgl_2026 = generateBulan(tahunSekarang)
+const tgl_2025 = generateBulan(tahunSekarang - 1)
 
   try {
+    let list_2026 = []
+    for (let i = 0; i < tgl_2026?.length; i++) {
+      const kejadian = await Kejadian.findAndCountAll({
+        where: {
+          tanggal: {[Op.like]: '%'+tgl_2026[i]+'%'}
+        },
+      });
+      list_2026.push(kejadian.count)
+    }
+
     let list_2025 = []
     for (let i = 0; i < tgl_2025?.length; i++) {
       const kejadian = await Kejadian.findAndCountAll({
@@ -327,17 +349,7 @@ const getCountKejadianPerTahun = async (req, res) => {
       list_2025.push(kejadian.count)
     }
 
-    let list_2024 = []
-    for (let i = 0; i < tgl_2024?.length; i++) {
-      const kejadian = await Kejadian.findAndCountAll({
-        where: {
-          tanggal: {[Op.like]: '%'+tgl_2024[i]+'%'}
-        },
-      });
-      list_2024.push(kejadian.count)
-    }
-
-      res.json({total_2025: list_2025, total_2024: list_2024});
+      res.json({total_2025: list_2025, total_2026: list_2026});
     } catch (error) {
       res.status(500).json({ message: error.message });
     }
@@ -423,7 +435,7 @@ const getKejadianPerJenisKejadian = async (req, res) => {
 
     const total_kejadian = await Kejadian.findAndCountAll({
       where: {
-        tanggal: {[Op.like]: '%'+'2025'+'%'}
+        tanggal: {[Op.like]: '%'+'2026'+'%'}
       },
     });
 
@@ -433,7 +445,7 @@ const getKejadianPerJenisKejadian = async (req, res) => {
       const kejadian = await Kejadian.findAndCountAll({
         where:{
           [Op.and]: [{tanggal:{
-              [Op.like]: '%'+'2025'+'%'
+              [Op.like]: '%'+'2026'+'%'
           }}, {id_jenis_kejadian:{
               [Op.like]: '%'+jenisKejadian[i].id+'%'
           }}],
@@ -460,12 +472,12 @@ const getPersentaseKejadian = async (req, res) => {
     
     const kejadian_2024 = await Kejadian.findAndCountAll({
       where: {
-        tanggal: {[Op.like]: '%'+'2024'+'%'}
+        tanggal: {[Op.like]: '%'+'2025'+'%'}
       },
     });
     const kejadian_2025 = await Kejadian.findAndCountAll({
       where: {
-        tanggal: {[Op.like]: '%'+'2025'+'%'}
+        tanggal: {[Op.like]: '%'+'2026'+'%'}
       },
     });
 
@@ -542,8 +554,11 @@ const getKejadianSearch = async (req, res) => {
 
 const getKejadian = async (req, res) => {
   try {
-    const kejadian = await Kejadian.findAll({
-      order: [["created_at", "DESC"]],
+   const kejadian = await Kejadian.findAll({
+      order: [
+        ["tanggal", "DESC"],
+        ["jam", "DESC"],
+      ],
       include: [JenisKejadian],
     });
     res.json(kejadian);
@@ -918,7 +933,7 @@ const deleteKejadian = async (req, res) => {
 const getKejadianPerTahun = async (req, res) => {
   try {
     // const tahun = req.query.tahun || new Date().getFullYear().toString();
-    const tahun = 2025;
+    const tahun = 2026;
     
     const { Kejadian, LokasiKejadian, Kabupaten, Kecamatan, Kelurahan } = require("../models/Connector.js");
     const kejadianList = await Kejadian.findAll({
