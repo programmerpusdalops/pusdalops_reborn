@@ -1,5 +1,5 @@
 import { lazy } from 'react';
-import TambahPengetahuanPage from '../pages/private/Informasi/TambahPengetahuanPage';
+// import TambahPengetahuanPage from '../pages/private/Informasi/TambahPengetahuanPage';
 import TambahTipsPage from '../pages/private/Informasi/TambahTipsPage';
 // Batas Awal import page fix
 const DashboardPage = lazy(
@@ -43,6 +43,9 @@ const DokumenPage = lazy(
 );
 const PengetahuanPage = lazy(
   () => import('../pages/private/Informasi/PengetahuanPage')
+);
+const TambahPengetahuanPage = lazy(
+  () => import('../pages/private/Informasi/TambahPengetahuanPage')
 );
 const UbahPengetahuanPage = lazy(
   () => import('../pages/private/Informasi/UbahPengetahuanPage')
@@ -163,14 +166,14 @@ const coreRoutes = [
   {
     path: '/tambah-pengetahuan',
     title: 'Tambah Pengetahuan',
-    Component: TambahPengetahuanPage,
+    component: TambahPengetahuanPage,
   },
   {
     path: '/ubah-pengetahuan/:id',
     title: 'Ubah Pengetahuan',
     component: UbahPengetahuanPage,
   },
- 
+
   {
     path: '/tips',
     title: 'Tips',
@@ -186,7 +189,7 @@ const coreRoutes = [
     title: 'Ubah Tips',
     component: UbahTipsPage,
   },
-{
+  {
     path: '/kontak',
     title: 'Kontak Penting',
     component: KontakPentingPage,

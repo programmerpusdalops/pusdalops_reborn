@@ -3,7 +3,7 @@ const cors = require("cors");
 const multer = require("multer");
 const path = require("path");
 const db = require("./config/Database.js");
-require("dotenv").config();
+const { config } = require("./config/env.js");
 
 // url
 const Auth = require("./routes/AuthRoutes.js");
@@ -20,6 +20,7 @@ const Logpal = require("./routes/LogpalRoutes.js");
 const VideoAsset = require("./routes/VideoAssetRoutes.js");
 const Pengetahuan = require("./routes/PengetahuanRoutes.js");
 const TipsBencana = require("./routes/TipsBencanaRoutes.js");
+const KontakPenting = require("./routes/KontakPentingRoutes.js");
 
 ////
 // const PembuatanTabel = require("./models/VideoAssetModel.js");
@@ -44,14 +45,12 @@ const storage = multer.diskStorage({
 
 const upload = multer({ storage: storage });
 app.use(cors({
-  origin: "http://localhost:5173",
-  // origin: "https://pusdalops-bpbdsulteng.com",
+  origin: config.corsOrigin,
   methods: ["GET", "POST", "PUT", "DELETE", "PATCH"],
 }));
 app.use(express.json());
 
-// app.use("/images", express.static(path.join(__dirname, "images")));
-app.use("/public/images", express.static(path.join("public/images")));
+app.use("/images", express.static(path.join("public/images")));
 
 // URL API
 app.use("/auth", Auth);
@@ -68,8 +67,8 @@ app.use("/logpal", Logpal);
 app.use("/asset", VideoAsset);
 app.use("/pengetahuan", upload.single("file"), Pengetahuan);
 app.use("/tips_bencana", upload.single("file"), TipsBencana);
+app.use("/kontak", KontakPenting);
 // AKHIR URL API
 
-const port = process.env.PORT || 5001;
-app.listen(port);
-console.log("Listening on localhost:" + port);
+app.listen(config.port);
+console.log(`Server running on ${config.baseUrl}`);

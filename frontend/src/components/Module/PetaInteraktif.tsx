@@ -4,6 +4,7 @@ import { LayersControl, MapContainer, TileLayer, GeoJSON } from 'react-leaflet';
 import CardTotalKejadianMobile from '../../components/Module/CardTotalKejadianMobile';
 import 'leaflet/dist/leaflet.css';
 import * as api from '../../utils/Api';
+import { getImageUrl } from '../../utils/helpers/imageUrl';
 import { Icon } from 'leaflet';
 import L from 'leaflet';
 
@@ -17,7 +18,7 @@ export default function PetaInteraktif() {
   const [bencana, setBencana] = useState<any>([]);
   // const[bencana] = useState<any>(testing);
   //console.log(bencana);
-  const[batasKab] = useState<any>(batas_kab)
+  const [batasKab] = useState<any>(batas_kab)
 
   const geo = useRef(null);
 
@@ -27,7 +28,7 @@ export default function PetaInteraktif() {
     // Untuk mengambil data kejadian dari API
     const fetchKejadian = async () => {
       // Memanggil fungsi fetchKejadianPerTahun dari modul api untuk mendapatkan data kejadian per tahun
-      const response = await api.fetchKejadianPerTahun(); 
+      const response = await api.fetchKejadianPerTahun();
       // Menyimpan data yang diterima dari response ke dalam state bencana
       setBencana(response?.data);
       // ⚠️ ini mungkin belum langsung update karena state asynchronous
@@ -48,7 +49,8 @@ export default function PetaInteraktif() {
   }, []);
 
   const MarkerPetaCore = new Icon({
-    iconUrl: 'https://backendreboon.api.pusdalops-bpbdsulteng.com/images/location1.png',
+    // iconUrl: 'https://backendreboon.api.pusdalops-bpbdsulteng.com/images/location1.png',
+    iconUrl: getImageUrl('location1.png'),
     iconSize: [20, 20],
   });
 

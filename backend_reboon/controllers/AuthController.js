@@ -1,14 +1,15 @@
 const Users = require("../models/UserModel.js");
 // const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
+const { getImageUrl } = require("../config/env.js");
 
-module.exports = Register = async(req, res) => {
+module.exports = Register = async (req, res) => {
     const { username, password, confPassword, role_id } = req.body;
 
-    const oldUser = await Users.findOne({where:{username: req.body.username}});
+    const oldUser = await Users.findOne({ where: { username: req.body.username } });
     if (oldUser) return res.status(400).json({ message: "Maaf Username Sudah Terdaftar" });
 
-    if(password !== confPassword) return res.status(400).json({message: "Password dan Confirm Password tidak cocok"});
+    if (password !== confPassword) return res.status(400).json({ message: "Password dan Confirm Password tidak cocok" });
 
     // const salt = await bcrypt.genSalt();
     // const hashPassword = await bcrypt.hash(password, salt);
@@ -18,26 +19,26 @@ module.exports = Register = async(req, res) => {
             username: username,
             // password: hashPassword,
             password: password,
-            url: `https://pusdalops-backend.com.pusdalops-bpbdsulteng.com/api/images/default.png`,
+            url: getImageUrl("default.png"),
             image: 'default.png',
             role_id: role_id
         });
-        res.json({message: "Register Successfuly"});
+        res.json({ message: "Register Successfuly" });
     } catch (error) {
         res.status(400).json({ message: error.message });
     }
- 
+
 }
 
 
 
 
-module.exports = Login = async(req, res) => {
+module.exports = Login = async (req, res) => {
     try {
-        const user = await Users.findAll({where:{username: req.body.username}});
-        if(user[0].is_active === false) return res.status(400).json({message: "Maaf, Username belum diaktifkan"});
-        
-        if(req.body.password !== user[0].password) return res.status(400).json({message: "Password Anda salah"});
+        const user = await Users.findAll({ where: { username: req.body.username } });
+        if (user[0].is_active === false) return res.status(400).json({ message: "Maaf, Username belum diaktifkan" });
+
+        if (req.body.password !== user[0].password) return res.status(400).json({ message: "Password Anda salah" });
 
         // const match = await bcrypt.compare(req.body.password, user[0].password);
         // if(!match) return res.status(400).json({message: "Password Anda Salah"});
@@ -58,7 +59,7 @@ module.exports = Login = async(req, res) => {
 
         res.status(200).json({ result: data, token });
     } catch (error) {
-        res.status(404).json({message:"Username Tidak Terdaftar"});
+        res.status(404).json({ message: "Username Tidak Terdaftar" });
     }
 }
 

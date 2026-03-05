@@ -1,13 +1,14 @@
 const Pengetahuan = require("../models/PengetahuanModel.js")
-const {Op} = require("sequelize");
+const { Op } = require("sequelize");
 const fs = require("fs");
+const { getImageUrl } = require("../config/env.js");
 
 const getPengetahuan = async (req, res) => {
     try {
         const pengetahuan = await Pengetahuan.findAll({
-            order:[
+            order: [
                 ['created_at', 'DESC']
-              ],
+            ],
         });
         res.json(pengetahuan);
     } catch (error) {
@@ -18,9 +19,9 @@ const getPengetahuan = async (req, res) => {
 const getLatest = async (req, res) => {
     try {
         const pengetahuan = await Pengetahuan.findAll({
-            order:[
+            order: [
                 ['created_at', 'DESC']
-              ],
+            ],
             limit: 1
         });
         res.json(pengetahuan[0]);
@@ -32,9 +33,9 @@ const getLatest = async (req, res) => {
 const getLatestFour = async (req, res) => {
     try {
         const pengetahuan = await Pengetahuan.findAll({
-            order:[
+            order: [
                 ['created_at', 'DESC']
-              ],
+            ],
             limit: 4
         });
         res.json(pengetahuan);
@@ -49,9 +50,9 @@ const getLatestFourRecommended = async (req, res) => {
             where: {
                 kategori: "rekomendasi"
             },
-            order:[
+            order: [
                 ['created_at', 'DESC']
-              ],
+            ],
             limit: 4
         });
         res.json(pengetahuan);
@@ -66,9 +67,9 @@ const getLatestFourFavorit = async (req, res) => {
             where: {
                 kategori: "favorit"
             },
-            order:[
+            order: [
                 ['created_at', 'DESC']
-              ],
+            ],
             limit: 4
         });
         res.json(pengetahuan);
@@ -83,22 +84,30 @@ const getPengetahuanSearch = async (req, res) => {
     const search = req.query.search_query || "";
     const offset = limit * page;
     const totalRows = await Pengetahuan.count({
-        where:{
-            [Op.or]: [{kategori:{
-                [Op.like]: '%'+search+'%'
-            }}, {judul:{
-                [Op.like]: '%'+search+'%'
-            }}],
+        where: {
+            [Op.or]: [{
+                kategori: {
+                    [Op.like]: '%' + search + '%'
+                }
+            }, {
+                judul: {
+                    [Op.like]: '%' + search + '%'
+                }
+            }],
         }
-    }); 
+    });
     const totalPage = Math.ceil(totalRows / limit);
     const result = await Pengetahuan.findAll({
-        where:{
-            [Op.or]: [{kategori:{
-                [Op.like]: '%'+search+'%'
-            }}, {judul:{
-                [Op.like]: '%'+search+'%'
-            }}],
+        where: {
+            [Op.or]: [{
+                kategori: {
+                    [Op.like]: '%' + search + '%'
+                }
+            }, {
+                judul: {
+                    [Op.like]: '%' + search + '%'
+                }
+            }],
         },
         offset: offset,
         limit: limit,
@@ -126,7 +135,7 @@ const getPengetahuanById = async (req, res) => {
     }
 }
 
-const postPengetahuan = async (req, res) =>  {
+const postPengetahuan = async (req, res) => {
     const { judul, kategori, penulis, content } = req.body;
 
     console.log("consssss", req.body)
@@ -137,108 +146,106 @@ const postPengetahuan = async (req, res) =>  {
         const fileName = files.filename;
         const fileSize = files.size;
         const type = files.mimetype;
-        const allowedType = ['image/jpeg','image/jpg','image/png'];
-        const url = `http://localhost:5001/public/images/${fileName}`;
-        // const url = `https://pusdalops-backend.com.pusdalops-bpbdsulteng.com/api/images/${fileName}`;
+        const allowedType = ['image/jpeg', 'image/jpg', 'image/png'];
+        const url = getImageUrl(fileName);
 
-        if(!allowedType.includes(type)) return res.status(422).json({message: "Invalid Images"});
-        if(fileSize > 5000000) return res.status(422).json({message: "Image must be less than 5 MB"});
-        
-            try {
-                await Pengetahuan.create({
-                    judul: judul,
-                    kategori: kategori,
-                    penulis: penulis,
-                    content: content,
-                    image: fileName,
-                    url: url
-                 });
-                    res.status(201).json({message: "Created Successfuly"});
-                } catch (error) {
-                    console.log("errrror", error)
-                    res.status(400).json({ message: error.message });
-                }
+        if (!allowedType.includes(type)) return res.status(422).json({ message: "Invalid Images" });
+        if (fileSize > 5000000) return res.status(422).json({ message: "Image must be less than 5 MB" });
+
+        try {
+            await Pengetahuan.create({
+                judul: judul,
+                kategori: kategori,
+                penulis: penulis,
+                content: content,
+                image: fileName,
+                url: url
+            });
+            res.status(201).json({ message: "Created Successfuly" });
+        } catch (error) {
+            console.log("errrror", error)
+            res.status(400).json({ message: error.message });
+        }
     } else {
-            try {
-                await Pengetahuan.create({
-                    judul: judul,
-                    kategori: kategori,
-                    penulis: penulis,
-                    content: content,
-                    image: "",
-                    url: ""
-                });
-                res.status(201).json({message: "Created Successfuly"});
-            } catch (error) {
-                console.log("errrror", error)
-                res.status(400).json({ message: error.message });
-            }
+        try {
+            await Pengetahuan.create({
+                judul: judul,
+                kategori: kategori,
+                penulis: penulis,
+                content: content,
+                image: "",
+                url: ""
+            });
+            res.status(201).json({ message: "Created Successfuly" });
+        } catch (error) {
+            console.log("errrror", error)
+            res.status(400).json({ message: error.message });
+        }
     }
 
-    
+
 }
 
-const updatePengetahuan = async (req, res) =>  {
+const updatePengetahuan = async (req, res) => {
     const { judul, kategori, penulis, content } = req.body;
     const pengetahuan = await Pengetahuan.findOne({
-        where:{
+        where: {
             id: req.params.id
         }
     });
-    if(!pengetahuan) return res.status(404).json({message: "No Data Found"});
+    if (!pengetahuan) return res.status(404).json({ message: "No Data Found" });
 
     if (req.file) {
         const files = req.file;
         const fileName = files.filename;
         const fileSize = files.size;
         const type = files.mimetype;
-        const allowedType = ['image/jpeg','image/jpg','image/png'];
-        const url = `http://localhost:5001/public/images/${fileName}`;
-        // const url = `https://pusdalops-backend.com.pusdalops-bpbdsulteng.com/api/images/${fileName}`;
+        const allowedType = ['image/jpeg', 'image/jpg', 'image/png'];
+        const url = getImageUrl(fileName);
 
-        if(!allowedType.includes(type)) return res.status(422).json({message: "Invalid Images"});
-        if(fileSize > 5000000) return res.status(422).json({message: "Image must be less than 5 MB"});
-        
-            try {
-                await Pengetahuan.update({
-                    judul: judul,
-                    kategori: kategori,
-                    penulis: penulis,
-                    content: content,
-                    image: fileName,
-                    url: url
-                },{
-                    where:{
-                        id: req.params.id
-                    }
-                });
-                    res.status(201).json({message: "Created Successfuly"});
-                } catch (error) {
-                    res.status(400).json({ message: error.message });
+        if (!allowedType.includes(type)) return res.status(422).json({ message: "Invalid Images" });
+        if (fileSize > 5000000) return res.status(422).json({ message: "Image must be less than 5 MB" });
+
+        try {
+            await Pengetahuan.update({
+                judul: judul,
+                kategori: kategori,
+                penulis: penulis,
+                content: content,
+                image: fileName,
+                url: url
+            }, {
+                where: {
+                    id: req.params.id
                 }
+            });
+            res.status(201).json({ message: "Created Successfuly" });
+        } catch (error) {
+            res.status(400).json({ message: error.message });
+        }
     } else {
-            try {
-                await Pengetahuan.update({
-                    judul: judul,
-                    kategori: kategori,
-                    penulis: penulis,
-                    content: content,
-                    image: pengetahuan?.image,
-                    url: pengetahuan?.url
-                },{
-                    where:{
-                        id: req.params.id
-                    }
-                    });
-                res.status(201).json({message: "Created Successfuly"});
-            } catch (error) {
-                res.status(400).json({ message: error.message });
-            }
+        try {
+            await Pengetahuan.update({
+                judul: judul,
+                kategori: kategori,
+                penulis: penulis,
+                content: content,
+                image: pengetahuan?.image,
+                url: pengetahuan?.url
+            }, {
+                where: {
+                    id: req.params.id
+                }
+            });
+            res.status(201).json({ message: "Created Successfuly" });
+        } catch (error) {
+            res.status(400).json({ message: error.message });
+        }
     }
 }
 
 const deletePengetahuan = async (req, res) => {
-    const pengetahuan = await Pengetahuan.findOne({where:{id: req.params.id}});
+    const pengetahuan = await Pengetahuan.findOne({ where: { id: req.params.id } });
     const filepath = `./public/images/${pengetahuan.image}`;
     fs.unlinkSync(filepath);
 
@@ -248,10 +255,10 @@ const deletePengetahuan = async (req, res) => {
                 id: req.params.id
             }
         });
-        res.status(200).json({message: "Dokumen Deleted Successfuly"});
+        res.status(200).json({ message: "Dokumen Deleted Successfuly" });
     } catch (error) {
         res.status(400).json({ message: error.message });
     }
 }
 
-module.exports = {getPengetahuan, getLatest, getLatestFour, getLatestFourRecommended, getLatestFourFavorit, getPengetahuanSearch, getPengetahuanById, postPengetahuan, updatePengetahuan, deletePengetahuan}
+module.exports = { getPengetahuan, getLatest, getLatestFour, getLatestFourRecommended, getLatestFourFavorit, getPengetahuanSearch, getPengetahuanById, postPengetahuan, updatePengetahuan, deletePengetahuan }

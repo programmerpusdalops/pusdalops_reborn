@@ -2,6 +2,7 @@ const Dokumen = require("../models/DokumenModel.js");
 const JenisDokumen = require("../models/JenisDokumenModel.js");
 const { Op } = require("sequelize");
 const fs = require("fs");
+const { getImageUrl } = require("../config/env.js");
 
 const getDokumenSearch = async (req, res) => {
   const page = parseInt(req.query.page) || 0;
@@ -99,8 +100,7 @@ const postDokumen = async (req, res) => {
     const fileSize = files.size;
     const type = files.mimetype;
     const allowedType = ["image/jpeg", "image/jpg", "image/png", "application/pdf"];
-    const url = `http://localhost:5001/${fileName}`;
-    // const url = `https://pusdalops-backend.com.pusdalops-bpbdsulteng.com/api/images/${fileName}`;
+    const url = getImageUrl(fileName);
 
     if (!allowedType.includes(type)) return res.status(422).json({ message: "Invalid Images" });
     if (fileSize > 5000000) return res.status(422).json({ message: "Image must be less than 5 MB" });
@@ -148,8 +148,7 @@ const updateDokumen = async (req, res) => {
     const fileSize = files.size;
     const type = files.mimetype;
     const allowedType = ["image/jpeg", "image/jpg", "image/png", "application/pdf"];
-    const url = `http://localhost:5001/${fileName}`;
-    // const url = `https://pusdalops-backend.com.pusdalops-bpbdsulteng.com/api/images/${fileName}`;
+    const url = getImageUrl(fileName);
 
     if (!allowedType.includes(type)) return res.status(422).json({ message: "Invalid Images" });
     if (fileSize > 5000000) return res.status(422).json({ message: "Image must be less than 5 MB" });
@@ -197,7 +196,7 @@ const updateDokumen = async (req, res) => {
 };
 
 const deleteDokumen = async (req, res) => {
-  const dokumen = await Dokumen.findOne({where:{id: req.params.id}});
+  const dokumen = await Dokumen.findOne({ where: { id: req.params.id } });
   const filepath = `./public/images/${dokumen.file_name}`;
   fs.unlinkSync(filepath);
 

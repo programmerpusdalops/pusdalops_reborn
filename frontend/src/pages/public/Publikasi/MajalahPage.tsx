@@ -5,6 +5,8 @@ import depanImage3 from "../../../assets/images/majalah/3.png";
 import depanImage4 from "../../../assets/images/majalah/4.png";
 import depanImage5 from "../../../assets/images/majalah/5.png";
 import { FiEye } from 'react-icons/fi';
+import { Link } from 'react-router-dom';
+import { getImageUrl } from '../../../utils/helpers/imageUrl';
 
 interface MajalahItem {
   id: number;

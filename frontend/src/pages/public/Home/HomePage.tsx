@@ -2,6 +2,7 @@
 import { useEffect, useState } from 'react';
 import { FaAngleRight } from 'react-icons/fa6';
 import * as api from '../../../utils/Api';
+import { getImageUrl } from '../../../utils/helpers/imageUrl';
 import ChartPerKejadian from '../../../components/Module/ChartPerKejadian';
 import ChartPerWilayah from '../../../components/Module/ChartPerWilayah';
 import MediaSosial from '../../../components/Module/MediaSosial';
@@ -249,7 +250,7 @@ const HomePage = () => {
                   <p className="font-grey-600 text-base mt-2">
                     {parse(
                       String(beritaTerbaru?.content).substring(220, 0) +
-                        "<Link to={} className='text-black dark:text-white'> ... Selanjutnya</Link>",
+                      "<Link to={} className='text-black dark:text-white'> ... Selanjutnya</Link>",
                     )}
                   </p>
                 </div>
@@ -313,12 +314,12 @@ const HomePage = () => {
           </div>
           <div className="flex-grow border-t border-black dark:border-white mt-3 lg:flex-row mb-3"></div>
           <div className="lg:flex lg:flex-row gap-x-4">
-            
+
             <div className="flex flex-col w-full lg:w-1/2">
               <div className=" bg-white rounded-lg  shadow dark:bg-gray-800 dark:border-gray-700 dark:border-strokedark dark:bg-boxdark">
                 <img
                   className="w-full py-3 px-3 h-[300px] md:h-[280px] object-cover relative lg:h-[330px]"
-                  src={'https://backendreboon.api.pusdalops-bpbdsulteng.com/images/1754966105058-7.%20Infografis%20Kejadian%20Bencana%20Juli%202025.jpg'}
+                  src={getImageUrl('1754966105058-7.%20Infografis%20Kejadian%20Bencana%20Juli%202025.jpg')}
                   alt="Sunset in the mountains"
                 />
                 <div className="px-4 py-4">
@@ -336,7 +337,7 @@ const HomePage = () => {
               <div className=" bg-white rounded-lg  shadow dark:bg-gray-800 dark:border-gray-700 dark:border-strokedark dark:bg-boxdark">
                 <img
                   className="w-full py-3 px-3 h-[300px] md:h-[280px] object-cover relative lg:h-[330px]"
-                  src={'https://backendreboon.api.pusdalops-bpbdsulteng.com/images/1754966105058-7.%20Infografis%20Kejadian%20Bencana%20Juli%202025.jpg'}
+                  src={getImageUrl('1754966105058-7.%20Infografis%20Kejadian%20Bencana%20Juli%202025.jpg')}
                   alt="Sunset in the mountains"
                 />
                 <div className="px-4 py-4">
@@ -354,7 +355,7 @@ const HomePage = () => {
               <div className=" bg-white rounded-lg  shadow dark:bg-gray-800 dark:border-gray-700 dark:border-strokedark dark:bg-boxdark">
                 <img
                   className="w-full py-3 px-3 h-[300px] md:h-[280px] object-cover relative lg:h-[330px]"
-                  src={'https://backendreboon.api.pusdalops-bpbdsulteng.com/images/1754966105058-7.%20Infografis%20Kejadian%20Bencana%20Juli%202025.jpg'}
+                  src={getImageUrl('1754966105058-7.%20Infografis%20Kejadian%20Bencana%20Juli%202025.jpg')}
                   alt="Sunset in the mountains"
                 />
                 <div className="px-4 py-4">
@@ -447,13 +448,13 @@ const HomePage = () => {
                 Fast Respon (24 Jam)
               </h4>
               <p className="font-semibold mt-4.5">
-                  PUSDALOPS-PB SULTENG
+                PUSDALOPS-PB SULTENG
               </p>
               <Link
-                  to="https://maps.app.goo.gl/1SrNR8GAx9QpnaRb7" target='_BLANK'
-                  className="mt-4.5"
-                  >
-                  Jl. M.T Haryono No.29, Besusu Tengah, Kec. Palu Timur., Kota Palu, Sulawesi Tengah 94118. 
+                to="https://maps.app.goo.gl/1SrNR8GAx9QpnaRb7" target='_BLANK'
+                className="mt-4.5"
+              >
+                Jl. M.T Haryono No.29, Besusu Tengah, Kec. Palu Timur., Kota Palu, Sulawesi Tengah 94118.
               </Link>
               <br></br>
                   No. Telp: 0811-4032-247
