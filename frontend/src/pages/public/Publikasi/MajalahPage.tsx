@@ -1,115 +1,116 @@
-// import { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
-// import * as api from '../../../utils/Api';
-// import parse from 'html-react-parser';
-// import CarouselCard from '../../../components/Module/CarouselCard';
-// import { YouTubeEmbed } from 'react-social-media-embed';
-// import CarouselCardVideo from '../../../components/Module/CarouselCardVideo';
+import React from "react";
+import depanImage from "../../../assets/images/majalah/1.png";
+import depanImage2 from "../../../assets/images/majalah/2.png";
+import depanImage3 from "../../../assets/images/majalah/3.png";
+import depanImage4 from "../../../assets/images/majalah/4.png";
+import depanImage5 from "../../../assets/images/majalah/5.png";
+import { FiEye } from 'react-icons/fi';
 
-const MajalahPage = () => {
+interface MajalahItem {
+  id: number;
+  title: string;
+  image: string;
+  lihatUrl: string;
+  unduhUrl: string;
+}
 
+const majalahList: MajalahItem[] = [
+  {
+    id: 1,
+    title: "Edisi 2023",
+    image: depanImage,
+    lihatUrl: "https://dashboard.core.pusdalops-bpbdsulteng.com/upgrade/lihat_majalah/edisi_2023#page/2",
+    unduhUrl: "https://dashboard.core.pusdalops-bpbdsulteng.com/assets/assets_majalah/turnjs4/daftar_majalah/dismag_edisi_2023.pdf",
+  },
+  {
+    id: 2,
+    title: "Edisi II (Jan-Feb 2024)",
+    image: depanImage2,
+    lihatUrl: "https://dashboard.core.pusdalops-bpbdsulteng.com/upgrade/majalah_edisi2/edisi_2023#page/2",
+    unduhUrl: "https://dashboard.core.pusdalops-bpbdsulteng.com/assets/assets_majalah/turnjs4/daftar_majalah/DisMag_Edisi%202%20(Januari-Februari%202024).pdf",
+  },
+  {
+    id: 3,
+    title: "Edisi III (Maret-April 2024)",
+    image: depanImage3,
+    lihatUrl: "https://dashboard.core.pusdalops-bpbdsulteng.com/upgrade/majalah_edisi3/edisi_20243#page/2",
+    unduhUrl: "/https://dashboard.core.pusdalops-bpbdsulteng.com/assets/assets_majalah/turnjs4/daftar_majalah/DisMag%20Edisi%203%20(Maret-April%202024).pdf",
+  },
+  {
+    id: 4,
+    title: "Majalah Info Bencana Tahun 2023",
+    image: depanImage4,
+    lihatUrl: "https://dashboard.core.pusdalops-bpbdsulteng.com/upgrade/majalah_edisi4/#page/2",
+    unduhUrl: "https://dashboard.core.pusdalops-bpbdsulteng.com/assets/assets_majalah/turnjs4/daftar_majalah/MAJALAH%20INFO%20BENCANA%20TAHUN%202023.pdf",
+  },
+  {
+    id: 5,
+    title: "Majalah Info Bencana Tahun 2024",
+    image: depanImage5,
+    lihatUrl: "https://dashboard.core.pusdalops-bpbdsulteng.com/upgrade/majalah_edisi5/#page/2",
+    unduhUrl: "https://dashboard.core.pusdalops-bpbdsulteng.com/assets/assets_majalah/turnjs4/daftar_majalah/MAJALAH%20INFO%20BENCANA%20TAHUN%202024.pdf",
+  },
+];
 
+const MajalahPage: React.FC = () => {
   return (
-    <div className="flex flex-col">
-      <div className="flex flex-col md:flex-row gap-13 mt-10">
-        <div className="flex flex-col md:w-6/18">
+    <section className="w-full py-10 bg-gray-50">
+      <div className="container mx-auto">
+        <div className="flex flex-row justify-between items-center mb-6">
           <label className="border-l-2 pl-3 border-l-meta-1 text-2xl text-black-2 dark:text-white">
-            Majalah Page
+            Majalah Kebencanaan
           </label>
+        </div>
 
-            <div className="lg:flex lg:gap-x-5 py-5 flex-row">
-              <div className="flex flex-col w-full  lg:flex lg: lg:gap-x-2 ">
-                <div className="lg:flex lg:flex-row gap-x-16">
-                  <div className="flex flex-col w-full lg:w-1/2">
-                    <div className=" bg-white rounded-lg  shadow dark:bg-gray-800 dark:border-gray-700 dark:border-strokedark dark:bg-boxdark">
-                      <img
-                        className="w-full py-3 px-3 h-[300px] md:h-[280px] object-cover relative lg:h-[330px]"
-                        src={'https://dashboard.core.pusdalops-bpbdsulteng.com/upgrade/lihat_majalah/edisi_2023#page/2'}
-                        alt="Sunset in the mountains"
-                      />
-                      <div className="px-4 py-4">
-                        {/* pra bencana */}
-                        <Link
-                            to="https://dashboard.core.pusdalops-bpbdsulteng.com/upgrade/lihat_majalah/edisi_2023#page/2" target='_BLANK'
-                            className="font-bold text-sm mb-2"
-                            >
-                            Tips Siaga Kekeringan
-                        <p className="font-bold text-base">
-                          Sebelum Terjadi
-                        </p>
-                        </Link>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="flex flex-col w-full lg:w-1/2">
-                    <div className=" bg-white rounded-lg  shadow dark:bg-gray-800 dark:border-gray-700 dark:border-strokedark dark:bg-boxdark">
-                      <img
-                        className="w-full py-3 px-3 h-[300px] md:h-[280px] object-cover relative lg:h-[330px]"
-                        src={'https://backendreboon.api.pusdalops-bpbdsulteng.com/images/1758777910633-1.%20SAAT%20KEKERINGAN.png'}
-                        alt="Sunset in the mountains"
-                      />
-                      <div className="px-4 py-4">
-                        {/* saat terjadi */}
-                        <Link
-                            to="https://backendreboon.api.pusdalops-bpbdsulteng.com/images/1758777910633-1.%20SAAT%20KEKERINGAN.png" target='_BLANK'
-                            className="font-bold text-sm mb-2"
-                            >
-                            Tips Siaga Kekeringan
-                        <p className="font-bold text-base">
-                          Saat Terjadi
-                        </p>
-                        </Link>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="flex flex-col w-full lg:w-1/2">
-                    <div className=" bg-white rounded-lg  shadow dark:bg-gray-800 dark:border-gray-700 dark:border-strokedark dark:bg-boxdark">
-                      <img
-                        className="w-full py-3 px-3 h-[300px] md:h-[280px] object-cover relative lg:h-[330px]"
-                        src={'https://backendreboon.api.pusdalops-bpbdsulteng.com/images/1758777941959-1.%20PASCA%20KEKERINGAN.png'}
-                        alt="Sunset in the mountains"
-                      />
-                      <div className="px-4 py-4">
-                        {/* pasca bencana */}
-                        <Link
-                            to="https://backendreboon.api.pusdalops-bpbdsulteng.com/images/1758777941959-1.%20PASCA%20KEKERINGAN.png" target='_BLANK'
-                            className="font-bold text-sm mb-2"
-                            >
-                            Tips Siaga Kekeringan
-                        <p className="font-bold text-base">
-                          Setelah Terjadi
-                        </p>
-                        </Link>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="flex flex-col w-full lg:w-1/2">
-                    <div className=" bg-white rounded-lg  shadow dark:bg-gray-800 dark:border-gray-700 dark:border-strokedark dark:bg-boxdark">
-                      <img
-                        className="w-full py-3 px-3 h-[300px] md:h-[280px] object-cover relative lg:h-[330px]"
-                        src={'https://backendreboon.api.pusdalops-bpbdsulteng.com/images/1758777941959-1.%20PASCA%20KEKERINGAN.png'}
-                        alt="Sunset in the mountains"
-                      />
-                      <div className="px-4 py-4">
-                        {/* pasca bencana */}
-                        <Link
-                            to="https://backendreboon.api.pusdalops-bpbdsulteng.com/images/1758777941959-1.%20PASCA%20KEKERINGAN.png" target='_BLANK'
-                            className="font-bold text-sm mb-2"
-                            >
-                            Tips Siaga Kekeringan
-                        <p className="font-bold text-base">
-                          Setelah Terjadi
-                        </p>
-                        </Link>
-                      </div>
-                    </div>
+        {/* <div className="bg-gradient-to-r from-success-600 to-success-400 h-[3px] mb-8 w-32 rounded-full" /> */}
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          {majalahList.map((item) => (
+            <div
+              key={item.id}
+              className="group relative rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-500 bg-white"
+            >
+              {/* Gambar */}
+              <div className="relative overflow-hidden">
+                <img
+                  src={item.image}
+                  alt={item.title}
+                  className="w-full h-full object-cover "
+                />
+                {/* Overlay */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent opacity-70 group-hover:opacity-90 transition-opacity duration-500" />
+                {/* Text muncul saat hover */}
+                <div className="absolute inset-0 flex flex-col justify-end items-start p-5 opacity-0 group-hover:opacity-100 transition-all duration-500 translate-y-10 group-hover:translate-y-0">
+                  <h3 className="text-xl font-semibold text-white drop-shadow-lg mb-3">
+                    {item.title}
+                  </h3>
+                  <div className="flex gap-3">
+                    <a
+                      href={item.lihatUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex w-full justify-center rounded border px-3 bg-success p-2 font-medium text-gray"
+                    >
+                      <FiEye size={23} className="mr-2" />
+                      <h3 >Lihat</h3>
+                    </a>
+                    <a
+                      href={item.unduhUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex w-full justify-center rounded border px-4 bg-success p-2 font-medium text-gray"
+                      // className="bg-success hover:bg-success-100 text-success-700 font-medium text-sm rounded px-4 py-1.5 transition-all duration-300 shadow-md hover:shadow-success-200"
+                    >
+                      <h3>Unduh</h3>
+                    </a>
                   </div>
                 </div>
               </div>
             </div>
+          ))}
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
@@ -117,126 +118,3 @@ export default MajalahPage;
 
 
 
-
-
-// import imageJokowi from '../../../assets/images/post/jokowi.png';
-// import { Link } from 'react-router-dom';
-
-// const MajalahPage = () => {
-
-
-//   return (
-//     <div className="lg:flex lg:flex-col lg:gap-x-5">
-//       <section>
-//         <div className="flex flex-col bg-transparent">
-//           <div className="flex flex-col md:flex-row w-full gap-5">
-//             <div className="flex flex-col md:w-9/12 rounded-2xl overflow-hidden bg-white mt-2">
-//               <div className="flex flex-col lg:flex-row">
-//                 <div className="flex flex-col w-10/12">
-//                   <p className="p-4 text-black font-bold">
-//                     Disaster Magazine Edisi Februari 2025
-//                   </p>
-//                 </div>
-//                 <div className="flex flex-col w-2/12 p-4">
-//                   <div className="h-10 w-10">
-//                     <Link
-//                       to="#"
-//                       className="inline-flex items-center justify-center rounded-md bg-primary py-4 px-10 text-center font-medium text-white hover:bg-opacity-5 lg:px-8 xl:px-10"
-//                     >
-//                       Unduh
-//                     </Link>
-//                   </div>
-//                 </div>
-//               </div>
-//               <div className="bg-form-strokedark mx-4 my-5 rounded-lg h-180">
-//                 <img
-//                   className="w-full py-5 px-5 h-full"
-//                   src={imageJokowi}
-//                   alt="Sunset in the mountains"
-//                 />
-//                 {/* <div
-//                   className="my-4 mx-4 h-full w-full"
-//                   style={{ backgroundImage: `url(${imageJokowi})` }}
-//                 ></div> */}
-//               </div>
-//             </div>
-
-//             <div className="flex flex-col gap-y-5 md:w-3/12">
-//               <div className="flex flex-row border-l-meta-1 border-l border-l-4">
-//                 <p className="p-1 text-black-2 font-bold text-xl">
-//                   Rekomendasi
-//                 </p>
-//               </div>
-//               <div className="flex flex-row 1/4">
-//                 <div className="flex items-center bg-white shadow dark:bg-gray-800 dark:border-gray-700 rounded-lg dark:border-strokedark dark:bg-boxdark  ">
-//                   <div>
-//                     <img
-//                       className="flex items-center h-32 w-h-32 bg-white shadow dark:bg-gray-800 dark:border-gray-700 rounded-lg dark:border-strokedark dark:bg-boxdark  "
-//                       src={imageJokowi}
-//                       alt="Sunset in the mountains"
-//                     />
-//                   </div>
-//                   <div className=" bg-white rounded-b align-middle rounded-b-none rounded-r p-2 flex flex-col justify-center leading-normal dark:border-strokedark dark:bg-boxdark">
-//                     <div className="text-black-2 text-base text-xl mb-2 ">
-//                       Badan Nasional Penanggulangan Bencana
-//                     </div>
-//                   </div>
-//                 </div>
-//               </div>
-//               <div className="flex flex-row 1/4">
-//                 <div className="flex items-center bg-white shadow dark:bg-gray-800 dark:border-gray-700 rounded-lg dark:border-strokedark dark:bg-boxdark  ">
-//                   <div>
-//                     <img
-//                       className="flex items-center h-32 w-h-32 bg-white shadow dark:bg-gray-800 dark:border-gray-700 rounded-lg dark:border-strokedark dark:bg-boxdark  "
-//                       src={imageJokowi}
-//                       alt="Sunset in the mountains"
-//                     />
-//                   </div>
-//                   <div className=" bg-white rounded-b align-middle rounded-b-none rounded-r p-2 flex flex-col justify-center leading-normal dark:border-strokedark dark:bg-boxdark">
-//                     <div className="text-black-2 text-base text-xl mb-2 ">
-//                       Badan Nasional Penanggulangan Bencana
-//                     </div>
-//                   </div>
-//                 </div>
-//               </div>
-//               <div className="flex flex-row 1/4">
-//                 <div className="flex items-center bg-white shadow dark:bg-gray-800 dark:border-gray-700 rounded-lg dark:border-strokedark dark:bg-boxdark  ">
-//                   <div>
-//                     <img
-//                       className="flex items-center h-32 w-h-32 bg-white shadow dark:bg-gray-800 dark:border-gray-700 rounded-lg dark:border-strokedark dark:bg-boxdark  "
-//                       src={imageJokowi}
-//                       alt="Sunset in the mountains"
-//                     />
-//                   </div>
-//                   <div className=" bg-white rounded-b align-middle rounded-b-none rounded-r p-2 flex flex-col justify-center leading-normal dark:border-strokedark dark:bg-boxdark">
-//                     <div className="text-black-2 text-base text-xl mb-2 ">
-//                       Badan Nasional Penanggulangan Bencana
-//                     </div>
-//                   </div>
-//                 </div>
-//               </div>
-//               <div className="flex flex-row 1/4">
-//                 <div className="flex items-center bg-white shadow dark:bg-gray-800 dark:border-gray-700 rounded-lg dark:border-strokedark dark:bg-boxdark  ">
-//                   <div>
-//                     <img
-//                       className="flex items-center h-32 w-h-32 bg-white shadow dark:bg-gray-800 dark:border-gray-700 rounded-lg dark:border-strokedark dark:bg-boxdark  "
-//                       src={imageJokowi}
-//                       alt="Sunset in the mountains"
-//                     />
-//                   </div>
-//                   <div className=" bg-white rounded-b align-middle rounded-b-none rounded-r p-2 flex flex-col justify-center leading-normal dark:border-strokedark dark:bg-boxdark">
-//                     <div className="text-black-2 text-base text-xl mb-2 ">
-//                       Badan Nasional Penanggulangan Bencana
-//                     </div>
-//                   </div>
-//                 </div>
-//               </div>
-//             </div>
-//           </div>
-//         </div>
-//       </section>
-//     </div>
-//   );
-// };
-
-// export default MajalahPage;

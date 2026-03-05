@@ -1,17 +1,9 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import * as api from '../../../utils/Api';
-// import parse from 'html-react-parser';
-// import CarouselCard from '../../../components/Module/CarouselCard';
-// import { YouTubeEmbed } from 'react-social-media-embed';
-// import CarouselCardVideo from '../../../components/Module/CarouselCardVideo';
 
 const TipsPage = () => {
   const [tips, setTipsBencana] = useState<Array<any>>([]);
-  // const [empatBeritaTerbaru, setEmpatBeritaTerbaru] = useState<Array<any>>([]);
-  // const [beritaRekomendasi, setBeritaRekomendasi] = useState<Array<any>>([]);
-  // const [beritaFavorit, setBeritaFavorit] = useState<Array<any>>([]);
-  // const [assetVideo, setAssetVideo] = useState<Array<any>>([]);
 
   useEffect(() => {
     const TipsBencana = async () => {
@@ -28,7 +20,7 @@ const TipsPage = () => {
   }, []);
 
   return (
-    <div className="flex flex-col mt-10">
+    <div className="flex flex-col mt-13">
       <label className="border-l-2 pl-3 border-l-meta-1 text-2xl text-black-2 dark:text-white mb-6">
         Tips Siaga Bencana
       </label>

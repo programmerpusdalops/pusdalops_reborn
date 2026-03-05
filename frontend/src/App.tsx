@@ -8,6 +8,7 @@ import routes from './routes';
 
 import SignInPage from './pages/public/Authentication/SignInPage';
 // import SignUpPage from './pages/public/Authentication/SignUpPage';
+import LandingPage from './pages/public/LandingPage/LandingPage';
 import HomePage from './pages/public/Home/HomePage';
 import DataBencanaPage from './pages/public/MasterData/DataBencanaPage';
 import DataLogpalPage from './pages/public/MasterData/DataLogpalPage';
@@ -18,7 +19,7 @@ import BeritaPage from './pages/public/Publikasi/BeritaPage';
 import MajalahPage from './pages/public/Publikasi/MajalahPage';
 import InfografisPage from './pages/public/Publikasi/InfografisPage';
 import KontakKamiPage from './pages/public/Kontak/KontakKamiPage';
-// import KontakPentingPage from './pages/public/Kontak/KontakPentingPage';
+import KontakPentingPage from './pages/public/Kontak/KontakPentingPage';
 
 // import Error from './layout/Error';
 import DetailDataBencanaPage from './pages/public/MasterData/DetailDataBencanaPage';
@@ -64,8 +65,9 @@ function App() {
       <Routes>
         {!token ? (
         <>
-        <Route element={<PublicLayout />}>
-          <Route index element={<HomePage />} />
+          <Route path="/" element={<LandingPage />} />
+          <Route element={<PublicLayout />}>
+          <Route path="/home" element={<HomePage />} />
           <Route path="/data-bencana-publik" element={<DataBencanaPage />} />
           <Route path="/data-logpal-publik" element={<DataLogpalPage />} />
           <Route path="/majalah-publik" element={<MajalahPage />} />
@@ -77,7 +79,7 @@ function App() {
           <Route path="/pengetahuan-publik" element={<PengetahuanPage />} />
           <Route path="/tips-publik" element={<TipsPage />} />
           <Route path="/kontak-kami" element={<KontakKamiPage />} />
-          {/* <Route path="/kontak-penting" element={<KontakPentingPage />} /> */}
+          <Route path="/kontak-penting" element={<KontakPentingPage />} />
           <Route path="/detail-data-bencana-publik/:id" element={<DetailDataBencanaPage />}/>
 
             <Route path="/Auth/SignIn" element={<SignInPage />} />

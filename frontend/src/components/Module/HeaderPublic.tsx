@@ -63,7 +63,7 @@ export default function HeaderPublic() {
 
           <div className="hidden lg:flex lg:flex-1 lg:gap-x-7 lg:justify-end">
             <NavLink
-              to="/"
+              to="/home"
               className="text-sm font-semibold leading-6 text-gray-900"
             >
               Beranda
@@ -263,14 +263,10 @@ export default function HeaderPublic() {
               </Popover>
             </Popover.Group>
 
-            <Popover.Group className="hidden lg:flex lg:gap-x-12">
+            {/* <Popover.Group className="hidden lg:flex lg:gap-x-12">
               <Popover className="relative">
                 <Popover.Button className="flex items-center gap-x-1 text-sm font-semibold leading-6 text-gray-900">
                   Aplikasi
-                  {/* <ChevronDownIcon
-                    className="h-4 w-4 flex-none text-gray-400"
-                    aria-hidden="true"
-                  /> */}
                 </Popover.Button>
                 <Transition
                   as={Fragment}
@@ -327,7 +323,7 @@ export default function HeaderPublic() {
                   </Popover.Panel>
                 </Transition>
               </Popover>
-            </Popover.Group>
+            </Popover.Group> */}
 
             <Popover.Group className="hidden lg:flex lg:gap-x-12">
               <Popover className="relative">

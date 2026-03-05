@@ -14,6 +14,60 @@ import { Link } from 'react-router-dom';
 import { InstagramEmbed } from 'react-social-media-embed';
 import parse from 'html-react-parser';
 import Tautan from '../../../components/Module/Tautan';
+import { YouTubeEmbed } from 'react-social-media-embed';
+import userSix from '../../../assets/images/logo/bpbd.png';
+import { FiEye } from 'react-icons/fi';
+// import depanImage from "../../../assets/images/majalah/1.png";
+import depanImage2 from "../../../assets/images/majalah/2.png";
+import depanImage3 from "../../../assets/images/majalah/3.png";
+import depanImage4 from "../../../assets/images/majalah/4.png";
+import depanImage5 from "../../../assets/images/majalah/5.png";
+
+interface MajalahItem {
+  id: number;
+  title: string;
+  image: string;
+  lihatUrl: string;
+  unduhUrl: string;
+}
+
+const majalahList: MajalahItem[] = [
+  // {
+  //   id: 1,
+  //   title: "Edisi 2023",
+  //   image: depanImage,
+  //   lihatUrl: "https://dashboard.core.pusdalops-bpbdsulteng.com/upgrade/lihat_majalah/edisi_2023#page/2",
+  //   unduhUrl: "https://dashboard.core.pusdalops-bpbdsulteng.com/assets/assets_majalah/turnjs4/daftar_majalah/dismag_edisi_2023.pdf",
+  // },
+  {
+    id: 2,
+    title: "Edisi II (Jan-Feb 2024)",
+    image: depanImage2,
+    lihatUrl: "https://dashboard.core.pusdalops-bpbdsulteng.com/upgrade/majalah_edisi2/edisi_2023#page/2",
+    unduhUrl: "https://dashboard.core.pusdalops-bpbdsulteng.com/assets/assets_majalah/turnjs4/daftar_majalah/DisMag_Edisi%202%20(Januari-Februari%202024).pdf",
+  },
+  {
+    id: 3,
+    title: "Edisi III (Maret-April 2024)",
+    image: depanImage3,
+    lihatUrl: "https://dashboard.core.pusdalops-bpbdsulteng.com/upgrade/majalah_edisi3/edisi_20243#page/2",
+    unduhUrl: "/https://dashboard.core.pusdalops-bpbdsulteng.com/assets/assets_majalah/turnjs4/daftar_majalah/DisMag%20Edisi%203%20(Maret-April%202024).pdf",
+  },
+  {
+    id: 4,
+    title: "Majalah Info Bencana Tahun 2023",
+    image: depanImage4,
+    lihatUrl: "https://dashboard.core.pusdalops-bpbdsulteng.com/upgrade/majalah_edisi4/#page/2",
+    unduhUrl: "https://dashboard.core.pusdalops-bpbdsulteng.com/assets/assets_majalah/turnjs4/daftar_majalah/MAJALAH%20INFO%20BENCANA%20TAHUN%202023.pdf",
+  },
+  {
+    id: 5,
+    title: "Majalah Info Bencana Tahun 2024",
+    image: depanImage5,
+    lihatUrl: "https://dashboard.core.pusdalops-bpbdsulteng.com/upgrade/majalah_edisi5/#page/2",
+    unduhUrl: "https://dashboard.core.pusdalops-bpbdsulteng.com/assets/assets_majalah/turnjs4/daftar_majalah/MAJALAH%20INFO%20BENCANA%20TAHUN%202024.pdf",
+  },
+];
 
 const HomePage = () => {
   const [beritaTerbaru, setBeritaTerbaru] = useState<any>();
@@ -317,116 +371,78 @@ const HomePage = () => {
         </div>
       </div>
 
+      {/* majalah */}
       <div className="lg:flex lg:gap-x-5 py-5 flex-row">
-        <div className="flex flex-col w-full  lg:flex lg: lg:gap-x-2 ">
-          <div className="flex flex-row">
-            <label className="text-2xl">Majalah Kebencanaan</label>
-          </div>
-          <div className="flex-grow border-t border-black dark:border-white mt-3 lg:flex-row mb-3"></div>
-          <div className="lg:flex lg:flex-row gap-x-4">
-            
-            <div className="flex flex-col w-full lg:w-1/2">
-              <div className=" bg-white rounded-lg  shadow dark:bg-gray-800 dark:border-gray-700 dark:border-strokedark dark:bg-boxdark">
-                <img
-                  className="w-full py-3 px-3 h-[300px] md:h-[280px] object-cover relative lg:h-[330px]"
-                  src={'https://backendreboon.api.pusdalops-bpbdsulteng.com/images/1754966105058-7.%20Infografis%20Kejadian%20Bencana%20Juli%202025.jpg'}
-                  alt="Sunset in the mountains"
-                />
-                <div className="px-4 py-4">
-                  <div className="font-bold text-sm mb-2">
-                    Craig Brator - 27 Des 2024
-                  </div>
-                  <p className="font-bold text-base">
-                    Now Is the Time to Think About Your Small Business Success
-                  </p>
+              <div className="flex flex-col w-full  lg:flex lg: lg:gap-x-2 ">
+                <div className="flex flex-row">
+                  <label className="text-2xl">Majalah Kebencanaan</label>
                 </div>
-              </div>
-            </div>
-
-            <div className="flex flex-col w-full lg:w-1/2">
-              <div className=" bg-white rounded-lg  shadow dark:bg-gray-800 dark:border-gray-700 dark:border-strokedark dark:bg-boxdark">
-                <img
-                  className="w-full py-3 px-3 h-[300px] md:h-[280px] object-cover relative lg:h-[330px]"
-                  src={'https://backendreboon.api.pusdalops-bpbdsulteng.com/images/1754966105058-7.%20Infografis%20Kejadian%20Bencana%20Juli%202025.jpg'}
-                  alt="Sunset in the mountains"
-                />
-                <div className="px-4 py-4">
-                  <div className="font-bold text-sm mb-2">
-                    Craig Brator - 27 Des 2024
-                  </div>
-                  <p className="font-bold text-base">
-                    Now Is the Time to Think About Your Small Business Success
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <div className="flex flex-col w-full lg:w-1/2">
-              <div className=" bg-white rounded-lg  shadow dark:bg-gray-800 dark:border-gray-700 dark:border-strokedark dark:bg-boxdark">
-                <img
-                  className="w-full py-3 px-3 h-[300px] md:h-[280px] object-cover relative lg:h-[330px]"
-                  src={'https://backendreboon.api.pusdalops-bpbdsulteng.com/images/1754966105058-7.%20Infografis%20Kejadian%20Bencana%20Juli%202025.jpg'}
-                  alt="Sunset in the mountains"
-                />
-                <div className="px-4 py-4">
-                  <div className="font-bold text-sm mb-2">
-                    Craig Brator - 27 Des 2024
-                  </div>
-                  <p className="font-bold text-base">
-                    Now Is the Time to Think About Your Small Business Success
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+                <div className="flex-grow border-t border-black dark:border-white mt-3 lg:flex-row mb-3"></div>
+                <div className="lg:flex lg:flex-row gap-x-4">
       
-      <div className="overflow-hidden rounded-sm border border-stroke bg-black shadow-default dark:border-strokedark dark:bg-boxdark mx-10000 my-10000">
-        <div className="px-4 pb-6 text-center lg:pb-8 xl:pb-11.5">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12">
+                    {majalahList.map((item) => (
+                      <div
+                        key={item.id}
+                        className="group relative rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-500 bg-white"
+                      >
+                        {/* Gambar */}
+                        <div className="relative overflow-hidden">
+                          <img
+                            src={item.image}
+                            alt={item.title}
+                            className="w-full h-full object-cover "
+                          />
+                          {/* Overlay */}
+                          <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent opacity-70 group-hover:opacity-90 transition-opacity duration-500" />
+                          {/* Text muncul saat hover */}
+                          <div className="absolute inset-0 flex flex-col justify-end items-start p-5 opacity-0 group-hover:opacity-100 transition-all duration-500 translate-y-10 group-hover:translate-y-0">
+                            <h3 className="text-xl font-semibold text-white drop-shadow-lg mb-3">
+                              {item.title}
+                            </h3>
+                            <div className="flex gap-3">
+                              <a
+                                href={item.lihatUrl}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="flex w-full justify-center rounded border px-3 bg-success p-2 font-medium text-gray"
+                              >
+                                <FiEye size={23} className="mr-2" />
+                                <h3 >Lihat</h3>
+                              </a>
+                              <a
+                                href={item.unduhUrl}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="flex w-full justify-center rounded border px-4 bg-success p-2 font-medium text-gray"
+                                // className="bg-success hover:bg-success-100 text-success-700 font-medium text-sm rounded px-4 py-1.5 transition-all duration-300 shadow-md hover:shadow-success-200"
+                              >
+                                <h3>Unduh</h3>
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </div>
+      
+      <div className="overflow-hidden max-w-screen rounded-sm border border-stroke bg-black shadow-default dark:border-strokedark dark:bg-boxdark mx-10000 my-10000">
+        <div className="flex items-center justify-center gap-2 mb-1.5">
+          <div className="relative z-30 -mt-0 h-30 w-full max-w-30 rounded-full bg-white/15 p-1 backdrop-blur sm:h-55 sm:max-w-55 sm:p-2">
+            <div className="relative drop-shadow-2">
+              <img src={userSix} alt="profile" />
+            </div>
+          </div>
           <div className="mt-4">
             <h3 className="mb-1.5 text-2xl font-semibold text-white dark:text-white">
               PUSDALOPS-PB
             </h3>
             <p className="font-medium">BPBD PROVINSI SULAWESI TENGAH</p>
-            {/* <div className="mx-auto mt-4.5 mb-5.5 grid max-w-94 grid-cols-3 rounded-md border border-stroke py-2.5 shadow-1 dark:border-strokedark dark:bg-[#37404F]">
-              <div className="flex flex-col items-center justify-center gap-1 border-r border-stroke px-4 dark:border-strokedark xsm:flex-row">
-                <span className="text-black dark:text-white">
-                  TANGGAP
-                </span>
-              </div>
-              <div className="flex flex-col items-center justify-center gap-1 border-r border-stroke px-4 dark:border-strokedark xsm:flex-row">
-                <span className="text-black dark:text-white">
-                  TANGKAS
-                </span>
-              </div>
-              <div className="flex flex-col items-center justify-center gap-1 px-4 xsm:flex-row">
-                <span className="text-black dark:text-white">
-                  TANGGUH
-                </span>
-              </div>
-            </div> */}
             <br></br>
             <div className="mx-auto max-w-180">
-              <h4 className="font-semibold text-white dark:text-white">
-                Administrasi Perkantoran
-              </h4>
-              <p className="font-semibold mt-4.5">
-                  BPBD SULTENG
-              </p>
-              <Link
-                  to="https://maps.app.goo.gl/1SrNR8GAx9QpnaRb7" target='_BLANK'
-                  className="mt-4.5"
-                  >
-                  Jl. M.T Haryono No.29, Besusu Tengah, Kec. Palu Timur., Kota Palu, Sulawesi Tengah 94118. 
-              </Link>
-              <br></br>
-                  No. Telp: (0451) 421766
-              <br></br>
-                  E-mail: bpbdkepegawaian5@gmail.com
-              <br></br>
-              <br></br>
-              <br></br>
               <h4 className="font-semibold text-white dark:text-white">
                 Fast Respon (24 Jam)
               </h4>
@@ -439,18 +455,22 @@ const HomePage = () => {
                   >
                   Jl. M.T Haryono No.29, Besusu Tengah, Kec. Palu Timur., Kota Palu, Sulawesi Tengah 94118. 
               </Link>
-             <br></br>
+              <br></br>
                   No. Telp: 0811-4032-247
               <br></br>
                   E-mail: pusdalops.bpbdsulteng@gmail.com
-              
+              <br></br>
+              <h3 className="font-semibold text-black dark:text-white">
+                Fast Respon (24 Jam)
+              </h3>
             </div>
+          </div>
 
             <div className="mt-6.5">
-              <h4 className="mb-3.5 font-medium text-black dark:text-white">
-                Follow me on
+              <h4 className="mb-3.5 font-medium text-white dark:text-white">
+                Follow us on
               </h4>
-              <div className="flex items-center justify-center gap-3.5">
+              <div className="flex items-center  gap-3.5">
                 <a
                   href="#"
                   className="hover:text-primary"
@@ -565,42 +585,15 @@ const HomePage = () => {
                     </defs>
                   </svg>
                 </a>
-                <a
-                  href="#"
-                  className="hover:text-primary"
-                  aria-label="social-icon"
+              </div><br></br>
+                <div
+                  className="flex flex-col w-full md:w-[100%] rounded-xl overflow-hidden"
                 >
-                  <svg
-                    className="fill-current"
-                    width="23"
-                    height="22"
-                    viewBox="0 0 23 22"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <g clipPath="url(#clip0_30_982)">
-                      <path
-                        d="M11.6662 1.83337C6.6016 1.83337 2.49951 5.93546 2.49951 11C2.49847 12.9244 3.10343 14.8002 4.22854 16.3613C5.35366 17.9225 6.94181 19.0897 8.76768 19.6974C9.22602 19.7771 9.39743 19.5021 9.39743 19.261C9.39743 19.0438 9.38552 18.3224 9.38552 17.5542C7.08285 17.9786 6.48701 16.9932 6.30368 16.4771C6.2001 16.2131 5.75368 15.4 5.3641 15.1819C5.04326 15.0105 4.58493 14.586 5.35218 14.575C6.07451 14.5631 6.58968 15.2396 6.76201 15.5146C7.58701 16.9006 8.90518 16.511 9.43135 16.2709C9.51202 15.675 9.75218 15.2745 10.0162 15.0453C7.9766 14.8161 5.84535 14.025 5.84535 10.5188C5.84535 9.52146 6.2001 8.69737 6.78493 8.05479C6.69326 7.82562 6.37243 6.88604 6.8766 5.62562C6.8766 5.62562 7.64385 5.38546 9.39743 6.56612C10.1437 6.35901 10.9147 6.25477 11.6891 6.25629C12.4683 6.25629 13.2474 6.35896 13.9808 6.56521C15.7334 5.37354 16.5016 5.62654 16.5016 5.62654C17.0058 6.88696 16.6849 7.82654 16.5933 8.05571C17.1772 8.69737 17.5329 9.51046 17.5329 10.5188C17.5329 14.037 15.3906 14.8161 13.351 15.0453C13.6829 15.3313 13.9698 15.8813 13.9698 16.7411C13.9698 17.9667 13.9579 18.9521 13.9579 19.262C13.9579 19.5021 14.1302 19.7881 14.5885 19.6965C16.4081 19.0821 17.9893 17.9126 19.1094 16.3526C20.2296 14.7926 20.8323 12.9206 20.8329 11C20.8329 5.93546 16.7308 1.83337 11.6662 1.83337Z"
-                        fill=""
-                      />
-                    </g>
-                    <defs>
-                      <clipPath id="clip0_30_982">
-                        <rect
-                          width="22"
-                          height="22"
-                          fill="white"
-                          transform="translate(0.666138)"
-                        />
-                      </clipPath>
-                    </defs>
-                  </svg>
-                </a>
-              </div>
+                  <YouTubeEmbed url="https://youtu.be/REavBf9ZBVk?si=rzEnZWVJsxtA4DyB" width={250} height={120} />
+                </div>
             </div>
           </div>
         </div>
-      </div>
     </div>
   );
 };

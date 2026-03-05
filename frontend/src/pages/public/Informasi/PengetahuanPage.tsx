@@ -52,7 +52,7 @@ const PengetahuanPage = () => {
         <div className="flex flex-col md:w-9/12">
           <label className="border-l-2 pl-3 border-l-meta-1 text-2xl text-black-2 dark:text-white">
             Pengetahuan Bencana
-          </label>
+          </label> 
           <div className="w-full mt-5 md:hidden">
             {/* <CarouselCard pengetahuanTerbaru={pengetahuanTerbaru} /> */}
           </div>
