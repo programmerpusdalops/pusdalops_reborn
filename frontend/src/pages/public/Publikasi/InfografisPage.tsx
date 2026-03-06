@@ -1,200 +1,190 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
+import { useEffect, useState, useRef } from 'react';
+import * as api from '../../../utils/Api';
 import { Link } from 'react-router-dom';
-import { getImageUrl } from '../../../utils/helpers/imageUrl';
 
 const InfografisPage = () => {
+  const [infografis, setInfografis] = useState<Array<any>>([]);
+  const currentYear = new Date().getFullYear();
 
+  // Filter tahun: Tahunan max = currentYear - 1, Bulanan max = currentYear
+  const [tahunTahunan, setTahunTahunan] = useState<number>(currentYear - 1);
+  const [tahunBulanan, setTahunBulanan] = useState<number>(currentYear);
+
+  // Ref untuk sinkronisasi tinggi
+  const leftColRef = useRef<HTMLDivElement>(null);
+  const [leftHeight, setLeftHeight] = useState<number>(0);
+
+  useEffect(() => {
+    const loadData = async () => {
+      try {
+        const response = await api.fetchInfografis();
+        setInfografis(response.data);
+      } catch (error) {
+        console.error("Gagal memuat data infografis:", error);
+      }
+    };
+    loadData();
+  }, []);
+
+  // Update tinggi kolom kiri saat data/tahun berubah
+  useEffect(() => {
+    const updateHeight = () => {
+      if (leftColRef.current) {
+        setLeftHeight(leftColRef.current.offsetHeight);
+      }
+    };
+    updateHeight();
+    window.addEventListener('resize', updateHeight);
+    return () => window.removeEventListener('resize', updateHeight);
+  }, [infografis, tahunTahunan]);
+
+  // Ambil tahun unik dari data untuk dropdown
+  const allYears = [...new Set(infografis.map((item) => Number(item.tahun)))].sort((a, b) => b - a);
+  const tahunOpsiTahunan = allYears.filter((y) => y <= currentYear - 1);
+  const tahunOpsiBulanan = allYears.filter((y) => y <= currentYear);
+
+  // Filter data berdasarkan tahun dan kategori
+  const tahunanData = infografis.filter(
+    (item) => item.kategori === 'Tahunan' && Number(item.tahun) === tahunTahunan
+  );
+  const bulananData = infografis.filter(
+    (item) => item.kategori === 'Bulanan' && Number(item.tahun) === tahunBulanan
+  );
 
   return (
-    <div className="lg:flex lg:flex-col lg:gap-x-5">
-      <section>
-        <div className="flex flex-col bg-transparent">
-          <div className="flex flex-col md:flex-row w-full gap-5">
-            <div className="flex flex-col md:w-9/12 rounded-2xl overflow-hidden bg-white mt-2">
-              <div className="flex flex-col lg:flex-row">
-                <div className="flex flex-col w-10/12">
-                  <p className="p-4 text-black font-bold">
-                    INFOGRAFIS BENCANA
-                  </p>
-                </div>
-              </div>
-              <div className="bg-form-strokedark mx-4 my-5 rounded-lg h-180">
-                <img
-                  className="w-full py-2 px-2 h-full"
-                  src={getImageUrl("1737346377745-INFOGRAFIS%20TAHUN%202024.png")}
-                  alt="Sunset in the mountains"
-                />
-              </div>
+    <div className="flex flex-col gap-6 mt-6">
+      {/* Header */}
+      <div className="flex flex-col">
+        <label className="border-l-2 pl-3 border-l-meta-1 text-2xl text-black-2 dark:text-white">
+          Infografis Kebencanaan
+        </label>
+      </div>
+
+      {/* Layout 2 kolom (desktop) / 1 kolom (mobile) */}
+      <div className="flex flex-col lg:flex-row gap-6">
+
+        {/* ========== KOLOM KIRI: INFOGRAFIS TAHUNAN ========== */}
+        <div ref={leftColRef} className="w-full lg:w-7/12">
+          <div className="rounded-xl bg-white shadow-md dark:bg-boxdark overflow-hidden">
+            {/* Header + Filter */}
+            <div className="flex items-center justify-between px-5 py-4 border-b border-stroke dark:border-strokedark">
+              <h2 className="text-lg font-bold text-black dark:text-white">
+                📊 Infografis Tahunan
+              </h2>
+              <select
+                value={tahunTahunan}
+                onChange={(e) => setTahunTahunan(Number(e.target.value))}
+                className="rounded-lg border border-stroke bg-transparent py-2 px-4 text-sm font-medium outline-none focus:border-primary dark:border-form-strokedark dark:bg-form-input dark:text-white"
+              >
+                {tahunOpsiTahunan.length === 0 && (
+                  <option value={currentYear - 1}>{currentYear - 1}</option>
+                )}
+                {tahunOpsiTahunan.map((y) => (
+                  <option key={y} value={y}>{y}</option>
+                ))}
+              </select>
             </div>
 
-            <div className="flex flex-col gap-y-3 md:w-3/12">
-              <div className="flex flex-row border-l-meta-1 border-l border-l-4">
-                <p className="p-1 text-black-2 font-bold text-xl">
-                  Infografis Bencana Per-Bulan
-                </p>
-              </div>
-              <div className="flex flex-row 1/4">
-                <div className="flex items-center bg-white shadow dark:bg-gray-800 dark:border-gray-700 rounded-lg dark:border-strokedark dark:bg-boxdark  ">
-                  <div>
+            {/* Konten */}
+            <div className="p-4">
+              {tahunanData.length > 0 ? (
+                <Link to={tahunanData[0]?.url} target="_blank" className="block">
+                  <div className="rounded-lg overflow-hidden bg-gray-100 dark:bg-meta-4">
                     <img
-                      className="flex items-center h-32 w-h-32 bg-white shadow dark:bg-gray-800 dark:border-gray-700 rounded-lg dark:border-strokedark dark:bg-boxdark  "
-                      src={getImageUrl("1745378735515-WhatsApp%20Image%202025-04-23%20at%2011.12.47.jpeg")}
-                      alt="Sunset in the mountains"
+                      src={tahunanData[0]?.url}
+                      alt={tahunanData[0]?.judul}
+                      className="w-full object-contain"
+                      style={{ maxHeight: '680px' }}
+                      onLoad={() => {
+                        if (leftColRef.current) {
+                          setLeftHeight(leftColRef.current.offsetHeight);
+                        }
+                      }}
                     />
                   </div>
-                  <div className=" bg-white rounded-b align-middle rounded-b-none rounded-r p-2 flex flex-col justify-center leading-normal dark:border-strokedark dark:bg-boxdark">
-                    <Link
-                      to={getImageUrl("1745378735515-WhatsApp%20Image%202025-04-23%20at%2011.12.47.jpeg")}
-                      className="text-sm font-semibold leading-6 text-gray-900"
-                    >
-                      Infografis Bencana Bulan Januari Tahun 2025
-                    </Link>
+                  <div className="mt-3 px-1">
+                    <h3 className="text-base font-semibold text-black dark:text-white">
+                      {tahunanData[0]?.judul}
+                    </h3>
+                    <p className="text-sm text-gray-500 dark:text-gray-400 mt-1">
+                      Tahun {tahunanData[0]?.tahun}
+                    </p>
                   </div>
+                </Link>
+              ) : (
+                <div className="flex items-center justify-center py-20 text-gray-400">
+                  <p>Belum ada infografis tahunan untuk tahun {tahunTahunan}</p>
                 </div>
-              </div>
-
-              <div className="flex flex-row 1/4">
-                <div className="flex items-center bg-white shadow dark:bg-gray-800 dark:border-gray-700 rounded-lg dark:border-strokedark dark:bg-boxdark  ">
-                  <div>
-                    <img
-                      className="flex items-center h-32 w-h-32 bg-white shadow dark:bg-gray-800 dark:border-gray-700 rounded-lg dark:border-strokedark dark:bg-boxdark  "
-                      src={getImageUrl("1745378788699-WhatsApp%20Image%202025-04-23%20at%2011.12.47%20(1).jpeg")}
-                      alt="Sunset in the mountains"
-                    />
-                  </div>
-                  <div className=" bg-white rounded-b align-middle rounded-b-none rounded-r p-2 flex flex-col justify-center leading-normal dark:border-strokedark dark:bg-boxdark">
-                    <Link
-                      to={getImageUrl("1745378788699-WhatsApp%20Image%202025-04-23%20at%2011.12.47%20(1).jpeg")}
-                      className="text-sm font-semibold leading-6 text-gray-900"
-                    >
-                      Infografis Bencana Bulan Februari Tahun 2025
-                    </Link>
-                  </div>
-                </div>
-              </div>
-
-              <div className="flex flex-row 1/4">
-                <div className="flex items-center bg-white shadow dark:bg-gray-800 dark:border-gray-700 rounded-lg dark:border-strokedark dark:bg-boxdark  ">
-                  <div>
-                    <img
-                      className="flex items-center h-32 w-h-32 bg-white shadow dark:bg-gray-800 dark:border-gray-700 rounded-lg dark:border-strokedark dark:bg-boxdark  "
-                      src={getImageUrl("1745378805040-WhatsApp%20Image%202025-04-23%20at%2011.12.26.jpeg")}
-                      alt="Sunset in the mountains"
-                    />
-                  </div>
-                  <div className=" bg-white rounded-b align-middle rounded-b-none rounded-r p-2 flex flex-col justify-center leading-normal dark:border-strokedark dark:bg-boxdark">
-                    <Link
-                      to={getImageUrl("1745378805040-WhatsApp%20Image%202025-04-23%20at%2011.12.26.jpeg")}
-                      className="text-sm font-semibold leading-6 text-gray-900"
-                    >
-                      Infografis Bencana Bulan Maret Tahun 2025
-                    </Link>
-                  </div>
-                </div>
-              </div>
-
-              <div className="flex flex-row 1/4">
-                <div className="flex items-center bg-white shadow dark:bg-gray-800 dark:border-gray-700 rounded-lg dark:border-strokedark dark:bg-boxdark  ">
-                  <div>
-                    <img
-                      className="flex items-center h-32 w-h-32 bg-white shadow dark:bg-gray-800 dark:border-gray-700 rounded-lg dark:border-strokedark dark:bg-boxdark  "
-                      src={getImageUrl("1747295001668-WhatsApp%20Image%202025-05-15%20at%2015.40.32.jpeg")}
-                      alt="Sunset in the mountains"
-                    />
-                  </div>
-                  <div className=" bg-white rounded-b align-middle rounded-b-none rounded-r p-2 flex flex-col justify-center leading-normal dark:border-strokedark dark:bg-boxdark">
-                    <Link
-                      to={getImageUrl("1747295001668-WhatsApp%20Image%202025-05-15%20at%2015.40.32.jpeg")}
-                      className="text-sm font-semibold leading-6 text-gray-900"
-                    >
-                      Infografis Bencana Bulan April Tahun 2025
-                    </Link>
-                  </div>
-                </div>
-              </div>
-
-              <div className="flex flex-row 1/4">
-                <div className="flex items-center bg-white shadow dark:bg-gray-800 dark:border-gray-700 rounded-lg dark:border-strokedark dark:bg-boxdark  ">
-                  <div>
-                    <img
-                      className="flex items-center h-32 w-h-32 bg-white shadow dark:bg-gray-800 dark:border-gray-700 rounded-lg dark:border-strokedark dark:bg-boxdark  "
-                      src={getImageUrl("1754459839865-5.%20Infografis%20kejadian%20Bencana%20Mei%202025.jpeg")}
-                      alt="Sunset in the mountains"
-                    />
-                  </div>
-                  <div className=" bg-white rounded-b align-middle rounded-b-none rounded-r p-2 flex flex-col justify-center leading-normal dark:border-strokedark dark:bg-boxdark">
-                    <Link
-                      to={getImageUrl("1754459839865-5.%20Infografis%20kejadian%20Bencana%20Mei%202025.jpeg")}
-                      className="text-sm font-semibold leading-6 text-gray-900"
-                    >
-                      Infografis Bencana Bulan Mei Tahun 2025
-                    </Link>
-                  </div>
-                </div>
-              </div>
-
-              <div className="flex flex-row 1/4">
-                <div className="flex items-center bg-white shadow dark:bg-gray-800 dark:border-gray-700 rounded-lg dark:border-strokedark dark:bg-boxdark  ">
-                  <div>
-                    <img
-                      className="flex items-center h-32 w-h-32 bg-white shadow dark:bg-gray-800 dark:border-gray-700 rounded-lg dark:border-strokedark dark:bg-boxdark  "
-                      src={getImageUrl("1754459892376-6.%20Infografis%20kejadian%20Bencana%20Juni%202025.jpeg")}
-                      alt="Sunset in the mountains"
-                    />
-                  </div>
-                  <div className=" bg-white rounded-b align-middle rounded-b-none rounded-r p-2 flex flex-col justify-center leading-normal dark:border-strokedark dark:bg-boxdark">
-                    <Link
-                      to={getImageUrl("1754459892376-6.%20Infografis%20kejadian%20Bencana%20Juni%202025.jpeg")}
-                      className="text-sm font-semibold leading-6 text-gray-900"
-                    >
-                      Infografis Bencana Bulan Juni Tahun 2025
-                    </Link>
-                  </div>
-                </div>
-              </div>
-
-              <div className="flex flex-row 1/4">
-                <div className="flex items-center bg-white shadow dark:bg-gray-800 dark:border-gray-700 rounded-lg dark:border-strokedark dark:bg-boxdark  ">
-                  <div>
-                    <img
-                      className="flex items-center h-32 w-h-32 bg-white shadow dark:bg-gray-800 dark:border-gray-700 rounded-lg dark:border-strokedark dark:bg-boxdark  "
-                      src={getImageUrl("1754966105058-7.%20Infografis%20Kejadian%20Bencana%20Juli%202025.jpg")}
-                      alt="Sunset in the mountains"
-                    />
-                  </div>
-                  <div className=" bg-white rounded-b align-middle rounded-b-none rounded-r p-2 flex flex-col justify-center leading-normal dark:border-strokedark dark:bg-boxdark">
-                    <Link
-                      to={getImageUrl("1754966105058-7.%20Infografis%20Kejadian%20Bencana%20Juli%202025.jpg")}
-                      className="text-sm font-semibold leading-6 text-gray-900"
-                    >
-                      Infografis Bencana Bulan Juli Tahun 2025
-                    </Link>
-                  </div>
-                </div>
-              </div>
-
-              <div className="flex flex-row 1/4">
-                <div className="flex items-center bg-white shadow dark:bg-gray-800 dark:border-gray-700 rounded-lg dark:border-strokedark dark:bg-boxdark  ">
-                  <div>
-                    <img
-                      className="flex items-center h-32 w-h-32 bg-white shadow dark:bg-gray-800 dark:border-gray-700 rounded-lg dark:border-strokedark dark:bg-boxdark  "
-                      src={getImageUrl("1758597927853-8.%20Infografis%20Kejadian%20Bencana%20Agustus%202025.jpg")}
-                      alt="Sunset in the mountains"
-                    />
-                  </div>
-                  <div className=" bg-white rounded-b align-middle rounded-b-none rounded-r p-2 flex flex-col justify-center leading-normal dark:border-strokedark dark:bg-boxdark">
-                    <Link
-                      to={getImageUrl("1758597927853-8.%20Infografis%20Kejadian%20Bencana%20Agustus%202025.jpg")}
-                      className="text-sm font-semibold leading-6 text-gray-900"
-                    >
-                      Infografis Bencana Bulan Agustus Tahun 2025
-                    </Link>
-                  </div>
-                </div>
-              </div>
+              )}
             </div>
           </div>
         </div>
-      </section>
+
+        {/* ========== KOLOM KANAN: INFOGRAFIS BULANAN ========== */}
+        <div className="w-full lg:w-5/12">
+          <div className="rounded-xl bg-white shadow-md dark:bg-boxdark overflow-hidden flex flex-col"
+            style={{ height: leftHeight > 0 ? `${leftHeight}px` : 'auto' }}
+          >
+            {/* Header + Filter */}
+            <div className="flex items-center justify-between px-5 py-4 border-b border-stroke dark:border-strokedark flex-shrink-0">
+              <h2 className="text-lg font-bold text-black dark:text-white">
+                📅 Infografis Bulanan
+              </h2>
+              <select
+                value={tahunBulanan}
+                onChange={(e) => setTahunBulanan(Number(e.target.value))}
+                className="rounded-lg border border-stroke bg-transparent py-2 px-4 text-sm font-medium outline-none focus:border-primary dark:border-form-strokedark dark:bg-form-input dark:text-white"
+              >
+                {tahunOpsiBulanan.length === 0 && (
+                  <option value={currentYear}>{currentYear}</option>
+                )}
+                {tahunOpsiBulanan.map((y) => (
+                  <option key={y} value={y}>{y}</option>
+                ))}
+              </select>
+            </div>
+
+            {/* Scrollable List */}
+            <div className="overflow-y-auto flex-1 p-4">
+              {bulananData.length > 0 ? (
+                <div className="flex flex-col gap-4">
+                  {bulananData.map((item: any) => (
+                    <Link
+                      key={item.id}
+                      to={item?.url}
+                      target="_blank"
+                      className="flex flex-row rounded-lg bg-gray-50 dark:bg-meta-4 overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-200"
+                    >
+                      {/* Thumbnail */}
+                      <div className="flex-shrink-0 w-28 h-28">
+                        <img
+                          src={item?.url}
+                          alt={item?.judul}
+                          className="w-full h-full object-cover"
+                        />
+                      </div>
+                      {/* Info */}
+                      <div className="flex flex-col justify-center px-4 py-3 flex-1 min-w-0">
+                        <h4 className="text-sm font-semibold text-black dark:text-white leading-snug line-clamp-2">
+                          {item?.judul}
+                        </h4>
+                        <span className="text-xs text-gray-500 dark:text-gray-400 mt-2">
+                          Tahun {item?.tahun}
+                        </span>
+                      </div>
+                    </Link>
+                  ))}
+                </div>
+              ) : (
+                <div className="flex items-center justify-center h-full text-gray-400">
+                  <p>Belum ada infografis bulanan untuk tahun {tahunBulanan}</p>
+                </div>
+              )}
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };

@@ -347,7 +347,7 @@ export default function HeaderPublic() {
                     <div className="p-4">
                       <div className="group relative flex items-center gap-x-6 rounded-lg p-2 text-sm leading-6 hover:bg-gray-50">
                         <NavLink
-                          to="#"
+                          to="/lapor-bencana"
                           className="text-sm font-semibold leading-6 text-gray-900"
                         >
                           Lapor Bencana

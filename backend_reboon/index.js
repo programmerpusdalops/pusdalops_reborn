@@ -21,16 +21,22 @@ const VideoAsset = require("./routes/VideoAssetRoutes.js");
 const Pengetahuan = require("./routes/PengetahuanRoutes.js");
 const TipsBencana = require("./routes/TipsBencanaRoutes.js");
 const KontakPenting = require("./routes/KontakPentingRoutes.js");
+const Infografis = require("./routes/InfografisRoutes.js");
+const LaporBencana = require("./routes/LaporBencanaRoutes.js");
+const Majalah = require("./routes/MajalahRoutes.js");
 
 ////
 // const PembuatanTabel = require("./models/VideoAssetModel.js");
-try {
-  db.authenticate();
-  console.log("Database connected...");
-  // PembuatanTabel.sync();
-} catch (error) {
-  console.error("Connection error:", error);
-}
+(async () => {
+  try {
+    await db.authenticate();
+    console.log("Database connected...");
+    // PembuatanTabel.sync();
+  } catch (error) {
+    console.error("Database connection error:", error.message);
+    process.exit(1);
+  }
+})();
 
 const app = express();
 
@@ -50,7 +56,7 @@ app.use(cors({
 }));
 app.use(express.json());
 
-app.use("/images", express.static(path.join("public/images")));
+app.use("/images", express.static(path.join(__dirname, "public", "images")));
 
 // URL API
 app.use("/auth", Auth);
@@ -68,6 +74,9 @@ app.use("/asset", VideoAsset);
 app.use("/pengetahuan", upload.single("file"), Pengetahuan);
 app.use("/tips_bencana", upload.single("file"), TipsBencana);
 app.use("/kontak", KontakPenting);
+app.use("/infografis", upload.single("file"), Infografis);
+app.use("/laporan", upload.array("dokumentasi", 5), LaporBencana);
+app.use("/majalah", upload.fields([{ name: "sampul", maxCount: 1 }, { name: "file_pdf", maxCount: 1 }]), Majalah);
 // AKHIR URL API
 
 app.listen(config.port);

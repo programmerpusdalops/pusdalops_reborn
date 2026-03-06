@@ -138,9 +138,6 @@ const getPengetahuanById = async (req, res) => {
 const postPengetahuan = async (req, res) => {
     const { judul, kategori, penulis, content } = req.body;
 
-    console.log("consssss", req.body)
-    console.log("consssss file", req.file)
-
     if (req.file) {
         const files = req.file;
         const fileName = files.filename;
@@ -163,7 +160,6 @@ const postPengetahuan = async (req, res) => {
             });
             res.status(201).json({ message: "Created Successfuly" });
         } catch (error) {
-            console.log("errrror", error)
             res.status(400).json({ message: error.message });
         }
     } else {
@@ -178,7 +174,6 @@ const postPengetahuan = async (req, res) => {
             });
             res.status(201).json({ message: "Created Successfuly" });
         } catch (error) {
-            console.log("errrror", error)
             res.status(400).json({ message: error.message });
         }
     }

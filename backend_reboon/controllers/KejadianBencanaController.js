@@ -15,6 +15,7 @@ const { getImageUrl } = require("../config/env.js");
 
 const getCountKejadian = async (req, res) => {
   try {
+    const tahunSekarang = new Date().getFullYear().toString();
     const jenisKejadian = await JenisKejadian.findAll();
 
     let jenis = []
@@ -23,7 +24,7 @@ const getCountKejadian = async (req, res) => {
         where: {
           [Op.and]: [{
             tanggal: {
-              [Op.like]: '%' + '2026' + '%'
+              [Op.like]: '%' + tahunSekarang + '%'
             }
           }, {
             id_jenis_kejadian: {
@@ -449,12 +450,13 @@ const getCountKejadianPerWilayah = async (req, res) => {
 const getKejadianPerJenisKejadian = async (req, res) => {
 
   const jenisKejadian = await JenisKejadian.findAll();
+  const tahunSekarang = new Date().getFullYear().toString();
 
   try {
 
     const total_kejadian = await Kejadian.findAndCountAll({
       where: {
-        tanggal: { [Op.like]: '%' + '2026' + '%' }
+        tanggal: { [Op.like]: '%' + tahunSekarang + '%' }
       },
     });
 
@@ -465,7 +467,7 @@ const getKejadianPerJenisKejadian = async (req, res) => {
         where: {
           [Op.and]: [{
             tanggal: {
-              [Op.like]: '%' + '2026' + '%'
+              [Op.like]: '%' + tahunSekarang + '%'
             }
           }, {
             id_jenis_kejadian: {
@@ -473,7 +475,6 @@ const getKejadianPerJenisKejadian = async (req, res) => {
             }
           }],
         },
-        // include: [JenisKejadian]
       });
       list.push(
         {
@@ -492,27 +493,30 @@ const getKejadianPerJenisKejadian = async (req, res) => {
 
 const getPersentaseKejadian = async (req, res) => {
   try {
+    const tahunSekarang = new Date().getFullYear().toString();
+    const tahunSebelumnya = (new Date().getFullYear() - 1).toString();
 
-    const kejadian_2024 = await Kejadian.findAndCountAll({
+    const kejadian_sebelumnya = await Kejadian.findAndCountAll({
       where: {
-        tanggal: { [Op.like]: '%' + '2025' + '%' }
+        tanggal: { [Op.like]: '%' + tahunSebelumnya + '%' }
       },
     });
-    const kejadian_2025 = await Kejadian.findAndCountAll({
+    const kejadian_sekarang = await Kejadian.findAndCountAll({
       where: {
-        tanggal: { [Op.like]: '%' + '2026' + '%' }
+        tanggal: { [Op.like]: '%' + tahunSekarang + '%' }
       },
     });
 
     // query perhitungan persentase
-    const nilai_awal = kejadian_2024.count
-    const nilai_akhir = kejadian_2025.count
-    const hasil_pengurangan = nilai_akhir - nilai_awal
-    const hasil_pembagian = hasil_pengurangan / nilai_awal
-    const hasil_kali = hasil_pembagian * 100
-    // query perhitungan persentase
+    const nilai_awal = kejadian_sebelumnya.count
+    const nilai_akhir = kejadian_sekarang.count
 
-    // kalo mines berarti penurunan bencana, dan kebalikanya
+    let hasil_kali = 0
+    if (nilai_awal > 0) {
+      const hasil_pengurangan = nilai_akhir - nilai_awal
+      const hasil_pembagian = hasil_pengurangan / nilai_awal
+      hasil_kali = hasil_pembagian * 100
+    }
 
     res.json(hasil_kali);
   } catch (error) {
@@ -700,7 +704,7 @@ const postKejadian = async (req, res) => {
 };
 
 const updateKejadian = async (req, res) => {
-  const { id_kejadian, id_user, id_jenis_kejadian, kronologis, tanggal, jam, titik_lokasi, status_ditangani, verification, ket } = req.body;
+  const { id_user, id_jenis_kejadian, kronologis, tanggal, jam, titik_lokasi, status_ditangani, verification, ket } = req.body;
   const kejadian = await Kejadian.findOne({
     where: {
       id_kejadian: req.params.id
@@ -721,7 +725,6 @@ const updateKejadian = async (req, res) => {
 
     try {
       await Kejadian.update({
-        id_kejadian: id_kejadian,
         id_user: id_user,
         id_jenis_kejadian: id_jenis_kejadian,
         kronologis: kronologis,
@@ -738,7 +741,7 @@ const updateKejadian = async (req, res) => {
           id_kejadian: req.params.id
         }
       });
-      res.status(201).json({ message: "Created Successfuly" });
+      res.status(200).json({ message: "Updated Successfully" });
     } catch (error) {
       res.status(400).json({ message: error.message });
     }
@@ -747,15 +750,12 @@ const updateKejadian = async (req, res) => {
 
     try {
       await Kejadian.update({
-        id_kejadian: id_kejadian,
         id_user: id_user,
         id_jenis_kejadian: id_jenis_kejadian,
         kronologis: kronologis,
         tanggal: tanggal,
         jam: jam,
         titik_lokasi: titik_lokasi,
-        file_laporan_akhir: kejadian.file_laporan_akhir,
-        url: kejadian.url,
         status_ditangani: status_ditangani,
         verification: verification,
         ket: ket
@@ -764,7 +764,7 @@ const updateKejadian = async (req, res) => {
           id_kejadian: req.params.id
         }
       });
-      res.status(201).json({ message: "Created Successfuly" });
+      res.status(200).json({ message: "Updated Successfully" });
     } catch (error) {
       res.status(400).json({ message: error.message });
     }
@@ -790,32 +790,32 @@ const getKejadianForUpdate = async (req, res) => {
         lat: lokasi[i]?.lat,
         long: lokasi[i]?.long,
 
-        id_korban: korban[i]?.id_korban,
-        meninggal: korban[i]?.meninggal,
-        luka_luka: korban[i]?.luka_luka,
-        sakit: korban[i]?.sakit,
-        hilang: korban[i]?.hilang,
-        menderita_kk: korban[i]?.menderita_kk,
-        menderita_jiwa: korban[i]?.menderita_jiwa,
-        mengungsi_kk: korban[i]?.mengungsi_kk,
-        mengungsi_jiwa: korban[i]?.mengungsi_jiwa,
+        id_korban: korban[i]?.id_korban ?? '',
+        meninggal: korban[i]?.meninggal ?? '',
+        luka_luka: korban[i]?.luka_luka ?? '',
+        sakit: korban[i]?.sakit ?? '',
+        hilang: korban[i]?.hilang ?? '',
+        menderita_kk: korban[i]?.menderita_kk ?? '',
+        menderita_jiwa: korban[i]?.menderita_jiwa ?? '',
+        mengungsi_kk: korban[i]?.mengungsi_kk ?? '',
+        mengungsi_jiwa: korban[i]?.mengungsi_jiwa ?? '',
 
-        id_kerusakan: kerusakan[i].id_kerusakan,
-        rumah_terdampak: kerusakan[i]?.rumah_terdampak,
-        rm_rusak_ringan: kerusakan[i]?.rm_rusak_ringan,
-        rm_rusak_sedang: kerusakan[i]?.rm_rusak_sedang,
-        rm_rusak_berat: kerusakan[i]?.rm_rusak_berat,
-        sarana_pendidikan: kerusakan[i]?.sarana_pendidikan,
-        sarana_ibadah: kerusakan[i]?.sarana_ibadah,
-        sarana_kesehatan: kerusakan[i]?.sarana_kesehatan,
-        perkantoran: kerusakan[i]?.perkantoran,
-        bangunan_lain: kerusakan[i]?.bangunan_lain,
-        jalan: kerusakan[i]?.jalan,
-        jembatan: kerusakan[i]?.jembatan,
-        sawah: kerusakan[i]?.sawah,
-        kebun: kerusakan[i]?.kebun,
-        tambak: kerusakan[i]?.tambak,
-        irigasi: kerusakan[i]?.irigasi
+        id_kerusakan: kerusakan[i]?.id_kerusakan ?? '',
+        rumah_terdampak: kerusakan[i]?.rumah_terdampak ?? '',
+        rm_rusak_ringan: kerusakan[i]?.rm_rusak_ringan ?? '',
+        rm_rusak_sedang: kerusakan[i]?.rm_rusak_sedang ?? '',
+        rm_rusak_berat: kerusakan[i]?.rm_rusak_berat ?? '',
+        sarana_pendidikan: kerusakan[i]?.sarana_pendidikan ?? '',
+        sarana_ibadah: kerusakan[i]?.sarana_ibadah ?? '',
+        sarana_kesehatan: kerusakan[i]?.sarana_kesehatan ?? '',
+        perkantoran: kerusakan[i]?.perkantoran ?? '',
+        bangunan_lain: kerusakan[i]?.bangunan_lain ?? '',
+        jalan: kerusakan[i]?.jalan ?? '',
+        jembatan: kerusakan[i]?.jembatan ?? '',
+        sawah: kerusakan[i]?.sawah ?? '',
+        kebun: kerusakan[i]?.kebun ?? '',
+        tambak: kerusakan[i]?.tambak ?? '',
+        irigasi: kerusakan[i]?.irigasi ?? ''
       })
     }
 
@@ -973,8 +973,7 @@ const deleteKejadian = async (req, res) => {
 
 const getKejadianPerTahun = async (req, res) => {
   try {
-    // const tahun = req.query.tahun || new Date().getFullYear().toString();
-    const tahun = 2025;
+    const tahun = req.query.tahun || new Date().getFullYear().toString();
 
     const { Kejadian, LokasiKejadian, Kabupaten, Kecamatan, Kelurahan } = require("../models/Connector.js");
     const kejadianList = await Kejadian.findAll({

@@ -143,6 +143,43 @@ export const patchKontak = (id: string | any, data: {} | any) =>
   API.patch(`/kontak/${id}`, data);
 export const deleteKontak = (id: string | any) => API.delete(`/kontak/${id}`);
 
+// API INFOGRAFIS
+export const fetchInfografis = () => API.get('/infografis');
+export const fetchInfografisSearch = (keyword: any, page: any, limit: any) =>
+  API.get(
+    `/infografis/search?search_query=${keyword}&page=${page}&limit=${limit}`,
+  );
+export const fetchInfografisById = (id: string | any) => API.get(`/infografis/${id}`);
+export const postInfografis = (data: {} | any) => API.post('/infografis', data);
+export const patchInfografis = (id: string | any, data: {} | any) =>
+  API.patch(`/infografis/${id}`, data);
+export const deleteInfografis = (id: string | any) => API.delete(`/infografis/${id}`);
+
+// API LAPOR BENCANA
+export const postLaporan = (data: {} | any) => API.post('/laporan', data);
+export const fetchLaporanStats = () => API.get('/laporan/stats');
+export const fetchLaporanSearch = (keyword: any, page: any, limit: any, status?: string) =>
+  API.get(
+    `/laporan/search?search_query=${keyword}&page=${page}&limit=${limit}${status ? `&status=${status}` : ''}`,
+  );
+export const fetchLaporanById = (id: string | any) => API.get(`/laporan/${id}`);
+export const patchLaporan = (id: string | any, data: {} | any) =>
+  API.patch(`/laporan/${id}`, data);
+export const deleteLaporan = (id: string | any) => API.delete(`/laporan/${id}`);
+export const trackLaporan = (tiket: string) => API.get(`/laporan/track/${tiket}`);
+
+// API MAJALAH
+export const fetchMajalah = () => API.get('/majalah');
+export const fetchMajalahSearch = (keyword: any, page: any, limit: any) =>
+  API.get(
+    `/majalah/search?search_query=${keyword}&page=${page}&limit=${limit}`,
+  );
+export const fetchMajalahById = (id: string | any) => API.get(`/majalah/${id}`);
+export const postMajalah = (data: {} | any) => API.post('/majalah', data);
+export const patchMajalah = (id: string | any, data: {} | any) =>
+  API.patch(`/majalah/${id}`, data);
+export const deleteMajalah = (id: string | any) => API.delete(`/majalah/${id}`);
+
 export const fetchInformasi = () => API.get('/informasi');
 
 // API BERITA

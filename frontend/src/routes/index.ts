@@ -29,9 +29,9 @@ const TambahBeritaPage = lazy(
 const UbahBeritaPage = lazy(
   () => import('../pages/private/Publikasi/UbahBeritaPage')
 );
-// const InfografisPage = lazy(
-//   () => import('../pages/private/Publikasi/InfografisPage')
-// );
+const InfografisPage = lazy(
+  () => import('../pages/private/Publikasi/InfografisPage')
+);
 const MajalahPage = lazy(
   () => import('../pages/private/Publikasi/MajalahPage'),
 );
@@ -80,6 +80,12 @@ const JenisDokumenPage = lazy(
   () => import('../pages/private/JenisDokumen/JenisDokumenPage'),
 );
 // lanjutkan disini jika ingin menambahkan
+const LaporBencanaAdminPage = lazy(
+  () => import('../pages/private/LaporBencana/LaporBencanaPage')
+);
+const DetailLaporanPage = lazy(
+  () => import('../pages/private/LaporBencana/DetailLaporanPage')
+);
 
 // Batas Akhir import page fix
 const Calendar = lazy(() => import('../pages/templates/Calendar'));
@@ -93,6 +99,16 @@ const Buttons = lazy(() => import('../pages/templates/Buttons'));
 
 const coreRoutes = [
   // Batas Awal import page fix
+  {
+    path: '/laporan-bencana',
+    title: 'Laporan Bencana',
+    component: LaporBencanaAdminPage,
+  },
+  {
+    path: '/detail-laporan/:id',
+    title: 'Detail Laporan',
+    component: DetailLaporanPage,
+  },
   {
     path: '/dashboard',
     title: 'Dashboard',
@@ -138,11 +154,11 @@ const coreRoutes = [
     title: 'Ubah Berita',
     component: UbahBeritaPage,
   },
-  // {
-  //   path: '/infografis',
-  //   title: 'Infografis',
-  //   component: InfografisPage,
-  // },
+  {
+    path: '/infografis',
+    title: 'Infografis',
+    component: InfografisPage,
+  },
   {
     path: '/majalah',
     title: 'majalah',
